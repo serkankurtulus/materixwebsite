@@ -11,7 +11,7 @@
                     {{ translations.cta.description }}
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="/{{ lang }}/iletisim/" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105">
+                    <a href="{{ translations.urls.contact }}" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105">
                         {{ translations.cta.primaryButton }}
                     </a>
                     <a href="tel:{{ site.contact.phone | replace(' ', '') }}" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all">
@@ -66,22 +66,22 @@
                 <h4 class="font-bold text-lg mb-4">{{ translations.footer.products }}</h4>
                 <ul class="space-y-3">
                     <li>
-                        <a href="/{{ lang }}/urunlerimiz/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.ssrPro }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.products.ssrPro.name }}
                         </a>
                     </li>
                     <li>
-                        <a href="/{{ lang }}/urunlerimiz/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.ssrStandard }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.products.ssrStandard.name }}
                         </a>
                     </li>
                     <li>
-                        <a href="/{{ lang }}/urunlerimiz/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.ssrIndustrial }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.products.ssrIndustrial.name }}
                         </a>
                     </li>
                     <li>
-                        <a href="/{{ lang }}/iletisim/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.contact }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.footer.pricing }}
                         </a>
                     </li>
@@ -93,22 +93,22 @@
                 <h4 class="font-bold text-lg mb-4">{{ translations.footer.company }}</h4>
                 <ul class="space-y-3">
                     <li>
-                        <a href="/{{ lang }}/kurumsal/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.corporate }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.footer.about }}
                         </a>
                     </li>
                     <li>
-                        <a href="/{{ lang }}/nanoteknoloji/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.nanotechnology }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.footer.technology }}
                         </a>
                     </li>
                     <li>
-                        <a href="/{{ lang }}/projelerimiz/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.projects }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.footer.references }}
                         </a>
                     </li>
                     <li>
-                        <a href="/{{ lang }}/blog/" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="{{ translations.urls.blog }}" class="text-gray-400 hover:text-white transition-colors">
                             {{ translations.nav.blog }}
                         </a>
                     </li>
@@ -153,10 +153,10 @@
                     © {% year %} {{ site.name }}. {% if lang == 'tr' %}Tüm hakları saklıdır.{% else %}All rights reserved.{% endif %}
                 </p>
                 <div class="flex space-x-6 text-sm">
-                    <a href="/{{ lang }}/gizlilik-politikasi/" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="{{ translations.urls.privacy }}" class="text-gray-400 hover:text-white transition-colors">
                         {{ translations.footer.privacy }}
                     </a>
-                    <a href="/{{ lang }}/kullanim-kosullari/" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="{{ translations.urls.terms }}" class="text-gray-400 hover:text-white transition-colors">
                         {{ translations.footer.terms }}
                     </a>
                 </div>

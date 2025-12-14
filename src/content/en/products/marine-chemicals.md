@@ -4,7 +4,7 @@ lang: en
 translations: en
 title: "Marine Chemicals"
 description: "Materix NFC-12 - Water Repellent Nano Film Coating for Boat and Yacht Glass. Resistant to marine conditions."
-permalink: /en/marine-chemicals/
+permalink: /en/products/marine-chemicals/
 product:
   name: "Materix NFC-12"
   code: "NFC-12"

@@ -4,7 +4,7 @@ lang: tr
 translations: tr
 title: "Araç Kimyasalları"
 description: "Materix NFC-11 - Araç Camları için Yağmur Kaydırıcı Nano Film Kaplama. 1 yıl koruma, güvenli sürüş deneyimi."
-permalink: /tr/arac-kimyasallari/
+permalink: /tr/urunlerimiz/arac-kimyasallari/
 product:
   name: "Materix NFC-11"
   code: "NFC-11"

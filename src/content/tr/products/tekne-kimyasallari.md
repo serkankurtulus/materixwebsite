@@ -4,7 +4,7 @@ lang: tr
 translations: tr
 title: "Tekne Kimyasalları"
 description: "Materix NFC-12 - Tekne ve Yat Camları için Su Kaydırıcı Nano Film Kaplama. Deniz koşullarına dayanıklı."
-permalink: /tr/tekne-kimyasallari/
+permalink: /tr/urunlerimiz/tekne-kimyasallari/
 product:
   name: "Materix NFC-12"
   code: "NFC-12"

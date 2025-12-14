@@ -4,7 +4,7 @@ lang: en
 translations: en
 title: "Vehicle Chemicals"
 description: "Materix NFC-11 - Rain Repellent Nano Film Coating for Vehicle Glass. 1 year protection, safe driving experience."
-permalink: /en/vehicle-chemicals/
+permalink: /en/products/vehicle-chemicals/
 product:
   name: "Materix NFC-11"
   code: "NFC-11"

@@ -4,7 +4,7 @@ lang: en
 translations: en
 title: "Home Chemicals"
 description: "Materix NFC-14 - Water Repellent Nano Film Coating for Home Glass and Ceramic Surfaces. Limescale prevention, easy cleaning."
-permalink: /en/home-chemicals/
+permalink: /en/products/home-chemicals/
 product:
   name: "Materix NFC-14"
   code: "NFC-14"

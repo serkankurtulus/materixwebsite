@@ -4,7 +4,7 @@ lang: tr
 translations: tr
 title: "Ev Kimyasalları"
 description: "Materix NFC-14 - Ev Cam ve Seramik Yüzeyleri için Su İtici Nano Film Kaplama. Kireç önleyici, kolay temizlik."
-permalink: /tr/ev-kimyasallari/
+permalink: /tr/urunlerimiz/ev-kimyasallari/
 product:
   name: "Materix NFC-14"
   code: "NFC-14"

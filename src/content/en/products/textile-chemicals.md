@@ -4,7 +4,7 @@ lang: en
 translations: en
 title: "Textile Chemicals"
 description: "Materix NFC-16 - Water Repellent Nano Film for Textile Products. Invisible protection against stains."
-permalink: /en/textile-chemicals/
+permalink: /en/products/textile-chemicals/
 product:
   name: "Materix NFC-16"
   code: "NFC-16"

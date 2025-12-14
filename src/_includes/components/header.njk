@@ -26,23 +26,23 @@
                     {# Dropdown Menu #}
                     <div class="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
                         <div class="py-2">
-                            <a href="/{{ lang }}/urunlerimiz/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                            <a href="{{ translations.urls.products }}" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
                                 <div class="font-semibold">{{ translations.products.categories.solar }}</div>
                                 <div class="text-sm text-gray-500">{{ translations.products.categories.solarDesc }}</div>
                             </a>
-                            <a href="/{{ lang }}/ev-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                            <a href="{{ translations.urls.homeChemicals }}" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
                                 <div class="font-semibold">{{ translations.products.categories.home }}</div>
                                 <div class="text-sm text-gray-500">{{ translations.products.categories.homeDesc }}</div>
                             </a>
-                            <a href="/{{ lang }}/arac-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                            <a href="{{ translations.urls.vehicleChemicals }}" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
                                 <div class="font-semibold">{{ translations.products.categories.vehicle }}</div>
                                 <div class="text-sm text-gray-500">{{ translations.products.categories.vehicleDesc }}</div>
                             </a>
-                            <a href="/{{ lang }}/tekstil-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                            <a href="{{ translations.urls.textileChemicals }}" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
                                 <div class="font-semibold">{{ translations.products.categories.textile }}</div>
                                 <div class="text-sm text-gray-500">{{ translations.products.categories.textileDesc }}</div>
                             </a>
-                            <a href="/{{ lang }}/tekne-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                            <a href="{{ translations.urls.marineChemicals }}" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
                                 <div class="font-semibold">{{ translations.products.categories.marine }}</div>
                                 <div class="text-sm text-gray-500">{{ translations.products.categories.marineDesc }}</div>
                             </a>
@@ -51,19 +51,19 @@
                 </div>
 
                 {# Other Navigation Links #}
-                <a href="/{{ lang }}/kurumsal/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                <a href="{{ translations.urls.corporate }}" class="text-gray-700 hover:text-primary font-medium transition-colors">
                     {{ translations.nav.corporate }}
                 </a>
-                <a href="/{{ lang }}/projelerimiz/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                <a href="{{ translations.urls.projects }}" class="text-gray-700 hover:text-primary font-medium transition-colors">
                     {{ translations.nav.projects }}
                 </a>
-                <a href="/{{ lang }}/nanoteknoloji/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                <a href="{{ translations.urls.nanotechnology }}" class="text-gray-700 hover:text-primary font-medium transition-colors">
                     {{ translations.nav.nanotechnology }}
                 </a>
-                <a href="/{{ lang }}/blog/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                <a href="{{ translations.urls.blog }}" class="text-gray-700 hover:text-primary font-medium transition-colors">
                     {{ translations.nav.blog }}
                 </a>
-                <a href="/{{ lang }}/iletisim/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                <a href="{{ translations.urls.contact }}" class="text-gray-700 hover:text-primary font-medium transition-colors">
                     {{ translations.nav.contact }}
                 </a>
             </div>
@@ -74,7 +74,7 @@
                 {% include "components/language-switcher.njk" %}
 
                 {# CTA Button (Desktop) #}
-                <a href="/{{ lang }}/iletisim/" class="hidden md:inline-flex bg-gradient-to-r from-primary to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                <a href="{{ translations.urls.contact }}" class="hidden md:inline-flex bg-gradient-to-r from-primary to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all">
                     {{ translations.common.getQuote }}
                 </a>
 
@@ -110,34 +110,34 @@
                     </svg>
                 </button>
                 <div class="accordion-content hidden pl-4 pb-2 space-y-2">
-                    <a href="/{{ lang }}/urunlerimiz/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.solar }}</a>
-                    <a href="/{{ lang }}/ev-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.home }}</a>
-                    <a href="/{{ lang }}/arac-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.vehicle }}</a>
-                    <a href="/{{ lang }}/tekstil-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.textile }}</a>
-                    <a href="/{{ lang }}/tekne-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.marine }}</a>
+                    <a href="{{ translations.urls.products }}" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.solar }}</a>
+                    <a href="{{ translations.urls.homeChemicals }}" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.home }}</a>
+                    <a href="{{ translations.urls.vehicleChemicals }}" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.vehicle }}</a>
+                    <a href="{{ translations.urls.textileChemicals }}" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.textile }}</a>
+                    <a href="{{ translations.urls.marineChemicals }}" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.marine }}</a>
                 </div>
             </div>
 
             {# Other Links #}
-            <a href="/{{ lang }}/kurumsal/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+            <a href="{{ translations.urls.corporate }}" class="block py-3 text-gray-700 font-medium hover:text-primary">
                 {{ translations.nav.corporate }}
             </a>
-            <a href="/{{ lang }}/projelerimiz/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+            <a href="{{ translations.urls.projects }}" class="block py-3 text-gray-700 font-medium hover:text-primary">
                 {{ translations.nav.projects }}
             </a>
-            <a href="/{{ lang }}/nanoteknoloji/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+            <a href="{{ translations.urls.nanotechnology }}" class="block py-3 text-gray-700 font-medium hover:text-primary">
                 {{ translations.nav.nanotechnology }}
             </a>
-            <a href="/{{ lang }}/blog/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+            <a href="{{ translations.urls.blog }}" class="block py-3 text-gray-700 font-medium hover:text-primary">
                 {{ translations.nav.blog }}
             </a>
-            <a href="/{{ lang }}/iletisim/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+            <a href="{{ translations.urls.contact }}" class="block py-3 text-gray-700 font-medium hover:text-primary">
                 {{ translations.nav.contact }}
             </a>
 
             {# Mobile CTA #}
             <div class="pt-4">
-                <a href="/{{ lang }}/iletisim/" class="block w-full text-center bg-gradient-to-r from-primary to-blue-500 text-white px-6 py-3 rounded-lg font-semibold">
+                <a href="{{ translations.urls.contact }}" class="block w-full text-center bg-gradient-to-r from-primary to-blue-500 text-white px-6 py-3 rounded-lg font-semibold">
                     {{ translations.common.getQuote }}
                 </a>
             </div>

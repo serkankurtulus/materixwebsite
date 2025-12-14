@@ -5,6 +5,25 @@
   "langName": "Türkçe",
   "langFlag": "🇹🇷",
 
+  "urls": {
+    "home": "/tr/",
+    "products": "/tr/urunlerimiz/",
+    "ssrPro": "/tr/urunlerimiz/ssr-pro/",
+    "ssrStandard": "/tr/urunlerimiz/ssr-standard/",
+    "ssrIndustrial": "/tr/urunlerimiz/ssr-industrial/",
+    "homeChemicals": "/tr/urunlerimiz/ev-kimyasallari/",
+    "vehicleChemicals": "/tr/urunlerimiz/arac-kimyasallari/",
+    "textileChemicals": "/tr/urunlerimiz/tekstil-kimyasallari/",
+    "marineChemicals": "/tr/urunlerimiz/tekne-kimyasallari/",
+    "corporate": "/tr/kurumsal/",
+    "projects": "/tr/projelerimiz/",
+    "nanotechnology": "/tr/nanoteknoloji/",
+    "contact": "/tr/iletisim/",
+    "blog": "/tr/blog/",
+    "privacy": "/tr/gizlilik-politikasi/",
+    "terms": "/tr/kullanim-kosullari/"
+  },
+
   "meta": {
     "defaultTitle": "MATERIX | Nanoteknoloji ile Güneş Enerjisinde Devrim",
     "defaultDescription": "MATERIX Nano Teknoloji - Güneş panellerinizden %8'e varan daha fazla verim alın. Nanoteknoloji destekli kaplama çözümleri.",

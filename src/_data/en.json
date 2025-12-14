@@ -5,6 +5,25 @@
   "langName": "English",
   "langFlag": "🇬🇧",
 
+  "urls": {
+    "home": "/en/",
+    "products": "/en/products/",
+    "ssrPro": "/en/products/ssr-pro/",
+    "ssrStandard": "/en/products/ssr-standard/",
+    "ssrIndustrial": "/en/products/ssr-industrial/",
+    "homeChemicals": "/en/products/home-chemicals/",
+    "vehicleChemicals": "/en/products/vehicle-chemicals/",
+    "textileChemicals": "/en/products/textile-chemicals/",
+    "marineChemicals": "/en/products/marine-chemicals/",
+    "corporate": "/en/corporate/",
+    "projects": "/en/projects/",
+    "nanotechnology": "/en/nanotechnology/",
+    "contact": "/en/contact/",
+    "blog": "/en/blog/",
+    "privacy": "/en/privacy-policy/",
+    "terms": "/en/terms-of-use/"
+  },
+
   "meta": {
     "defaultTitle": "MATERIX | Revolutionizing Solar Energy with Nanotechnology",
     "defaultDescription": "MATERIX Nano Technology - Get up to 8% more efficiency from your solar panels. Nanotechnology-powered coating solutions.",

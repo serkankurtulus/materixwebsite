@@ -4,7 +4,7 @@ lang: tr
 translations: tr
 title: "Tekstil Kimyasalları"
 description: "Materix NFC-16 - Tekstil Ürünleri için Su-itici Nano Film. Lekeye karşı görünmez koruma."
-permalink: /tr/tekstil-kimyasallari/
+permalink: /tr/urunlerimiz/tekstil-kimyasallari/
 product:
   name: "Materix NFC-16"
   code: "NFC-16"
