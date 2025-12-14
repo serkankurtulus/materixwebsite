@@ -55,6 +55,17 @@ technologies:
   - icon: "🦠"
     title: "Antibacterial Properties"
     description: "Our nano coating prevents bacteria from multiplying on the surface and creates hygienic environments."
+statsSection:
+  title: "Project Statistics"
+stats:
+  - label: "Projects Completed"
+    value: "500+"
+  - label: "Solar Panels Coated"
+    value: "100,000+"
+  - label: "Customer Satisfaction"
+    value: "98%"
+  - label: "Countries Served"
+    value: "10+"
 cta:
   title: "Let's Develop Projects Together"
   content:
