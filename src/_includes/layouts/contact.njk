@@ -1,0 +1,170 @@
+---
+layout: layouts/base.njk
+---
+
+{# Contact Page Template - Matches original iletisim.html design #}
+
+{# Hero Section - Purple gradient with envelope emoji #}
+<section class="pt-32 pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    {# Background emoji decoration #}
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span class="text-[300px] md:text-[400px] opacity-10 select-none">✉️</span>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center text-white">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                {{ hero.title }}
+            </h1>
+            {% if hero.description %}
+            <p class="text-xl max-w-2xl mx-auto opacity-95">
+                {{ hero.description }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{# Contact Section - Two column grid #}
+<section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16">
+
+            {# Contact Info Card #}
+            <div class="bg-white p-10 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-10">
+                    {% if lang == 'tr' %}İletişim Bilgileri{% else %}Contact Information{% endif %}
+                </h2>
+
+                {% for item in contactInfo %}
+                <div class="flex gap-5 mb-8">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 text-2xl text-white" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        {{ item.icon }}
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">{{ item.title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            {% if item.link %}
+                            <a href="{{ item.link }}" class="text-purple-600 hover:text-purple-800 transition-colors">{{ item.content | safe }}</a>
+                            {% else %}
+                            {{ item.content | safe }}
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            {# Contact Form Card #}
+            <div class="bg-white p-10 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                    {% if lang == 'tr' %}Bize Ulaşın{% else %}Get In Touch{% endif %}
+                </h2>
+
+                <form id="contactForm" class="space-y-6" netlify name="contact" method="POST">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="lang" value="{{ lang }}">
+
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">
+                            {% if lang == 'tr' %}Ad Soyad *{% else %}Full Name *{% endif %}
+                        </label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-lg">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">
+                            {% if lang == 'tr' %}E-posta *{% else %}Email *{% endif %}
+                        </label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-lg">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">
+                            {% if lang == 'tr' %}Telefon{% else %}Phone{% endif %}
+                        </label>
+                        <input type="tel" id="phone" name="phone"
+                            class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-lg">
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">
+                            {% if lang == 'tr' %}Konu *{% else %}Subject *{% endif %}
+                        </label>
+                        <input type="text" id="subject" name="subject" required
+                            class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-lg">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">
+                            {% if lang == 'tr' %}Mesajınız *{% else %}Your Message *{% endif %}
+                        </label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-lg resize-y"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-4 px-8 text-white font-bold text-lg rounded-full transition-all hover:scale-[1.02] hover:shadow-xl"
+                        style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        {% if lang == 'tr' %}Mesaj Gönder{% else %}Send Message{% endif %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# Quick Contact Section - Dark background with glass cards #}
+<section class="py-20" style="background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                {% if lang == 'tr' %}Hızlı İletişim{% else %}Quick Contact{% endif %}
+            </h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                {% if lang == 'tr' %}İş birliği ve proje geliştirme için bizimle iletişime geçin{% else %}Contact us for collaboration and project development{% endif %}
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for card in quickContact %}
+            <div class="text-center p-8 rounded-2xl border border-white/20 backdrop-blur-sm transition-transform hover:-translate-y-2"
+                 style="background: rgba(255, 255, 255, 0.1);">
+                <div class="text-5xl mb-5">{{ card.icon }}</div>
+                <h3 class="text-xl font-bold text-white mb-3">{{ card.title }}</h3>
+                <p class="text-gray-300">{{ card.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# Map Section #}
+{% if mapEmbedUrl %}
+<section class="h-[450px]">
+    <iframe
+        src="{{ mapEmbedUrl }}"
+        class="w-full h-full border-0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+{% endif %}
+
+{# Form submission feedback script #}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Netlify handles the form, but we can add client-side feedback
+            const button = form.querySelector('button[type="submit"]');
+            button.textContent = '{% if lang == "tr" %}Gönderiliyor...{% else %}Sending...{% endif %}';
+            button.disabled = true;
+        });
+    }
+});
+</script>
