@@ -8,8 +8,8 @@
   "favicon": "/assets/images/favicon.svg",
 
   "contact": {
-    "email": "info@materix.tech",
-    "phone": "0850 XXX XX XX",
+    "email": "info@materix.com.tr",
+    "phone": "0 (232) 480 08 00",
     "address": {
       "tr": "Dokuz Eylül Üniversitesi, Tınaztepe Yerleşkesi, DEPARK Beta Binası, B:29, Buca 35400, İzmir",
       "en": "Dokuz Eylül University, Tınaztepe Campus, DEPARK Beta Building, B:29, Buca 35400, İzmir, Turkey"
@@ -45,6 +45,11 @@
 
   "certifications": [
     {
+      "name": "TSE",
+      "type": "certification",
+      "icon": "check-shield"
+    },
+    {
       "name": "KOSGEB",
       "type": "support",
       "icon": "trophy"
@@ -55,14 +60,23 @@
       "icon": "university"
     },
     {
-      "name": "ISO 9001",
-      "type": "certification",
-      "icon": "check"
-    },
-    {
       "name": "TÜBİTAK",
       "type": "testing",
       "icon": "lab"
     }
-  ]
+  ],
+
+  "salesChannels": {
+    "koctas": {
+      "name": "Koçtaş",
+      "available": true,
+      "note": "Seçili ürünler mağazalarımızda satılmaktadır"
+    },
+    "trendyol": {
+      "name": "Trendyol",
+      "url": "",
+      "available": false,
+      "note": "Yakında"
+    }
+  }
 }

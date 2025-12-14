@@ -1403,6 +1403,399 @@ The user needs to:
 
 ---
 
+---
+
+## 🔧 POST-LAUNCH FIXES & IMPROVEMENTS
+
+The following phases document fixes and improvements made after initial deployment, consolidated from gap-fix-plan.md, gap-fix-plan-v2.md, and gap-analysis-v3.md.
+
+---
+
+### ✅ GAP-FIX PHASE 1: Translation System Fix - **COMPLETED 2024-12-14**
+
+**Problem:** All `{{ translations.xxx }}` variables outputted empty strings, breaking navigation, buttons, and footer content.
+
+**Root Cause:** The `translations` variable was set to the string `"tr"` instead of the actual translation object.
+
+**Solution:**
+Added `eleventyComputed` global data in `eleventy.config.js` to properly resolve translations based on `lang` variable.
+
+**Files Modified:**
+- `eleventy.config.js` - Added computed translations resolver
+
+**Results:**
+- Navigation menu labels display correctly (Ürünlerimiz, Kurumsal, etc.)
+- Product dropdown categories with descriptions showing
+- Footer CTA and section titles working
+- All button texts displaying properly
+
+---
+
+### ✅ GAP-FIX PHASE 2: SSR Product Template - **COMPLETED 2024-12-14**
+
+**Problem:** Generic `product.njk` template didn't match the rich SSR Pro design mockup.
+
+**Solution:** Created dedicated `product-ssr.njk` template with 8 sections:
+1. Hero with light gradient, price card, ROI badge, feature checkmarks
+2. Key Benefits (3 colored gradient cards)
+3. Technical Specifications (2 styled cards + application grid)
+4. Application Process (4 numbered colored circles + CTA banner)
+5. Case Study (dark section with glass stat cards)
+6. FAQ (collapsible accordions)
+7. Related Products (gradient product cards)
+8. Final CTA (full gradient with 2 buttons)
+
+**Files Created:**
+- `src/_includes/layouts/product-ssr.njk`
+
+**Files Modified:**
+- `src/content/tr/products/ssr-pro.md` - Rich structured frontmatter
+- `src/content/tr/products/ssr-standard.md` - Rich structured frontmatter
+- `src/content/tr/products/ssr-industrial.md` - Rich structured frontmatter
+- `src/content/en/products/ssr-pro.md` - Rich structured frontmatter
+- `src/content/en/products/ssr-standard.md` - Rich structured frontmatter
+- `src/content/en/products/ssr-industrial.md` - Rich structured frontmatter
+
+---
+
+### ✅ GAP-FIX PHASE 3: Navigation URL Fix - **COMPLETED 2024-12-14**
+
+**Problem:** All navigation links used Turkish URL patterns regardless of language, breaking entire English site navigation.
+
+| Navigation Link | Generated URL (EN) | Actual Page URL | Status |
+|----------------|-------------------|-----------------|--------|
+| Products | `/en/urunlerimiz/` | `/en/products/` | BROKEN |
+| Corporate | `/en/kurumsal/` | `/en/corporate/` | BROKEN |
+| Contact | `/en/iletisim/` | `/en/contact/` | BROKEN |
+
+**Solution:**
+1. Added `urls` section to `tr.json` and `en.json` with all URL mappings
+2. Updated `header.njk` and `footer.njk` to use `{{ translations.urls.xxx }}`
+
+**Files Modified:**
+- `src/_data/tr.json` - Added urls section
+- `src/_data/en.json` - Added urls section
+- `src/_includes/components/header.njk` - Use translation URLs
+- `src/_includes/components/footer.njk` - Use translation URLs
+
+---
+
+### ✅ GAP-FIX PHASE 4: Product URL Consistency - **COMPLETED 2024-12-14**
+
+**Problem:** SSR products nested under `/products/` but chemical products at root level (inconsistent).
+
+**Solution:** Updated all chemical product permalinks to be nested under products:
+- EN: `/en/products/home-chemicals/`, `/en/products/vehicle-chemicals/`, etc.
+- TR: `/tr/urunlerimiz/ev-kimyasallari/`, `/tr/urunlerimiz/arac-kimyasallari/`, etc.
+
+**Files Modified (8):**
+- `src/content/en/products/home-chemicals.md`
+- `src/content/en/products/vehicle-chemicals.md`
+- `src/content/en/products/textile-chemicals.md`
+- `src/content/en/products/marine-chemicals.md`
+- `src/content/tr/products/ev-kimyasallari.md`
+- `src/content/tr/products/arac-kimyasallari.md`
+- `src/content/tr/products/tekstil-kimyasallari.md`
+- `src/content/tr/products/tekne-kimyasallari.md`
+
+---
+
+### ✅ GAP-FIX PHASE 5: Missing Legal Pages - **COMPLETED 2024-12-14**
+
+**Problem:** Footer links to legal pages that didn't exist (404 errors).
+
+**Solution:** Created 4 legal pages with full content.
+
+**Files Created:**
+- `src/content/tr/pages/gizlilik-politikasi.md` → `/tr/gizlilik-politikasi/`
+- `src/content/tr/pages/kullanim-kosullari.md` → `/tr/kullanim-kosullari/`
+- `src/content/en/pages/privacy-policy.md` → `/en/privacy-policy/`
+- `src/content/en/pages/terms-of-use.md` → `/en/terms-of-use/`
+
+---
+
+### ✅ GAP-FIX PHASE 6: Corporate Page Template - **COMPLETED 2024-12-14**
+
+**Problem:** Generic page.njk layout didn't match `kurumsal.html` design.
+
+**Solution:** Created custom `corporate.njk` layout with:
+- Dark navy hero with wave SVG pattern overlay
+- Story section with white card on gray background
+- Vision/Mission section with gradient background and icon cards
+- Timeline component with vertical line, dots, and alternating layout
+- Innovation section with purple gradient and glass-effect cards
+- CTA section with contact link
+
+**Files Created:**
+- `src/_includes/layouts/corporate.njk`
+
+**Files Modified:**
+- `src/content/tr/pages/kurumsal.md`
+- `src/content/en/pages/corporate.md`
+
+---
+
+### ✅ GAP-FIX PHASE 7: Products List Template - **COMPLETED 2024-12-14**
+
+**Problem:** Generic layout didn't match `urunlerimiz.html` design with product cards grid.
+
+**Solution:** Created custom `products.njk` layout with:
+- Purple gradient hero with wave SVG pattern
+- Intro section with centered text
+- Products grid (6 cards) with purple headers, feature tags, and link buttons
+- Surface cleaner special section
+- Dark navy collaboration CTA section
+
+**Files Created:**
+- `src/_includes/layouts/products.njk`
+
+**Files Modified:**
+- `src/content/tr/pages/urunlerimiz.md`
+- `src/content/en/pages/products.md`
+
+---
+
+### ✅ GAP-FIX PHASE 8: Chemical Products Template - **COMPLETED 2024-12-14**
+
+**Problem:** Chemical product pages using generic product.njk, not matching original designs.
+
+**Solution:** Created custom `product-chemical.njk` layout with:
+- Product-specific color theming (green, blue, cyan, purple)
+- Light gradient hero with category badge
+- Quick info boxes and highlight card
+- 2-column features section with icons
+- Use cases cards (3 cards with emojis)
+- Gradient CTA section
+
+**Files Created:**
+- `src/_includes/layouts/product-chemical.njk`
+
+**Files Modified (8):**
+- TR: ev-kimyasallari.md, arac-kimyasallari.md, tekne-kimyasallari.md, tekstil-kimyasallari.md
+- EN: home-chemicals.md, vehicle-chemicals.md, marine-chemicals.md, textile-chemicals.md
+
+---
+
+### ✅ GAP-FIX PHASE 9: Projects Page Template - **COMPLETED 2024-12-14**
+
+**Problem:** Generic layout didn't match `projelerimiz.html` design.
+
+**Solution:** Created custom `projects.njk` layout with:
+- Dark navy gradient hero with radial overlays
+- Intro section with centered text
+- Project cards with numbered badges (01, 02)
+- Gradient image headers with large icons
+- Feature tag badges
+- Technology grid (6 cards with icons)
+- Purple gradient CTA section
+
+**Files Created:**
+- `src/_includes/layouts/projects.njk`
+
+**Files Modified:**
+- `src/content/tr/pages/projelerimiz.md`
+- `src/content/en/pages/projects.md`
+
+---
+
+### ✅ GAP-FIX PHASE 10: Nanotechnology Page Template - **COMPLETED 2024-12-14**
+
+**Problem:** Generic layout didn't match `nanoteknoloji.html` design.
+
+**Solution:** Created custom `nanotechnology.njk` layout with:
+- Purple gradient hero with radial overlay
+- Services section with 6 cards with colored top borders
+- Dark tech section with glass-effect cards (4 technologies)
+- Benefits section with 6 icon items
+- Applications section with gradient cards (6 areas)
+- Pink/red gradient CTA section
+
+**Files Created:**
+- `src/_includes/layouts/nanotechnology.njk`
+
+**Files Modified:**
+- `src/content/tr/pages/nanoteknoloji.md`
+- `src/content/en/pages/nanotechnology.md`
+
+---
+
+### ✅ GAP-FIX PHASE 11: Blog Page Template - **COMPLETED 2024-12-14**
+
+**Problem:** Generic layout didn't match `blog.html` design with coming soon state.
+
+**Solution:** Created custom `blog.njk` layout with:
+- Purple gradient hero with emoji (📝) background overlay
+- Empty state section with large icon (📰), title, description
+- Email subscribe form with styled input and button
+- Topics section with 6 gradient cards
+- Coming Soon section (dark navy) with social links
+- JavaScript for subscribe form handling (bilingual alerts)
+
+**Files Created:**
+- `src/_includes/layouts/blog.njk`
+
+**Files Modified:**
+- `src/content/tr/pages/blog.md`
+- `src/content/en/pages/blog.md`
+
+---
+
+### ✅ GAP-FIX PHASE 12: Homepage Enhancements - **COMPLETED 2024-12-14**
+
+**Problem:** Homepage missing before/after comparison section from original design.
+
+**Solution:** Added Before/After Comparison section:
+- Side-by-side comparison cards showing uncoated vs coated panels
+- "Before" card with red badges (dust, frequent cleaning, efficiency loss, UV damage)
+- "After" card with green badges (self-cleaning, 70% less cleaning, max efficiency, UV protection)
+- Visual indicators with BEFORE/AFTER tags and +8% EFFICIENCY badge
+- Bilingual support (Turkish and English)
+- Responsive grid layout
+
+**Files Modified:**
+- `src/_includes/layouts/home.njk`
+
+---
+
+## 📊 GAP-FIX SUMMARY
+
+| Phase | Description | Templates Created | Files Modified |
+|-------|-------------|-------------------|----------------|
+| 1 | Translation System Fix | - | eleventy.config.js |
+| 2 | SSR Product Template | product-ssr.njk | 6 SSR product files |
+| 3 | Navigation URL Fix | - | tr.json, en.json, header.njk, footer.njk |
+| 4 | Product URL Consistency | - | 8 product files |
+| 5 | Missing Legal Pages | - | 4 new legal pages |
+| 6 | Corporate Template | corporate.njk | 2 content files |
+| 7 | Products List Template | products.njk | 2 content files |
+| 8 | Chemical Products Template | product-chemical.njk | 8 content files |
+| 9 | Projects Template | projects.njk | 2 content files |
+| 10 | Nanotechnology Template | nanotechnology.njk | 2 content files |
+| 11 | Blog Template | blog.njk | 2 content files |
+| 12 | Homepage Enhancements | - | home.njk |
+
+**Total New Templates Created:** 7
+**Total Content Files Modified:** 40+
+**Build Output:** 33→38 pages
+
+---
+
+### ✅ PHASE 13: Content Updates Based on User Feedback - **COMPLETED 2024-12-15**
+
+**User Feedback Implemented:**
+
+#### 1. SSR Product Family - Corrected Specifications
+
+| Product | Warranty | Efficiency | Price | Features |
+|---------|----------|------------|-------|----------|
+| **SSR Standard** | 1 year | 2-6% | ₺10/m² | Easy cleaning |
+| **SSR Pro** | 2 years | 2-6% | ₺14/m² | UV protection, Antireflectivity, Easy cleaning, Reduced cleaning frequency |
+| **SSR Industrial** | 2 years | 2-8% | TBD | Extreme weather resistance, Antireflectivity, UV protection |
+
+**Files Updated:**
+- `src/content/tr/products/ssr-standard.md`
+- `src/content/tr/products/ssr-pro.md`
+- `src/content/tr/products/ssr-industrial.md`
+- `src/content/en/products/ssr-standard.md`
+- `src/content/en/products/ssr-pro.md`
+- `src/content/en/products/ssr-industrial.md`
+
+#### 2. TUPRAS Case Study with ROI Calculator
+
+Added to SSR Pro product page:
+- Kurulu Güç: 1 MWp
+- Günlük Üretim: 4 MWh
+- Materix Verim Hedefi: %3.5
+- Yıllık Verim: 51 MWh ($3,300)
+- ROI (ilk yıl): +121%
+- Geri Ödeme Süresi: ≈5.4 ay
+- Temizleme Sıklığı: %50 azalma
+
+#### 3. Auto Products - Expanded Catalog (9 Products)
+
+| Product | Description |
+|---------|-------------|
+| Materix NFC-11 | Nano Yağmur Kaydırıcı |
+| Nano Hızlı Cila | Anında Parlaklık |
+| Nano Torpido Parlatıcı | İç Mekan Bakımı |
+| Nano Jant Temizleyici | Profesyonel Jant Bakımı |
+| Nano Lastik Parlatıcı | Lastik Bakım |
+| Nano Deri Koltuk Temizleyici | Deri Bakım |
+| Detay Temizleyici | Çok Amaçlı |
+| Cilalı Oto Şampuanı | Temizlik + Cila |
+| **Nano Seramik Kaplama** | Uzun Süreli Boya Koruması |
+
+**Files Updated:**
+- `src/content/tr/products/arac-kimyasallari.md`
+- `src/content/en/products/vehicle-chemicals.md`
+
+#### 4. Home Products (3 Products)
+
+| Product | Description |
+|---------|-------------|
+| Materix NFC-14 | Cam ve Seramik Nano Su İtici |
+| Materix NFC-16 | Ayakkabı/Tekstil Su İtici |
+| Detay Temizleyici | Çok Amaçlı Temizlik |
+
+**Files Updated:**
+- `src/content/tr/products/ev-kimyasallari.md`
+- `src/content/en/products/home-chemicals.md`
+
+#### 5. Marine Products (3 Products)
+
+| Product | Description |
+|---------|-------------|
+| Materix NFC-12 | Tekne ve Yat Camları için Nano Su İtici |
+| Detay Temizleyici | Marine Çok Amaçlı Temizlik |
+| **Nano Seramik Kaplama** | Marine Yüzey Koruması |
+
+**Files Updated:**
+- `src/content/tr/products/tekne-kimyasallari.md`
+- `src/content/en/products/marine-chemicals.md`
+
+#### 6. Sales Channels Configuration
+
+Added to `src/_data/site.json`:
+```json
+"salesChannels": {
+  "koctas": {
+    "name": "Koçtaş",
+    "available": true,
+    "note": "Seçili ürünler mağazalarımızda satılmaktadır"
+  },
+  "trendyol": {
+    "name": "Trendyol",
+    "url": "",
+    "available": false,
+    "note": "Yakında"
+  }
+}
+```
+
+#### 7. TSE Certification
+
+- Added TSE to certifications array in `site.json`
+- Removed ISO 9001 (not yet obtained)
+- Added TSE badge to all product pages
+
+#### 8. Contact Information Updated
+
+- Phone: `0 (232) 480 08 00`
+- Email: `info@materix.com.tr`
+
+#### 9. Pending Items (Awaiting User Input)
+
+| Item | Status | Notes |
+|------|--------|-------|
+| Purira product | ❓ Awaiting clarification | Not found in catalog - what is this product? |
+| ROI Calculator equation | ❓ Awaiting review | User to verify calculation formula |
+| 500+ customers stats | ❓ Awaiting update | User to provide accurate numbers |
+| SSR Industrial price | ❓ Awaiting info | Price per m² needed |
+
+**🔹 PHASE 13 COMPLETE - Content updates applied**
+
+---
+
 ### ✅ FINAL VERIFICATION CHECKLIST
 
 - [ ] ✅ Site live at Netlify URL

@@ -2,27 +2,27 @@
 layout: layouts/product-ssr.njk
 lang: en
 title: "MATERIX SSR Standard"
-description: "Nano coating for residential solar panels. 4-6% efficiency increase, 3-year warranty, easy application."
+description: "Entry-level solar panel nano coating. 2-6% efficiency increase, 1 year durability, easy cleaning."
 permalink: /en/products/ssr-standard/
 product:
   name: "MATERIX SSR Standard"
   code: "SSR-STD"
   badge: "Budget Friendly"
-  description: "Cost-effective nano coating solution ideal for residential and small-scale systems"
+  description: "Ideal entry-level nano coating solution for residential and small businesses"
   image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=800&fit=crop"
-  price: "€ 55"
+  price: "€ 1"
   priceUnit: "/ m²"
-  priceNote: "* Valid for minimum 10 m² application"
-  warranty: "3 Years"
-  roi: "2.8 Years"
-  roiNote: "7-year lifespan"
+  priceNote: "* Product price only. Application not included."
+  warranty: "1 Year"
+  roi: "6-8 Months"
+  roiNote: "Average payback period"
   stats:
     installations: "1.5K+"
     rating: "4.7/5"
   highlights:
-    - "4-6% Efficiency Increase"
-    - "3 Year Warranty"
-    - "DIY Applicable"
+    - "2-6% Efficiency Increase"
+    - "1 Year Durability"
+    - "Easy Cleaning"
   keyBenefits:
     - title: "Efficient Production"
       description: "Increase your annual production with 4-6% efficiency gain. Your panels stay clean longer."
@@ -38,7 +38,7 @@ product:
       icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
   performanceSpecs:
     - label: "Efficiency Increase"
-      value: "4-6%"
+      value: "2-6%"
       color: "blue"
     - label: "Dirt Repellency"
       value: "98%"
@@ -53,11 +53,11 @@ product:
       value: "98.8%"
       color: "blue"
   durabilitySpecs:
-    - label: "Warranty Period"
-      value: "3 Years"
+    - label: "Durability Period"
+      value: "1 Year"
       color: "blue"
     - label: "Estimated Lifespan"
-      value: "5-7 Years"
+      value: "1-2 Years"
       color: "green"
     - label: "Temperature Resistance"
       value: "-30°C / +80°C"
@@ -127,13 +127,13 @@ product:
   relatedProducts:
     - name: "MATERIX SSR Pro"
       url: "/en/products/ssr-pro/"
-      description: "Premium solution for professional installations"
-      price: "€ 85 / m²"
+      description: "Professional solution with UV protection and antireflectivity"
+      price: "€ 1.40 / m²"
       color: "blue"
       icon: "🔬"
     - name: "MATERIX SSR Industrial"
       url: "/en/products/ssr-industrial/"
-      description: "For large-scale solar projects"
+      description: "Special formulation for large-scale solar projects"
       price: "Custom Quote"
       color: "purple"
       icon: "🏭"

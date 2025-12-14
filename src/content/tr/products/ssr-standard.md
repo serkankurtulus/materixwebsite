@@ -2,27 +2,27 @@
 layout: layouts/product-ssr.njk
 lang: tr
 title: "MATERIX SSR Standard"
-description: "Ev tipi güneş panelleri için nano kaplama. %4-6 verim artışı, 3 yıl garanti, kolay uygulama."
+description: "Giriş seviyesi güneş paneli nano kaplama. %2-6 verim artışı, 1 yıl dayanım, kolay temizleme."
 permalink: /tr/urunlerimiz/ssr-standard/
 product:
   name: "MATERIX SSR Standard"
   code: "SSR-STD"
   badge: "Ekonomik Seçim"
-  description: "Ev ve küçük ölçekli sistemler için ideal, uygun maliyetli nano kaplama çözümü"
+  description: "Konut ve küçük işletmeler için ideal başlangıç seviyesi nano kaplama çözümü"
   image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=800&fit=crop"
-  price: "₺ 550"
+  price: "₺ 10"
   priceUnit: "/ m²"
-  priceNote: "* Minimum 10 m² uygulama için geçerlidir"
-  warranty: "3 Yıl"
-  roi: "2.8 Yıl"
-  roiNote: "7 yıl kullanım süresi"
+  priceNote: "* Ürün fiyatıdır. Uygulama dahil değildir."
+  warranty: "1 Yıl"
+  roi: "6-8 Ay"
+  roiNote: "Ortalama geri ödeme süresi"
   stats:
     installations: "1.5K+"
     rating: "4.7/5"
   highlights:
-    - "%4-6 Verim Artışı"
-    - "3 Yıl Garanti"
-    - "DIY Uygulanabilir"
+    - "%2-6 Verim Artışı"
+    - "1 Yıl Dayanım"
+    - "Kolay Temizleme"
   keyBenefits:
     - title: "Verimli Üretim"
       description: "%4-6 verim artışı ile yıllık üretiminizi artırın. Panelleriniz daha uzun süre temiz kalır."
@@ -38,7 +38,7 @@ product:
       icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
   performanceSpecs:
     - label: "Verim Artışı"
-      value: "%4-6"
+      value: "%2-6"
       color: "blue"
     - label: "Kir İtme Özelliği"
       value: "%98"
@@ -53,11 +53,11 @@ product:
       value: "%98.8"
       color: "blue"
   durabilitySpecs:
-    - label: "Garanti Süresi"
-      value: "3 Yıl"
+    - label: "Dayanım Süresi"
+      value: "1 Yıl"
       color: "blue"
     - label: "Tahmini Ömür"
-      value: "5-7 Yıl"
+      value: "1-2 Yıl"
       color: "green"
     - label: "Sıcaklık Dayanımı"
       value: "-30°C / +80°C"
@@ -127,13 +127,13 @@ product:
   relatedProducts:
     - name: "MATERIX SSR Pro"
       url: "/tr/urunlerimiz/ssr-pro/"
-      description: "Profesyonel kurulumlar için premium çözüm"
-      price: "₺ 850 / m²"
+      description: "UV koruması ve antireflektivite ile profesyonel çözüm"
+      price: "₺ 14 / m²"
       color: "blue"
       icon: "🔬"
     - name: "MATERIX SSR Industrial"
       url: "/tr/urunlerimiz/ssr-industrial/"
-      description: "Büyük ölçekli GES projeleri için"
+      description: "Büyük ölçekli GES projeleri için özel formülasyon"
       price: "Özel Teklif"
       color: "purple"
       icon: "🏭"
