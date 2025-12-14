@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Materix Nano Teknoloji</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '📝';
+            position: absolute;
+            font-size: 400px;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Empty State Section */
+        .empty-state {
+            padding: 120px 20px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .empty-state-icon {
+            font-size: 120px;
+            margin-bottom: 30px;
+            opacity: 0.3;
+        }
+
+        .empty-state h2 {
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .empty-state p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .subscribe-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-family: inherit;
+        }
+
+        .subscribe-form input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .subscribe-form button {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .subscribe-form button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Blog Topics Section */
+        .topics-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .topic-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .topic-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .topic-card h3 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .topic-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .coming-soon h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .coming-soon p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            font-size: 28px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .empty-state h2 {
+                font-size: 28px;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sample Blog Post Styles (for future use) */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .blog-content {
+            padding: 30px;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+
+        .blog-excerpt {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .blog-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .blog-link:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">MATERIX</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Materix Blog</h1>
+        <p>Nanoteknoloji dünyasından haberler, yenilikler ve içgörüler</p>
+    </section>
+
+    <!-- Empty State -->
+    <section class="empty-state">
+        <div class="container">
+            <div class="empty-state-icon">📰</div>
+            <h2>Blog Yazıları Yakında!</h2>
+            <p>Nanoteknoloji, yenilikçi projelerimiz, sektör haberleri ve daha fazlası hakkında içerikler çok yakında burada olacak. Yeni içeriklerden haberdar olmak için bültenimize abone olun.</p>
+            
+            <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+                <input type="email" placeholder="E-posta adresiniz" required>
+                <button type="submit">Abone Ol</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Blog Topics Preview -->
+    <section class="topics-section">
+        <div class="container">
+            <h2 class="section-title">Gelecek İçerik Konularımız</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">🔬</div>
+                    <h3>Nanoteknoloji Temelleri</h3>
+                    <p>Nanoteknolojinin temel prensipleri ve uygulama alanları hakkında detaylı içerikler</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">☀️</div>
+                    <h3>Güneş Enerjisi</h3>
+                    <p>Güneş panellerinde verim artırma yöntemleri ve temizlik teknolojileri</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">💧</div>
+                    <h3>Su İtici Teknolojiler</h3>
+                    <p>Hidrofobik kaplamalar ve self-cleaning yüzey teknolojileri</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🌱</div>
+                    <h3>Sürdürülebilirlik</h3>
+                    <p>Çevre dostu nanoteknoloji uygulamaları ve yeşil enerji çözümleri</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🏭</div>
+                    <h3>Endüstriyel Uygulamalar</h3>
+                    <p>Farklı sektörlerde nanoteknoloji kullanımı ve başarı hikayeleri</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🚀</div>
+                    <h3>İnovasyon Haberleri</h3>
+                    <p>Materix'in yeni projeleri, ödüller ve sektörel gelişmeler</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
+        <div class="container">
+            <h2>İçeriklerimiz Hazırlanıyor</h2>
+            <p>Nanoteknoloji ve yenilikçi projelerimiz hakkında bilgilendirici içerikler çok yakında!</p>
+            <p>Bizi sosyal medyada takip ederek güncel gelişmelerden haberdar olabilirsiniz.</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">🔗</a>
+                <a href="#" class="social-link">📧</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Materix Nano Teknoloji. Tüm hakları saklıdır.</p>
+            <p>Dokuz Eylül Üniversitesi, Tınaztepe Yerleşkesi, DEPARK Beta Binası</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubscribe(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input').value;
+            alert('Teşekkürler! ' + email + ' adresi bülten listemize eklendi. Yeni içeriklerden haberdar olacaksınız.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

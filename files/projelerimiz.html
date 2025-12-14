@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz - Materix Nano Teknoloji</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-content h2 {
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .intro-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #0066ff);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .project-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d4ff, #0066ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(0, 100, 255, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 0%, transparent 60%);
+        }
+
+        .project-icon {
+            font-size: 100px;
+            opacity: 0.3;
+            color: white;
+        }
+
+        .project-content {
+            padding: 40px;
+        }
+
+        .project-title {
+            font-size: 28px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .project-description {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .project-features {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .feature-badge {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #0066ff;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #00d4ff, #0066ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 100, 255, 0.3);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 50px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        /* Technologies Section */
+        .tech-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tech-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .tech-card h3 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+
+        .tech-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">MATERIX</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Projelerimiz</h1>
+        <p>Su, kir, yağ ve mikro organizma itici teknolojilerin yanında yüzey teknolojileri üretmekteyiz. Aynı zamanda atölyemizde, nanoteknoloji konusunda çeşitli projeler üretmekteyiz.</p>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2>İnovasyon ve Sürdürülebilirlik</h2>
+                <p>Materix olarak, nanoteknoloji alanında öncü projeler geliştirerek endüstrilere yenilikçi çözümler sunuyoruz. Projelerimiz, çevre dostu yaklaşımlar ve kaynak verimliliği odaklı teknolojiler üzerine inşa edilmiştir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Aktif Projelerimiz</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Solar Panel -->
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-image">
+                        <div class="project-icon">☀️</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Güneş Panellerine Özel Nano Kaplama</h3>
+                        <p class="project-description">
+                            Materix'in çözümleriyle donatılmış olan güneş panelleriniz, artık çok daha uzun ömürlü. Temizlik ürünü kullanımını azaltarak kimyasalların yaratmış olduğu aşınmaları azaltır ve güneş panelinizin kullanım süresini uzatır.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-badge">⚡ Enerji Verimliliği</span>
+                            <span class="feature-badge">💧 Su Tasarrufu</span>
+                            <span class="feature-badge">🌱 Sürdürülebilir</span>
+                            <span class="feature-badge">🔬 KOSGEB Destekli</span>
+                        </div>
+                        <a href="gunes-paneli-nanofilm.html" class="project-link">Proje Detayları →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Metal Surfaces -->
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-image">
+                        <div class="project-icon">🛡️</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Metal Yüzeyler için Nano Kaplama</h3>
+                        <p class="project-description">
+                            Metal yüzeyler üzerinde UV direnci oluşturmanın yanı sıra, toz/kir itici özellikleri ile yüzeylerin daha uzun süre temiz kalmasını sağlar. Endüstriyel uygulamalar için geliştirilmiş koruyucu nano film teknolojisi.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-badge">☀️ UV Koruma</span>
+                            <span class="feature-badge">🧹 Kir İtici</span>
+                            <span class="feature-badge">🏭 Endüstriyel</span>
+                            <span class="feature-badge">⏱️ Uzun Ömür</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="tech-section">
+        <div class="container">
+            <h2 class="section-title">Teknoloji Alanlarımız</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🔬</div>
+                    <h3>Yüzey Mühendisliği</h3>
+                    <p>Katı cisimlerin yüzey özelliklerini iyileştirerek çevresel koruma, mekanik performans ve görünüm düzenlemesi sağlar.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🎯</div>
+                    <h3>İnce Film Teknolojisi</h3>
+                    <p>İnce filmler, malzemenin atomlarını düzenli bir taban üzerine yerleştirerek oluşturulan 1 mikronun altındaki kaplama malzemeleridir.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">✨</div>
+                    <h3>Kendi Kendini Temizleme</h3>
+                    <p>Teknolojik uygulamalarda kendi kendini temizleme, aktif ve pasif yöntemlerle, güneş paneli gibi yüzeyleri bağımsız olarak temizler.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">💧</div>
+                    <h3>Hidrofobik Kaplamalar</h3>
+                    <p>Su itici nano filmler, yüzeylerde su tutunmasını engelleyerek kolay temizlik ve kireç oluşumunu önler.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌞</div>
+                    <h3>Fotokatalitik Teknoloji</h3>
+                    <p>Güneş ışığı ile aktive olan fotokatalitik yüzeyler, organik kirleri parçalayarak yüzeyi temiz tutar.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🦠</div>
+                    <h3>Antibakteriyel Özellikler</h3>
+                    <p>Nano kaplamamız bakterilerin yüzeyde çoğalmasını engeller ve hijyenik ortamlar yaratır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Birlikte Proje Geliştirelim</h2>
+            <p>Gerçekleştirmek istediğiniz bir fikriniz varsa ve bu fikir nanoteknoloji alanındaysa, harika haber: Materix ile tanışmanın vakti geldi!</p>
+            <p>Atölyemiz sayesinde nanoteknoloji alanında özel projeler üretmekteyiz. İş birliği için bizimle iletişime geçin!</p>
+            <a href="iletisim.html" class="cta-button">İletişime Geçin</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Materix Nano Teknoloji. Tüm hakları saklıdır.</p>
+            <p>Dokuz Eylül Üniversitesi, Tınaztepe Yerleşkesi, DEPARK Beta Binası</p>
+        </div>
+    </footer>
+</body>
+</html>

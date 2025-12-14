@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünlerimiz - Materix Nano Teknoloji</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-content h2 {
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .intro-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Products Grid */
+        .products-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .product-code {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .product-body {
+            padding: 30px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .product-features {
+            margin-top: 20px;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 5px;
+            color: #667eea;
+        }
+
+        .product-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+
+        .product-link:hover {
+            transform: scale(1.05);
+        }
+
+        /* Collaboration Section */
+        .collaboration-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .collaboration-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .collaboration-content h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        .collaboration-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: #00d4ff;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+        }
+
+        /* Surface Cleaner Section */
+        .cleaner-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .cleaner-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .cleaner-card h3 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .cleaner-card p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">MATERIX</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>BÜYÜK FİKİRLERİ GERÇEK KILIYORUZ</h1>
+        <p>Nanoteknoloji ile gelişmiş yüzey koruma çözümleri</p>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Ürünlerimizi İnceleyin</h2>
+                <p>Materix, nanoteknoloji alanında öncü çözümler sunarak farklı sektörlerin ihtiyaçlarına yönelik yenilikçi ürünler geliştirmektedir. Su itici, fotokatalitik ve koruyucu özellikler ile donatılmış nano film kaplamalarımız, yüzeylerin ömrünü uzatır ve bakım maliyetlerini azaltır.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Ürün Portföyümüz</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-code">MATERIX NFC-11</div>
+                        <div class="product-name">Araç Camları için Yağmur Kaydırıcı</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Nanoteknoloji içeren özel formülüyle yüksek kalitede bir su itici ince film kaplama ürünüdür. Yağmurlu havalardaki sürüş deneyimini iyileştirir ve cam yüzey üzerindeki etkisini 1 yıla kadar korur.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">🚗 Araç Camları</span>
+                            <span class="feature-tag">💧 Su İtici</span>
+                            <span class="feature-tag">⏱️ 1 Yıl Koruma</span>
+                        </div>
+                        <a href="arac-kimyasallari.html" class="product-link">Detayları Gör</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-code">MATERIX NFC-12</div>
+                        <div class="product-name">Tekne ve Yat Camları için Su Kaydırıcı</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Marine Clean özel formülüyle yüksek kalitede bir su itici. Tekne ve yat camlarında görüşü arttırır, iç mekan camlarında kireç ve su lekesi temizliğini kolaylaştırır.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">⛵ Tekne & Yat</span>
+                            <span class="feature-tag">🌊 Deniz Suyu Direnci</span>
+                            <span class="feature-tag">⏱️ 1 Yıl Koruma</span>
+                        </div>
+                        <a href="tekne-kimyasallari.html" class="product-link">Detayları Gör</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-code">MATERIX NFC-14</div>
+                        <div class="product-name">Ev Cam ve Seramik Yüzeyleri için</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Home Clean, yüksek su ve yağ iticilik özelliği ile yüzeylerde su tutunmasını engeller. Kireç oluşumunu önler ve temizlik deterjanlarının kullanımını minimize eder.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">🏠 Ev Kullanımı</span>
+                            <span class="feature-tag">🧽 Kolay Temizlik</span>
+                            <span class="feature-tag">✨ Kireç Önleyici</span>
+                        </div>
+                        <a href="ev-kimyasallari.html" class="product-link">Detayları Gör</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-code">MATERIX NFC-15</div>
+                        <div class="product-name">Ahşap Yüzeyler için Su-itici</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Wood Clean Ahşap Koruyucu Nano Sprey ile doğal ahşap ürünlerinizin ve bahçe mobilyalarınızın ömrünü su hasarlarından koruyarak uzatabilirsiniz.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">🪵 Ahşap Koruma</span>
+                            <span class="feature-tag">☔ Su Hasarı Önleme</span>
+                            <span class="feature-tag">🌳 Doğal Görünüm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-code">MATERIX NFC-16</div>
+                        <div class="product-name">Tekstil Ürünleri için Su-itici</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Hidrofobik nanoparçacıklar sayesinde tekstil ve kumaş malzemelere sıvı itici özelliği kazandırır. Leke tutmasını önler ve temizlenmesini kolaylaştırır.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">👕 Tekstil</span>
+                            <span class="feature-tag">🛡️ Leke Önleme</span>
+                            <span class="feature-tag">👁️ Görünmez Tabaka</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Solar Panel -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-code">MATERIX SSR</div>
+                        <div class="product-name">Güneş Panelleri için Nano Kaplama</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Güneş panellerinizin yıllık verimini %2 ila %6 arasında arttıran, fotokatalitik ve antireflektif özellikler içeren özel nano film kaplama.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">☀️ Güneş Paneli</span>
+                            <span class="feature-tag">📈 %8'e Kadar Verim</span>
+                            <span class="feature-tag">♻️ Sürdürülebilir</span>
+                        </div>
+                        <a href="gunes-paneli-nanofilm.html" class="product-link">Detayları Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surface Cleaner Section -->
+    <section class="cleaner-section">
+        <div class="container">
+            <div class="cleaner-card">
+                <h3>MATERİX YÜZEY TEMİZLEYİCİ</h3>
+                <p><strong>Nano Film Uygulama Öncesi Yüzey Temizleyici</strong></p>
+                <p>Araç, ev ve tekne camlarına uygulanacak su itici nano kaplama işlemini daha etkili bir hale getirmek için işlem öncesinde kullanılabilecek bir temizlik ürünüdür. Yüzeyi yağ ve kirden arındırarak nano malzeme spreyleme işleminin uygulanabilirliğini arttırır. Yüzeye su iticilik kazandırma işlemi için daha kaliteli sonuçlar elde etmenizi sağlar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="collaboration-section">
+        <div class="collaboration-content">
+            <h2>İŞ BİRLİĞİ</h2>
+            <p>Atölyemiz sayesinde nanoteknoloji alanında özel projeler üretmekteyiz.</p>
+            <p>Gerçekleştirmek istediğiniz bir fikriniz varsa ve bu fikir nanoteknoloji alanındaysa, harika haber: Materix ile tanışmanın vakti geldi!</p>
+            <a href="iletisim.html" class="cta-button">İletişime Geçin</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Materix Nano Teknoloji. Tüm hakları saklıdır.</p>
+            <p>Dokuz Eylül Üniversitesi, Tınaztepe Yerleşkesi, DEPARK Beta Binası</p>
+        </div>
+    </footer>
+</body>
+</html>

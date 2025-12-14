@@ -1,0 +1,239 @@
+{
+  "lang": "en",
+  "locale": "en-US",
+  "dir": "ltr",
+  "langName": "English",
+  "langFlag": "🇬🇧",
+
+  "meta": {
+    "defaultTitle": "MATERIX | Revolutionizing Solar Energy with Nanotechnology",
+    "defaultDescription": "MATERIX Nano Technology - Get up to 8% more efficiency from your solar panels. Nanotechnology-powered coating solutions.",
+    "keywords": "nanotechnology, solar panel, nano coating, efficiency, MATERIX, SSR, solar panel, cleaning"
+  },
+
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "corporate": "Corporate",
+    "projects": "Projects",
+    "nanotechnology": "Nanotechnology",
+    "contact": "Contact",
+    "blog": "Blog",
+    "onlineStore": "Online Store"
+  },
+
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Nanotechnology solutions for every need",
+    "categories": {
+      "solar": "Solar Panel Products",
+      "solarDesc": "SSR Pro, Standard, Industrial",
+      "home": "Home Chemicals",
+      "homeDesc": "For glass and ceramic surfaces",
+      "vehicle": "Vehicle Chemicals",
+      "vehicleDesc": "Rain repellent nano film",
+      "textile": "Textile Chemicals",
+      "textileDesc": "Water repellent fabric protection",
+      "marine": "Marine Chemicals",
+      "marineDesc": "Yacht and boat glass protection"
+    },
+    "ssrPro": {
+      "name": "MATERIX SSR Pro",
+      "tagline": "Most Popular",
+      "description": "Long-lasting nano coating developed for professional installations. 5-year warranty.",
+      "efficiency": "6-8% efficiency increase",
+      "selfCleaning": "Self-cleaning",
+      "uvProtection": "UV protection",
+      "warranty": "5-year warranty",
+      "price": "₺ 850 / m²"
+    },
+    "ssrStandard": {
+      "name": "MATERIX SSR Standard",
+      "description": "Ideal solution for residential and small businesses. Affordable price, high performance.",
+      "efficiency": "4-6% efficiency increase",
+      "waterRepellent": "Water and dirt repellent",
+      "warranty": "3-year warranty",
+      "price": "₺ 550 / m²"
+    },
+    "ssrIndustrial": {
+      "name": "MATERIX SSR Industrial",
+      "tagline": "Industrial",
+      "description": "Special formulation for solar power plants and large-scale projects.",
+      "efficiency": "7-8% efficiency increase",
+      "weatherResistant": "Resistant to extreme weather conditions",
+      "warranty": "7-year warranty",
+      "price": "Custom Quote"
+    }
+  },
+
+  "hero": {
+    "badge": "Turkey's Nanotechnology Leader",
+    "title": "Get Up To",
+    "titleHighlight": "8% More Efficiency",
+    "titleEnd": "From Your Solar Panels",
+    "description": "Protect your solar panels with nanotechnology-powered MATERIX SSR, reduce cleaning costs, and increase annual efficiency.",
+    "ctaPrimary": "Get Free Quote",
+    "ctaSecondary": "Explore Products"
+  },
+
+  "stats": {
+    "customers": "Happy Customers",
+    "applicationArea": "Application Area",
+    "satisfaction": "Customer Satisfaction"
+  },
+
+  "calculator": {
+    "title": "How Much Can You Save?",
+    "subtitle": "Calculate your potential savings for your solar panel system",
+    "power": "Installed Power (kWp)",
+    "production": "Annual Production (kWh)",
+    "price": "Electricity Unit Price (₺/kWh)",
+    "results": "Your Estimated Savings",
+    "efficiencyGain": "Efficiency Gain (Average 4%)",
+    "annualSavings": "Annual Additional Income",
+    "tenYearSavings": "10-Year Total Savings",
+    "co2Reduction": "CO₂ Reduction (Annual)",
+    "getReport": "Request Detailed Report"
+  },
+
+  "technology": {
+    "title": "Shaping the Future with Nanotechnology",
+    "description": "MATERIX's patented nano coating technology creates an invisible protective layer on the surface of your solar panels.",
+    "surfaceEngineering": {
+      "title": "Surface Engineering",
+      "description": "Specially designed formulation at molecular level protects your panels from environmental factors."
+    },
+    "selfCleaning": {
+      "title": "Self-Cleaning",
+      "description": "Thanks to hydrophobic properties, water and dirt don't stick to the panel, providing natural cleaning with rain."
+    },
+    "longLastingProtection": {
+      "title": "Long-Lasting Protection",
+      "description": "UV-resistant formulation maintains its effectiveness for years and extends panel life."
+    },
+    "labResults": "Laboratory Tests",
+    "effectiveness": "99.7% Effectiveness",
+    "independentTests": "Independent test results"
+  },
+
+  "caseStudy": {
+    "title": "Real Results, Real Customers",
+    "subtitle": "See the efficiency increase with MATERIX with your own eyes",
+    "label": "CASE STUDY",
+    "projectTitle": "İzmir Solar Power Plant Project - 500 kWp",
+    "projectDescription": "Data obtained after MATERIX SSR Pro application at a 500 kWp solar power plant installed in 2022.",
+    "efficiencyGain": "Efficiency Increase",
+    "annualIncome": "Annual Additional Income",
+    "cleaningSavings": "Cleaning Savings",
+    "roiPeriod": "ROI Period",
+    "testimonial": "After the MATERIX application, we observed a significant increase in efficiency and a decrease in maintenance costs. Highly recommended.",
+    "testimonialAuthor": "Mehmet K., Plant Manager",
+    "withoutMaterix": "WITHOUT MATERIX",
+    "withMaterix": "WITH MATERIX",
+    "without": {
+      "cleaning": "Manual cleaning required 2-3 times a month",
+      "loss": "5-15% efficiency loss due to dirt and dust accumulation",
+      "cost": "High water and labor costs",
+      "wear": "Wear due to chemical use"
+    },
+    "with": {
+      "cleaning": "Self-cleaning - minimum maintenance",
+      "gain": "6-8% efficiency increase guaranteed",
+      "savings": "Up to 70% cleaning cost savings",
+      "protection": "Extended panel life and protection"
+    }
+  },
+
+  "partners": {
+    "title": "Trusted Partners and Certifications",
+    "kosgeb": "Supported",
+    "depark": "Technopark",
+    "iso": "Certified",
+    "tubitak": "Test Approved"
+  },
+
+  "cta": {
+    "title": "Ready to Get Maximum Efficiency from Your Solar Energy?",
+    "description": "Our MATERIX experts are waiting to offer you a customized solution.",
+    "primaryButton": "Request Free Survey",
+    "phone": "0850 XXX XX XX"
+  },
+
+  "footer": {
+    "tagline": "Building the future of solar energy with nanotechnology.",
+    "products": "Products",
+    "company": "Company",
+    "contact": "Contact",
+    "about": "About Us",
+    "technology": "Our Technology",
+    "references": "References",
+    "careers": "Careers",
+    "pricing": "Pricing",
+    "copyright": "© {year} MATERIX Nano Technology Inc. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "contact": "Contact Us",
+    "getQuote": "Get Quote",
+    "viewDetails": "View Details",
+    "requestQuote": "Request Quote",
+    "send": "Send",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "menu": "Menu",
+    "search": "Search",
+    "language": "Language",
+    "year": "year",
+    "years": "years",
+    "month": "month",
+    "months": "months"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email Address",
+      "phone": "Your Phone Number",
+      "company": "Company Name",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully. We will get back to you as soon as possible.",
+      "error": "An error occurred while sending your message. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "workingHours": "Working Hours",
+      "workingHoursValue": "Monday - Friday: 09:00 - 18:00"
+    }
+  },
+
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest news about nanotechnology and solar energy",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "author": "Author",
+    "categories": "Categories",
+    "tags": "Tags",
+    "relatedPosts": "Related Posts",
+    "noPosts": "No blog posts yet."
+  },
+
+  "404": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or may have been moved.",
+    "backHome": "Back to Home"
+  }
+}

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATERIX SSR Pro | Profesyonel Güneş Paneli Nano Kaplama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #10b981 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.4);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #1e40af;
+            color: #1e40af;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #1e40af;
+            color: white;
+        }
+        
+        .spec-badge {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(16, 185, 129, 0.1));
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 glass-effect border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="materix-homepage-mockup.html">
+                        <img src="materix-logo.png" alt="MATERIX Logo" class="h-8 md:h-10">
+                    </a>
+                    <span class="ml-4 text-sm text-gray-600 hidden md:block">Nanoteknoloji</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="materix-homepage-mockup.html#urunler" class="text-blue-700 font-medium">Ürünler</a>
+                    <a href="materix-homepage-mockup.html#teknoloji" class="text-gray-700 hover:text-blue-700 font-medium">Teknoloji</a>
+                    <a href="materix-homepage-mockup.html#referanslar" class="text-gray-700 hover:text-blue-700 font-medium">Referanslar</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-700 font-medium">İletişim</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
+                        Online Mağaza
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full text-sm font-semibold text-green-700 mb-4">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        En Popüler Seçim
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                        MATERIX SSR Pro
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Profesyonel kurulumlar için geliştirilmiş, endüstri lideri nano kaplama teknolojisi
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="font-semibold">%6-8 Verim Artışı</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="font-semibold">5 Yıl Garanti</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="font-semibold">Profesyonel Uygulama</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span class="text-4xl font-bold text-blue-700">₺ 850</span>
+                            <span class="text-gray-600">/ m²</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-4">
+                            * Minimum 50 m² uygulama için geçerlidir
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 btn-primary text-white py-4 rounded-lg font-bold text-lg">
+                                Hemen Sipariş Ver
+                            </button>
+                            <button class="btn-secondary bg-white px-6 py-4 rounded-lg font-bold">
+                                Teklif Al
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>2.5K+ Kurulum</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>4.9/5 Müşteri Puanı</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=800&fit=crop" 
+                             alt="MATERIX SSR Pro Application" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-6 max-w-xs">
+                        <div class="text-sm font-semibold text-blue-700 mb-1">Ortalama ROI</div>
+                        <div class="text-3xl font-bold text-gray-900">2.3 Yıl</div>
+                        <div class="text-sm text-gray-600">10 yıl kullanım süresi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Neden MATERIX SSR Pro?</h2>
+                <p class="text-xl text-gray-600">Profesyonel projelerde tercih edilen üstün özellikler</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Maksimum Verim</h3>
+                    <p class="text-gray-600">
+                        %6-8 verim artışı ile yıllık üretiminizi önemli ölçüde artırın. 
+                        Güneş panelleriniz her zaman temiz ve optimize edilmiş durumda.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Uzun Ömürlü Koruma</h3>
+                    <p class="text-gray-600">
+                        5 yıl garanti ile gönül rahatlığı. UV dayanımlı formülasyon, 
+                        aşırı hava koşullarında bile etkinliğini korur.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Maliyet Tasarrufu</h3>
+                    <p class="text-gray-600">
+                        Temizlik maliyetlerinde %70'e varan azalma. Daha az bakım, 
+                        daha fazla üretim, daha yüksek karlılık.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Teknik Özellikler</h2>
+                <p class="text-xl text-gray-600">Profesyonel performans için geliştirilmiş nano teknoloji</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Performans Özellikleri</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Verim Artışı</span>
+                            <span class="text-blue-700 font-bold">%6-8</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Kir İtme Özelliği</span>
+                            <span class="text-green-600 font-bold">%99.5</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Su İtme Açısı</span>
+                            <span class="text-blue-700 font-bold">115°-120°</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">UV Geçirgenlik</span>
+                            <span class="text-green-600 font-bold">%98+</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">Işık Transmisyonu</span>
+                            <span class="text-blue-700 font-bold">%99.2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Dayanıklılık</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Garanti Süresi</span>
+                            <span class="text-blue-700 font-bold">5 Yıl</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Tahmini Ömür</span>
+                            <span class="text-green-600 font-bold">8-10 Yıl</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Sıcaklık Dayanımı</span>
+                            <span class="text-blue-700 font-bold">-40°C / +85°C</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">UV Dayanımı</span>
+                            <span class="text-green-600 font-bold">Mükemmel</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">Kimyasal Dayanım</span>
+                            <span class="text-blue-700 font-bold">pH 2-12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Uygulama Detayları</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-700 mb-2">50 m²</div>
+                        <div class="text-sm text-gray-600">Minimum Alan</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">24-48h</div>
+                        <div class="text-sm text-gray-600">Kuruma Süresi</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">0.8-1.2 L</div>
+                        <div class="text-sm text-gray-600">Tüketim / 100m²</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-600 mb-2">1 Gün</div>
+                        <div class="text-sm text-gray-600">Uygulama / 1000m²</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Uygulama Süreci</h2>
+                <p class="text-xl text-gray-600">Profesyonel ekibimiz tarafından 4 aşamalı uygulama</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-blue-700">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Yüzey Temizliği</h3>
+                    <p class="text-gray-600 text-sm">
+                        Panel yüzeyleri özel temizlik solüsyonları ile detaylı şekilde temizlenir
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-green-700">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Yüzey Hazırlığı</h3>
+                    <p class="text-gray-600 text-sm">
+                        Primer uygulaması ile yüzey nano kaplama için optimize edilir
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-purple-700">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Nano Kaplama</h3>
+                    <p class="text-gray-600 text-sm">
+                        MATERIX SSR Pro profesyonel ekipmanla eşit şekilde uygulanır
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-orange-700">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Kontrol & Test</h3>
+                    <p class="text-gray-600 text-sm">
+                        Uygulama kalitesi test edilir ve garanti belgesi düzenlenir
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Profesyonel Uygulama Dahil</h3>
+                <p class="text-gray-700 mb-6">
+                    Tüm MATERIX SSR Pro siparişleri, sertifikalı uygulama ekibimiz tarafından 
+                    yerinde yapılır. Ek uygulama ücreti yoktur.
+                </p>
+                <button class="btn-primary text-white px-8 py-4 rounded-lg font-bold text-lg">
+                    Ücretsiz Keşif Randevusu Al
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="text-green-400 font-semibold mb-2">BAŞARI HİKAYESİ</div>
+                    <h2 class="text-4xl font-bold mb-6">
+                        İzmir GES: 500 kWp Santral
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        2022 yılında devreye alınan güneş enerji santralinde MATERIX SSR Pro 
+                        uygulaması sonrası 24 aylık izleme verileri.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-green-400 mb-2">+6.8%</div>
+                            <div class="text-gray-300">Ortalama Verim Artışı</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">₺185K</div>
+                            <div class="text-gray-300">Yıllık Ek Gelir</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-purple-400 mb-2">%72</div>
+                            <div class="text-gray-300">Temizlik Maliyet Azalması</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-orange-400 mb-2">2.1 yıl</div>
+                            <div class="text-gray-300">Geri Ödeme Süresi</div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="border-l-4 border-green-400 pl-6 italic text-gray-300 mb-4">
+                        "MATERIX SSR Pro uygulaması sonrası hem üretimimiz arttı hem de 
+                        bakım maliyetlerimiz önemli ölçüde düştü. İlk 6 ayda bile farkı gördük."
+                    </blockquote>
+                    <div class="text-gray-400">
+                        — Mehmet Kaya, Tesis Müdürü
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=1000&fit=crop" 
+                         alt="Solar Farm Case Study" 
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer">
+                        MATERIX SSR Pro'yu kendim uygulayabilir miyim?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        Hayır, MATERIX SSR Pro profesyonel uygulama gerektiren bir üründür. 
+                        Maksimum etkinlik için özel ekipman ve teknik bilgi gereklidir. 
+                        Tüm siparişlerimiz sertifikalı uygulama ekibimiz tarafından yapılır.
+                    </p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer">
+                        Garanti kapsamı nedir?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        5 yıl süresince ürün performansını garantiliyoruz. Bu süre içinde 
+                        normal kullanım koşullarında kaplama etkinliğini kaybederse, 
+                        ücretsiz yeniden uygulama yapılır.
+                    </p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer">
+                        Ne sıklıkla temizlik yapmam gerekir?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        MATERIX SSR Pro uygulaması sonrası panelleriniz kendi kendini temizler. 
+                        Sadece yılda 1-2 kez hafif su ile durulamayı öneririz. 
+                        Kimyasal temizleyicilere gerek kalmaz.
+                    </p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer">
+                        Mevcut panellere uygulanabilir mi?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        Evet! MATERIX SSR Pro tüm silikon tabanlı güneş panellerine 
+                        uygulanabilir. Panellerinizin yaşı veya markası fark etmez.
+                    </p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer">
+                        Teslimat süresi ne kadar?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        Sipariş sonrası 5-7 iş günü içinde keşif randevusu alınır. 
+                        Uygulama genellikle keşiften 2 hafta sonra gerçekleştirilir.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Diğer Ürünlerimiz</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="materix-ssr-standard.html" class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                        <div class="text-white text-6xl">⚡</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">MATERIX SSR Standard</h3>
+                        <p class="text-gray-600 mb-4">
+                            Konut ve küçük işletmeler için ekonomik çözüm
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-2xl font-bold text-blue-700">₺ 550 / m²</div>
+                            <span class="text-blue-700 font-semibold">Detayları Gör →</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="materix-ssr-industrial.html" class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <div class="text-white text-6xl">🏭</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">MATERIX SSR Industrial</h3>
+                        <p class="text-gray-600 mb-4">
+                            Büyük ölçekli GES projeleri için özel formülasyon
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-2xl font-bold text-blue-700">Özel Teklif</div>
+                            <span class="text-blue-700 font-semibold">Detayları Gör →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-4xl font-bold mb-6">
+                MATERIX SSR Pro ile Verimliliği Artırın
+            </h2>
+            <p class="text-xl mb-8 text-blue-100">
+                Profesyonel uygulama ve 5 yıl garanti ile güneş panelinizin performansını maksimize edin.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all">
+                    Hemen Sipariş Ver
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-700 transition-all">
+                    Ücretsiz Teklif Al
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="materix-logo.png" alt="MATERIX Logo" class="h-8 mb-4 brightness-0 invert">
+                    <p class="text-gray-400 mb-4">
+                        Nanoteknoloji ile güneş enerjisinde geleceği inşa ediyoruz.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Ürünler</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="materix-ssr-pro.html" class="hover:text-white">MATERIX SSR Pro</a></li>
+                        <li><a href="materix-ssr-standard.html" class="hover:text-white">MATERIX SSR Standard</a></li>
+                        <li><a href="materix-ssr-industrial.html" class="hover:text-white">MATERIX SSR Industrial</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Şirket</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="materix-homepage-mockup.html" class="hover:text-white">Ana Sayfa</a></li>
+                        <li><a href="#" class="hover:text-white">Hakkımızda</a></li>
+                        <li><a href="#" class="hover:text-white">Referanslar</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">İletişim</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>DEÜ DEPARK, İzmir</li>
+                        <li>info@materix.tech</li>
+                        <li>0850 XXX XX XX</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MATERIX Nano Teknoloji San. Tic. A.Ş. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

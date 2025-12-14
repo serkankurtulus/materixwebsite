@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATERIX SSR Standard | Konut ve İşletmeler için Nano Kaplama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #10b981 100%); }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); }
+        .btn-primary { background: linear-gradient(135deg, #1e40af, #3b82f6); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(30, 64, 175, 0.4); }
+        .btn-secondary { border: 2px solid #1e40af; color: #1e40af; transition: all 0.3s ease; }
+        .btn-secondary:hover { background: #1e40af; color: white; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="fixed w-full top-0 z-50 glass-effect border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="materix-homepage-mockup.html"><img src="materix-logo.png" alt="MATERIX Logo" class="h-8 md:h-10"></a>
+                    <span class="ml-4 text-sm text-gray-600 hidden md:block">Nanoteknoloji</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="materix-homepage-mockup.html#urunler" class="text-blue-700 font-medium">Ürünler</a>
+                    <a href="materix-homepage-mockup.html#teknoloji" class="text-gray-700 hover:text-blue-700 font-medium">Teknoloji</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-700 font-medium">İletişim</a>
+                </div>
+                <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">Online Mağaza</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-gradient-to-b from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-sm font-semibold text-blue-700 mb-4">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        En Uygun Fiyat
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">MATERIX SSR Standard</h1>
+                    <p class="text-xl text-gray-600 mb-6">Ev ve küçük işletmeler için ekonomik, etkili nano kaplama çözümü</p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="font-semibold">%4-6 Verim Artışı</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="font-semibold">3 Yıl Garanti</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span class="text-4xl font-bold text-blue-700">₺ 550</span>
+                            <span class="text-gray-600">/ m²</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-4">* Minimum 20 m² uygulama için geçerlidir</div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 btn-primary text-white py-4 rounded-lg font-bold text-lg">Hemen Sipariş Ver</button>
+                            <button class="btn-secondary bg-white px-6 py-4 rounded-lg font-bold">Teklif Al</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=800&fit=crop" alt="Residential Solar" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Ev ve İşletmeniz için İdeal</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ev Kullanımına Uygun</h3>
+                    <p class="text-gray-600">Çatı üstü güneş panelleriniz için özel olarak optimize edilmiş.</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Uygun Fiyat</h3>
+                    <p class="text-gray-600">Kaliteli nano kaplama teknolojisini erişilebilir fiyatla sunuyoruz.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Kolay Uygulama</h3>
+                    <p class="text-gray-600">Detaylı kullanım kılavuzu ile kendiniz uygulayabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="materix-logo.png" alt="MATERIX Logo" class="h-8 mb-4 brightness-0 invert">
+                    <p class="text-gray-400 mb-4">Nanoteknoloji ile güneş enerjisinde geleceği inşa ediyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Ürünler</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="materix-ssr-pro.html" class="hover:text-white">MATERIX SSR Pro</a></li>
+                        <li><a href="materix-ssr-standard.html" class="hover:text-white">MATERIX SSR Standard</a></li>
+                        <li><a href="materix-ssr-industrial.html" class="hover:text-white">MATERIX SSR Industrial</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Şirket</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="materix-homepage-mockup.html" class="hover:text-white">Ana Sayfa</a></li>
+                        <li><a href="#" class="hover:text-white">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">İletişim</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>DEÜ DEPARK, İzmir</li>
+                        <li>info@materix.tech</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MATERIX Nano Teknoloji San. Tic. A.Ş. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

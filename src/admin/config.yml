@@ -1,0 +1,237 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local backend for development (comment out for production)
+# local_backend: true
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Site URL for preview
+site_url: https://materix.netlify.app
+display_url: https://materix.netlify.app
+
+# Logo for CMS
+logo_url: /assets/images/materix-logo.png
+
+# Slug configuration
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# Collections
+collections:
+  # ============================================
+  # TURKISH PAGES
+  # ============================================
+  - name: "pages_tr"
+    label: "Sayfalar (TR)"
+    label_singular: "Sayfa (TR)"
+    folder: "src/content/tr/pages"
+    create: false
+    delete: false
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Dil", name: "lang", widget: "hidden", default: "tr" }
+      - { label: "Çeviriler", name: "translations", widget: "hidden", default: "tr" }
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Açıklama (SEO)", name: "description", widget: "text" }
+      - { label: "URL", name: "permalink", widget: "string" }
+      - { label: "Sıra", name: "order", widget: "number", value_type: "int", min: 1, max: 20 }
+      - label: "Hero Bölümü"
+        name: "hero"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Başlık", name: "title", widget: "string" }
+          - { label: "Açıklama", name: "description", widget: "text", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  # ============================================
+  # ENGLISH PAGES
+  # ============================================
+  - name: "pages_en"
+    label: "Pages (EN)"
+    label_singular: "Page (EN)"
+    folder: "src/content/en/pages"
+    create: false
+    delete: false
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Translations", name: "translations", widget: "hidden", default: "en" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+      - { label: "URL", name: "permalink", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1, max: 20 }
+      - label: "Hero Section"
+        name: "hero"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  # ============================================
+  # TURKISH PRODUCTS
+  # ============================================
+  - name: "products_tr"
+    label: "Ürünler (TR)"
+    label_singular: "Ürün (TR)"
+    folder: "src/content/tr/products"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/product.njk" }
+      - { label: "Dil", name: "lang", widget: "hidden", default: "tr" }
+      - { label: "Çeviriler", name: "translations", widget: "hidden", default: "tr" }
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Açıklama (SEO)", name: "description", widget: "text" }
+      - { label: "URL", name: "permalink", widget: "string" }
+      - label: "Ürün Bilgileri"
+        name: "product"
+        widget: "object"
+        fields:
+          - { label: "Ürün Adı", name: "name", widget: "string" }
+          - { label: "Ürün Kodu", name: "code", widget: "string" }
+          - { label: "Kategori", name: "category", widget: "string" }
+          - { label: "Tür", name: "type", widget: "select", options: ["Sprey", "Sıvı", "Jel", "Diğer"] }
+          - { label: "Ürün Açıklaması", name: "description", widget: "text" }
+          - { label: "Koruma Süresi", name: "protection_duration", widget: "string", required: false }
+          - { label: "Ürün Görseli", name: "image", widget: "image", required: false }
+      - label: "Özellikler"
+        name: "features"
+        widget: "list"
+        field: { label: "Özellik", name: "feature", widget: "string" }
+      - { label: "Detaylı İçerik", name: "body", widget: "markdown" }
+
+  # ============================================
+  # ENGLISH PRODUCTS
+  # ============================================
+  - name: "products_en"
+    label: "Products (EN)"
+    label_singular: "Product (EN)"
+    folder: "src/content/en/products"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/product.njk" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Translations", name: "translations", widget: "hidden", default: "en" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+      - { label: "URL", name: "permalink", widget: "string" }
+      - label: "Product Information"
+        name: "product"
+        widget: "object"
+        fields:
+          - { label: "Product Name", name: "name", widget: "string" }
+          - { label: "Product Code", name: "code", widget: "string" }
+          - { label: "Category", name: "category", widget: "string" }
+          - { label: "Type", name: "type", widget: "select", options: ["Spray", "Liquid", "Gel", "Other"] }
+          - { label: "Product Description", name: "description", widget: "text" }
+          - { label: "Protection Duration", name: "protection_duration", widget: "string", required: false }
+          - { label: "Product Image", name: "image", widget: "image", required: false }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        field: { label: "Feature", name: "feature", widget: "string" }
+      - { label: "Detailed Content", name: "body", widget: "markdown" }
+
+  # ============================================
+  # TURKISH BLOG
+  # ============================================
+  - name: "blog_tr"
+    label: "Blog Yazıları (TR)"
+    label_singular: "Blog Yazısı (TR)"
+    folder: "src/content/tr/blog"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Dil", name: "lang", widget: "hidden", default: "tr" }
+      - { label: "Çeviriler", name: "translations", widget: "hidden", default: "tr" }
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Açıklama (SEO)", name: "description", widget: "text" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
+      - { label: "Yazar", name: "author", widget: "string", default: "Materix Ekibi" }
+      - { label: "Öne Çıkan Görsel", name: "featured_image", widget: "image", required: false }
+      - { label: "Etiketler", name: "tags", widget: "list", default: ["nanoteknoloji"] }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  # ============================================
+  # ENGLISH BLOG
+  # ============================================
+  - name: "blog_en"
+    label: "Blog Posts (EN)"
+    label_singular: "Blog Post (EN)"
+    folder: "src/content/en/blog"
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Translations", name: "translations", widget: "hidden", default: "en" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Materix Team" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list", default: ["nanotechnology"] }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  # ============================================
+  # SITE SETTINGS
+  # ============================================
+  - name: "settings"
+    label: "Site Ayarları / Settings"
+    files:
+      - label: "Genel Ayarlar / General Settings"
+        name: "site"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Adı", name: "name", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Varsayılan Dil", name: "defaultLang", widget: "select", options: ["tr", "en"] }
+          - label: "İletişim / Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "E-posta", name: "email", widget: "string" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "Adres (TR)", name: "address_tr", widget: "text" }
+              - { label: "Address (EN)", name: "address_en", widget: "text" }
+          - label: "Sosyal Medya / Social Media"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "YouTube", name: "youtube", widget: "string", required: false }
+              - { label: "Twitter/X", name: "twitter", widget: "string", required: false }
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Varsayılan Başlık (TR)", name: "default_title_tr", widget: "string" }
+              - { label: "Default Title (EN)", name: "default_title_en", widget: "string" }
+              - { label: "OG Görsel", name: "og_image", widget: "image", required: false }

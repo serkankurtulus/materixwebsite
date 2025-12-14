@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+.cache/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Netlify
+.netlify/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tailwind (generated files - uncomment if using build process)
+# src/assets/css/output.css
+
+# Temporary files
+tmp/
+temp/

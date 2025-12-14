@@ -1,0 +1,143 @@
+---
+layout: layouts/base.njk
+---
+
+{# Product Detail Layout #}
+
+{# Hero Section #}
+<section class="pt-12 pb-16 bg-gradient-to-br from-primary via-blue-500 to-accent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            {# Product Info #}
+            <div class="text-white">
+                {% if product.category %}
+                <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4 backdrop-blur-sm">
+                    {{ product.category }}
+                </div>
+                {% endif %}
+
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ product.name or title }}</h1>
+
+                {% if product.code %}
+                <div class="text-blue-200 mb-4">{% if lang == 'tr' %}Ürün Kodu{% else %}Product Code{% endif %}: {{ product.code }}</div>
+                {% endif %}
+
+                <p class="text-xl text-blue-100 mb-8">{{ product.description or description }}</p>
+
+                {# Quick Info #}
+                <div class="flex flex-wrap gap-4 mb-8">
+                    {% if product.type %}
+                    <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        <span class="text-blue-200 text-sm">{% if lang == 'tr' %}Tip{% else %}Type{% endif %}</span>
+                        <div class="font-semibold">{{ product.type }}</div>
+                    </div>
+                    {% endif %}
+                    {% if product.protection_duration %}
+                    <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        <span class="text-blue-200 text-sm">{% if lang == 'tr' %}Koruma Süresi{% else %}Protection{% endif %}</span>
+                        <div class="font-semibold">{{ product.protection_duration }}</div>
+                    </div>
+                    {% endif %}
+                    {% if product.warranty %}
+                    <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        <span class="text-blue-200 text-sm">{% if lang == 'tr' %}Garanti{% else %}Warranty{% endif %}</span>
+                        <div class="font-semibold">{{ product.warranty }}</div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                {# CTA #}
+                <div class="flex flex-wrap gap-4">
+                    <a href="/{{ lang }}/iletisim/" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105 shadow-xl">
+                        {{ translations.common.getQuote }}
+                    </a>
+                    <a href="tel:{{ site.contact.phone | replace(' ', '') }}" class="bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-primary transition-all">
+                        {{ site.contact.phone }}
+                    </a>
+                </div>
+            </div>
+
+            {# Product Image #}
+            <div class="hidden md:block">
+                {% if product.image %}
+                <img src="{{ product.image }}"
+                     alt="{{ product.name or title }}"
+                     class="rounded-2xl shadow-2xl w-full">
+                {% else %}
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-12 flex items-center justify-center">
+                    <div class="text-8xl">🔬</div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{# Features Section #}
+{% if features %}
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            {% if lang == 'tr' %}Özellikler{% else %}Features{% endif %}
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            {% for feature in features %}
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm">
+                <svg class="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">{{ feature }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Benefits Section #}
+{% if benefits %}
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            {% if lang == 'tr' %}Faydalar{% else %}Benefits{% endif %}
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for benefit in benefits %}
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{{ benefit.title }}</h3>
+                <p class="text-gray-600">{{ benefit.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Main Content #}
+<section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-primary">
+            {{ content | safe }}
+        </div>
+    </div>
+</section>
+
+{# CTA Section #}
+<section class="py-16 bg-primary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <h2 class="text-3xl font-bold mb-4">
+            {% if lang == 'tr' %}Bu Ürün Hakkında Bilgi Almak İster misiniz?{% else %}Want to Learn More About This Product?{% endif %}
+        </h2>
+        <p class="text-xl text-blue-100 mb-8">
+            {% if lang == 'tr' %}Uzman ekibimiz size yardımcı olmak için hazır.{% else %}Our expert team is ready to help you.{% endif %}
+        </p>
+        <a href="/{{ lang }}/iletisim/" class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105">
+            {{ translations.common.contact }}
+        </a>
+    </div>
+</section>

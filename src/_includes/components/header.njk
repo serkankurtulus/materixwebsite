@@ -1,0 +1,149 @@
+{# Navigation Header Component #}
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            {# Logo #}
+            <div class="flex items-center">
+                <a href="/{{ lang }}/" class="flex items-center">
+                    <img src="/assets/images/materix-logo.png"
+                         alt="{{ site.name }} Logo"
+                         class="h-8 md:h-10 crisp-image"
+                         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 50%22%3E%3Ctext x=%2210%22 y=%2235%22 font-family=%22Inter%22 font-weight=%22bold%22 font-size=%2224%22 fill=%22%231e40af%22%3EMATERIX%3C/text%3E%3C/svg%3E';">
+                    <span class="ml-3 text-sm text-gray-500 hidden md:block">Nanoteknoloji</span>
+                </a>
+            </div>
+
+            {# Desktop Navigation #}
+            <div class="hidden lg:flex items-center space-x-8">
+                {# Products Dropdown #}
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors">
+                        {{ translations.nav.products }}
+                        <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    {# Dropdown Menu #}
+                    <div class="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                        <div class="py-2">
+                            <a href="/{{ lang }}/urunlerimiz/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                                <div class="font-semibold">{{ translations.products.categories.solar }}</div>
+                                <div class="text-sm text-gray-500">{{ translations.products.categories.solarDesc }}</div>
+                            </a>
+                            <a href="/{{ lang }}/ev-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                                <div class="font-semibold">{{ translations.products.categories.home }}</div>
+                                <div class="text-sm text-gray-500">{{ translations.products.categories.homeDesc }}</div>
+                            </a>
+                            <a href="/{{ lang }}/arac-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                                <div class="font-semibold">{{ translations.products.categories.vehicle }}</div>
+                                <div class="text-sm text-gray-500">{{ translations.products.categories.vehicleDesc }}</div>
+                            </a>
+                            <a href="/{{ lang }}/tekstil-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                                <div class="font-semibold">{{ translations.products.categories.textile }}</div>
+                                <div class="text-sm text-gray-500">{{ translations.products.categories.textileDesc }}</div>
+                            </a>
+                            <a href="/{{ lang }}/tekne-kimyasallari/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">
+                                <div class="font-semibold">{{ translations.products.categories.marine }}</div>
+                                <div class="text-sm text-gray-500">{{ translations.products.categories.marineDesc }}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {# Other Navigation Links #}
+                <a href="/{{ lang }}/kurumsal/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                    {{ translations.nav.corporate }}
+                </a>
+                <a href="/{{ lang }}/projelerimiz/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                    {{ translations.nav.projects }}
+                </a>
+                <a href="/{{ lang }}/nanoteknoloji/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                    {{ translations.nav.nanotechnology }}
+                </a>
+                <a href="/{{ lang }}/blog/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                    {{ translations.nav.blog }}
+                </a>
+                <a href="/{{ lang }}/iletisim/" class="text-gray-700 hover:text-primary font-medium transition-colors">
+                    {{ translations.nav.contact }}
+                </a>
+            </div>
+
+            {# Right Side: Language Switcher + CTA #}
+            <div class="flex items-center space-x-4">
+                {# Language Switcher #}
+                {% include "components/language-switcher.njk" %}
+
+                {# CTA Button (Desktop) #}
+                <a href="/{{ lang }}/iletisim/" class="hidden md:inline-flex bg-gradient-to-r from-primary to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                    {{ translations.common.getQuote }}
+                </a>
+
+                {# Mobile Menu Button #}
+                <button type="button"
+                        class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                        onclick="toggleMobileMenu()"
+                        aria-label="Toggle menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <svg class="w-6 h-6 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {# Mobile Menu #}
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+        <div class="px-4 py-4 space-y-2">
+            {# Products Accordion #}
+            <div class="mobile-accordion">
+                <button type="button"
+                        class="flex items-center justify-between w-full py-3 text-gray-700 font-medium"
+                        onclick="toggleMobileAccordion(this)">
+                    {{ translations.nav.products }}
+                    <svg class="w-5 h-5 transition-transform accordion-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden pl-4 pb-2 space-y-2">
+                    <a href="/{{ lang }}/urunlerimiz/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.solar }}</a>
+                    <a href="/{{ lang }}/ev-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.home }}</a>
+                    <a href="/{{ lang }}/arac-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.vehicle }}</a>
+                    <a href="/{{ lang }}/tekstil-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.textile }}</a>
+                    <a href="/{{ lang }}/tekne-kimyasallari/" class="block py-2 text-gray-600 hover:text-primary">{{ translations.products.categories.marine }}</a>
+                </div>
+            </div>
+
+            {# Other Links #}
+            <a href="/{{ lang }}/kurumsal/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+                {{ translations.nav.corporate }}
+            </a>
+            <a href="/{{ lang }}/projelerimiz/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+                {{ translations.nav.projects }}
+            </a>
+            <a href="/{{ lang }}/nanoteknoloji/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+                {{ translations.nav.nanotechnology }}
+            </a>
+            <a href="/{{ lang }}/blog/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+                {{ translations.nav.blog }}
+            </a>
+            <a href="/{{ lang }}/iletisim/" class="block py-3 text-gray-700 font-medium hover:text-primary">
+                {{ translations.nav.contact }}
+            </a>
+
+            {# Mobile CTA #}
+            <div class="pt-4">
+                <a href="/{{ lang }}/iletisim/" class="block w-full text-center bg-gradient-to-r from-primary to-blue-500 text-white px-6 py-3 rounded-lg font-semibold">
+                    {{ translations.common.getQuote }}
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{# Spacer for fixed header #}
+<div class="h-20"></div>

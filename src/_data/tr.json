@@ -1,0 +1,239 @@
+{
+  "lang": "tr",
+  "locale": "tr-TR",
+  "dir": "ltr",
+  "langName": "Türkçe",
+  "langFlag": "🇹🇷",
+
+  "meta": {
+    "defaultTitle": "MATERIX | Nanoteknoloji ile Güneş Enerjisinde Devrim",
+    "defaultDescription": "MATERIX Nano Teknoloji - Güneş panellerinizden %8'e varan daha fazla verim alın. Nanoteknoloji destekli kaplama çözümleri.",
+    "keywords": "nanoteknoloji, güneş paneli, nano kaplama, verimlilik, MATERIX, SSR, solar panel, temizlik"
+  },
+
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünlerimiz",
+    "corporate": "Kurumsal",
+    "projects": "Projelerimiz",
+    "nanotechnology": "Nanoteknoloji",
+    "contact": "İletişim",
+    "blog": "Blog",
+    "onlineStore": "Online Mağaza"
+  },
+
+  "products": {
+    "title": "Ürünlerimiz",
+    "subtitle": "Her ihtiyaca özel nanoteknoloji çözümleri",
+    "categories": {
+      "solar": "Güneş Paneli Ürünleri",
+      "solarDesc": "SSR Pro, Standard, Industrial",
+      "home": "Ev Kimyasalları",
+      "homeDesc": "Cam ve seramik yüzeyler için",
+      "vehicle": "Araç Kimyasalları",
+      "vehicleDesc": "Yağmur kaydırıcı nano film",
+      "textile": "Tekstil Kimyasalları",
+      "textileDesc": "Su itici kumaş koruması",
+      "marine": "Tekne Kimyasalları",
+      "marineDesc": "Yat ve tekne cam koruması"
+    },
+    "ssrPro": {
+      "name": "MATERIX SSR Pro",
+      "tagline": "En Popüler",
+      "description": "Profesyonel kurulumlar için geliştirilmiş, uzun ömürlü nano kaplama. 5 yıl garanti.",
+      "efficiency": "%6-8 verim artışı",
+      "selfCleaning": "Kendi kendini temizler",
+      "uvProtection": "UV koruması",
+      "warranty": "5 yıl garanti",
+      "price": "₺ 850 / m²"
+    },
+    "ssrStandard": {
+      "name": "MATERIX SSR Standard",
+      "description": "Konut ve küçük işletmeler için ideal çözüm. Uygun fiyat, yüksek performans.",
+      "efficiency": "%4-6 verim artışı",
+      "waterRepellent": "Su ve kir itici",
+      "warranty": "3 yıl garanti",
+      "price": "₺ 550 / m²"
+    },
+    "ssrIndustrial": {
+      "name": "MATERIX SSR Industrial",
+      "tagline": "Endüstriyel",
+      "description": "Güneş enerji santralları ve büyük ölçekli projeler için özel formülasyon.",
+      "efficiency": "%7-8 verim artışı",
+      "weatherResistant": "Aşırı hava koşullarına dayanıklı",
+      "warranty": "7 yıl garanti",
+      "price": "Özel Teklif"
+    }
+  },
+
+  "hero": {
+    "badge": "Türkiye'nin Nanoteknoloji Lideri",
+    "title": "Güneş Panelinizden",
+    "titleHighlight": "%8'e Varan",
+    "titleEnd": "Daha Fazla Verim",
+    "description": "Nanoteknoloji destekli MATERIX SSR ile güneş panellerinizi koruyun, temizlik maliyetlerini azaltın ve yıllık verimliliği artırın.",
+    "ctaPrimary": "Ücretsiz Teklif Alın",
+    "ctaSecondary": "Ürünleri İncele"
+  },
+
+  "stats": {
+    "customers": "Mutlu Müşteri",
+    "applicationArea": "Uygulama Alanı",
+    "satisfaction": "Müşteri Memnuniyeti"
+  },
+
+  "calculator": {
+    "title": "Ne Kadar Tasarruf Edebilirsiniz?",
+    "subtitle": "Güneş panel sisteminiz için potansiyel kazancınızı hesaplayın",
+    "power": "Kurulu Güç (kWp)",
+    "production": "Yıllık Üretim (kWh)",
+    "price": "Elektrik Birim Fiyatı (₺/kWh)",
+    "results": "Tahmini Kazançlarınız",
+    "efficiencyGain": "Verim Artışı (Ortalama %4)",
+    "annualSavings": "Yıllık Ek Gelir",
+    "tenYearSavings": "10 Yıllık Toplam Kazanç",
+    "co2Reduction": "CO₂ Azaltımı (Yıllık)",
+    "getReport": "Detaylı Rapor İsteyin"
+  },
+
+  "technology": {
+    "title": "Nanoteknoloji ile Geleceği Şekillendiriyoruz",
+    "description": "MATERIX'in patentli nano kaplama teknolojisi, güneş panellerinizin yüzeyinde görünmez bir koruyucu tabaka oluşturur.",
+    "surfaceEngineering": {
+      "title": "Yüzey Mühendisliği",
+      "description": "Moleküler seviyede tasarlanmış özel formülasyon, panellerinizi çevresel etkenlerden korur."
+    },
+    "selfCleaning": {
+      "title": "Kendi Kendini Temizleme",
+      "description": "Hidrofobik özellikler sayesinde su ve kir panele yapışmaz, yağmur ile doğal temizlik sağlanır."
+    },
+    "longLastingProtection": {
+      "title": "Uzun Ömürlü Koruma",
+      "description": "UV dayanımlı formülasyon, yıllarca etkisini korur ve panel ömrünü uzatır."
+    },
+    "labResults": "Laboratuvar Testleri",
+    "effectiveness": "%99.7 Etkinlik",
+    "independentTests": "Bağımsız test sonuçları"
+  },
+
+  "caseStudy": {
+    "title": "Gerçek Sonuçlar, Gerçek Müşteriler",
+    "subtitle": "MATERIX ile verimlilik artışını gözlerinizle görün",
+    "label": "VAKA ÇALIŞMASI",
+    "projectTitle": "İzmir GES Projesi - 500 kWp",
+    "projectDescription": "2022 yılında kurulu 500 kWp güneş enerji santralinde MATERIX SSR Pro uygulaması sonrası elde edilen veriler.",
+    "efficiencyGain": "Verim Artışı",
+    "annualIncome": "Yıllık Ek Gelir",
+    "cleaningSavings": "Temizlik Tasarrufu",
+    "roiPeriod": "ROI Süresi",
+    "testimonial": "MATERIX uygulaması sonrası hem verimlilik artışı hem de bakım maliyetlerinde ciddi düşüş gözlemledik. Kesinlikle öneririm.",
+    "testimonialAuthor": "Mehmet K., Tesis Müdürü",
+    "withoutMaterix": "MATERIX OLMADAN",
+    "withMaterix": "MATERIX İLE",
+    "without": {
+      "cleaning": "Ayda 2-3 kez manuel temizlik gereksinimi",
+      "loss": "Kir ve toz birikimi nedeniyle %5-15 verim kaybı",
+      "cost": "Yüksek su ve işçilik maliyeti",
+      "wear": "Kimyasal kullanımından kaynaklı aşınma"
+    },
+    "with": {
+      "cleaning": "Kendi kendini temizleme - minimum bakım",
+      "gain": "%6-8 verim artışı garantisi",
+      "savings": "%70'e varan temizlik maliyet tasarrufu",
+      "protection": "Panel ömrü uzatımı ve koruma"
+    }
+  },
+
+  "partners": {
+    "title": "Güvenilir Ortaklar ve Sertifikalar",
+    "kosgeb": "Destekli",
+    "depark": "Teknokent",
+    "iso": "Sertifikalı",
+    "tubitak": "Test Onaylı"
+  },
+
+  "cta": {
+    "title": "Güneş Enerjinizden Maksimum Verimi Almaya Hazır mısınız?",
+    "description": "MATERIX uzmanlarımız size özel çözüm önerisi sunmak için bekliyor.",
+    "primaryButton": "Ücretsiz Keşif İsteyin",
+    "phone": "0850 XXX XX XX"
+  },
+
+  "footer": {
+    "tagline": "Nanoteknoloji ile güneş enerjisinde geleceği inşa ediyoruz.",
+    "products": "Ürünler",
+    "company": "Şirket",
+    "contact": "İletişim",
+    "about": "Hakkımızda",
+    "technology": "Teknolojimiz",
+    "references": "Referanslar",
+    "careers": "Kariyer",
+    "pricing": "Fiyatlandırma",
+    "copyright": "© {year} MATERIX Nano Teknoloji San. Tic. A.Ş. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları"
+  },
+
+  "common": {
+    "readMore": "Devamını Oku",
+    "learnMore": "Daha Fazla Bilgi",
+    "contact": "İletişime Geç",
+    "getQuote": "Teklif Al",
+    "viewDetails": "Detaylı İncele",
+    "requestQuote": "Teklif İste",
+    "send": "Gönder",
+    "submit": "Gönder",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "close": "Kapat",
+    "menu": "Menü",
+    "search": "Ara",
+    "language": "Dil",
+    "year": "yıl",
+    "years": "yıl",
+    "month": "ay",
+    "months": "ay"
+  },
+
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Bizimle iletişime geçin",
+    "form": {
+      "name": "Adınız Soyadınız",
+      "email": "E-posta Adresiniz",
+      "phone": "Telefon Numaranız",
+      "company": "Şirket Adı",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "submit": "Mesaj Gönder",
+      "success": "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.",
+      "error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "info": {
+      "address": "Adres",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "workingHours": "Çalışma Saatleri",
+      "workingHoursValue": "Pazartesi - Cuma: 09:00 - 18:00"
+    }
+  },
+
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Nanoteknoloji ve güneş enerjisi hakkında en son haberler",
+    "readMore": "Devamını Oku",
+    "publishedOn": "Yayınlanma Tarihi",
+    "author": "Yazar",
+    "categories": "Kategoriler",
+    "tags": "Etiketler",
+    "relatedPosts": "İlgili Yazılar",
+    "noPosts": "Henüz blog yazısı bulunmuyor."
+  },
+
+  "404": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+    "backHome": "Ana Sayfaya Dön"
+  }
+}

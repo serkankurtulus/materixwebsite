@@ -1,0 +1,32 @@
+{
+  "name": "materix-website",
+  "version": "1.0.0",
+  "description": "MATERIX Nano Technology Website - Multi-language website with CMS",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx @11ty/eleventy --serve",
+    "build:css": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/styles.css --minify",
+    "watch:css": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/styles.css --watch",
+    "dev": "npm run serve"
+  },
+  "keywords": [
+    "materix",
+    "nanotechnology",
+    "eleventy",
+    "netlify-cms",
+    "multi-language"
+  ],
+  "author": "MATERIX Nano Teknoloji",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

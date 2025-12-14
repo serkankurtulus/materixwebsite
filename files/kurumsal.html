@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal - Materix Nano Teknoloji</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(0,212,255,0.1)"/></svg>') no-repeat center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #0066ff);
+        }
+
+        .story-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-top: 40px;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /* Vision Mission Section */
+        .vision-mission {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .vm-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .vm-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .vm-card h3 {
+            font-size: 28px;
+            color: #0066ff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vm-card p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff, #0066ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d4ff, #0066ff);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: calc(50% + 40px);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 40px);
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-date {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066ff;
+            margin-bottom: 10px;
+        }
+
+        .timeline-text {
+            font-size: 17px;
+            color: #555;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #0066ff;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.2);
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .product-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">MATERIX</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>MATERIX'İN HİKAYESİ</h1>
+        <p>Nanoteknoloji ile geleceğe öncülük ediyoruz</p>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">Hikayemiz</h2>
+            <div class="story-content">
+                <p>MATERIX Nano Teknoloji San. Tic. A.Ş., endüstri ve akademik bir birleşimi temsil eden, nanoteknoloji odaklı bir girişimdir. Türkiye'nin önde gelen "İnovasyonda Kadın Girişimcilik Kampı"nda 5. sırada yer alan iş fikrimiz, KOSGEB Ar-Ge, Ür-Ge ve İnovasyon Destek Programı kapsamında hibe kazanarak, Ocak 2022'de DEPARK'ta (Dokuz Eylül Üniversitesi Teknoparkı) kök saldı.</p>
+                <br>
+                <p>Haziran 2022'de, hidrofobik nano film ürün prototipimizin tamamlanmasıyla birlikte Zone Gaziemir'de bir atölye kurarak sektöre adım attık. Malzemelerin yüzey özelliklerini iyileştirmek adına, sadece yüzeydeki malzemeyi değiştirmeyi tercih ediyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Mission Section -->
+    <section class="vision-mission">
+        <div class="container">
+            <h2 class="section-title">İLKELERİMİZ</h2>
+            <div class="vm-grid">
+                <div class="vm-card">
+                    <h3>
+                        <span class="icon">🎯</span>
+                        Vizyonumuz
+                    </h3>
+                    <p>Yenilikçi nano kaplama teknolojileri aracılığıyla sürdürülebilir bir geleceğe öncülük etmek ve küresel endüstrileri benzersiz çevresel sorumluluk ve kaynak verimliliği elde etme konusunda güçlendirmek.</p>
+                </div>
+                <div class="vm-card">
+                    <h3>
+                        <span class="icon">🚀</span>
+                        Misyonumuz
+                    </h3>
+                    <p>Materix'te misyonumuz, dayanıklılığı artıran, çevresel etkiyi azaltan ve çeşitli uygulamalarda performansı optimize eden gelişmiş nano kaplamalarla, yüzey korumasında devrim yaratmaktır. Aralıksız inovasyon ve sürdürülebilirliğe olan bağlılığımız sayesinde, kaynak tüketimini en aza indirmeye, çevresel ayak izlerini azaltmaya ve endüstrileri daha temiz, daha verimli bir dünyada gelişmeye teşvik etmek için çaba gösteriyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Yolculuğumuz</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Kasım 2020</div>
+                        <p class="timeline-text">İnovasyonda Kadın Yarışması Finalisti Olduk</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aralık 2021</div>
+                        <p class="timeline-text">KOSGEB Ar-Ge, Ür-Ge ve İnovasyon Onayı Aldık</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Ocak 2022</div>
+                        <p class="timeline-text">DEPARK'ta (Dokuz Eylül Üniversitesi Teknoparkı) Şirketimizi Kurduk</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Haziran 2022</div>
+                        <p class="timeline-text">Zone Gaziemir'de Atölyemizi Açtık ve İlk Ürünümüzü Piyasaya Sunduk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Innovation Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">SÜRDÜRÜLEBİLİR BİR GELECEĞE ADIM ATALIM!</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>İnce Filmlerde Yenilik</h3>
+                    <p>Spreyleme yöntemi ile uygulanan ince filmlerimiz, şeffaf tabakalar oluşturarak uygulandıkları yüzeye özel fonksiyonlar kazandırıyor. Hidrofobik, fotokatalitik, koruyuculuk, antibakteriyel gibi özelliklerle malzemeleri daha yüksek nitelikli hale getiriyoruz.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Teknolojik İnovasyon</h3>
+                    <p>Likit formdaki ince filmlerimiz, 300 nanometreyi geçmeyecek şekilde şeffaf tabakalar oluştururken, uygulandıkları yüzeye özel fonksiyonlar kazandırarak endüstriye öncü bir teknoloji sunmaktadır.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Kaynak Tasarrufu</h3>
+                    <p>Malzemelerin tamamını değiştirmek yerine, yüzeydeki malzemeyi değiştirmek büyük bir kaynak tasarrufu sağlamaktadır. Bu, hem ekonomik hem de çevresel açıdan sürdürülebilir çözümler sunmamıza olanak tanır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Materix Nano Teknoloji. Tüm hakları saklıdır.</p>
+            <p>Dokuz Eylül Üniversitesi, Tınaztepe Yerleşkesi, DEPARK Beta Binası</p>
+        </div>
+    </footer>
+</body>
+</html>

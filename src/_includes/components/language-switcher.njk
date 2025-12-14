@@ -1,0 +1,22 @@
+{# Language Switcher Component #}
+<div class="language-switcher relative">
+    {% if lang == 'tr' %}
+    {# Currently Turkish, show link to English #}
+    <a href="/en{{ page.url | replace('/tr', '') | replace('//', '/') }}"
+       class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors px-3 py-2 rounded-lg hover:bg-gray-100"
+       title="Switch to English"
+       hreflang="en">
+        <span class="mr-2 text-lg">🇬🇧</span>
+        <span class="hidden sm:inline">EN</span>
+    </a>
+    {% else %}
+    {# Currently English, show link to Turkish #}
+    <a href="{{ page.url | replace('/en/', '/tr/') | replace('/en', '/tr') }}"
+       class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors px-3 py-2 rounded-lg hover:bg-gray-100"
+       title="Türkçe'ye geç"
+       hreflang="tr">
+        <span class="mr-2 text-lg">🇹🇷</span>
+        <span class="hidden sm:inline">TR</span>
+    </a>
+    {% endif %}
+</div>

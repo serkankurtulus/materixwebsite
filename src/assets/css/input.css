@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   MATERIX Design System - Custom Styles
+   ========================================== */
+
+@layer base {
+  * {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-dark-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Glass Effect */
+  .glass-effect {
+    @apply bg-white/95 backdrop-blur-[10px] shadow-glass;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply bg-gradient-button text-white px-6 py-3 rounded-button font-semibold;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:scale-105 hover:shadow-button;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-button font-semibold;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:bg-primary hover:text-white;
+  }
+
+  /* Outline Button (White) */
+  .btn-outline-white {
+    @apply border-2 border-white text-white px-6 py-3 rounded-button font-semibold;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:bg-white hover:text-primary;
+  }
+
+  /* Card with hover lift effect */
+  .card {
+    @apply bg-white rounded-card shadow-card border border-gray-100;
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .card:hover {
+    @apply -translate-y-2 shadow-card-hover;
+  }
+
+  /* Gradient Background */
+  .gradient-bg {
+    @apply bg-gradient-primary;
+  }
+
+  /* Section Padding */
+  .section-padding {
+    @apply py-section;
+  }
+
+  /* Stat Number with Gradient Text */
+  .stat-number {
+    @apply text-5xl font-extrabold bg-gradient-text bg-clip-text text-transparent;
+  }
+
+  /* Calculator Card Background */
+  .calculator-card {
+    @apply bg-gradient-card;
+  }
+
+  /* Navigation Link */
+  .nav-link {
+    @apply text-dark-700 hover:text-primary font-medium transition-colors duration-200;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply pt-32 pb-20 gradient-bg relative overflow-hidden;
+  }
+
+  /* Product Card */
+  .product-card {
+    @apply card overflow-hidden;
+  }
+
+  .product-card-header {
+    @apply h-48 flex items-center justify-center;
+  }
+
+  /* Feature Item */
+  .feature-item {
+    @apply flex items-start gap-4;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0;
+  }
+
+  /* Badge/Tag */
+  .badge {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary;
+  }
+
+  .badge-accent {
+    @apply badge bg-accent-100 text-accent;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-green-700;
+  }
+
+  /* Trust Indicator */
+  .trust-indicator {
+    @apply text-center;
+  }
+
+  .trust-indicator-number {
+    @apply text-3xl font-bold;
+  }
+
+  .trust-indicator-label {
+    @apply text-sm text-blue-200;
+  }
+
+  /* Footer */
+  .footer {
+    @apply bg-dark-900 text-white py-12;
+  }
+
+  .footer-link {
+    @apply text-dark-400 hover:text-white transition-colors duration-200;
+  }
+
+  /* Form Elements */
+  .form-input {
+    @apply w-full px-4 py-3 border border-dark-200 rounded-button;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-dark-700 mb-2;
+  }
+
+  /* Range Slider */
+  .range-slider {
+    @apply w-full h-2 rounded-full bg-dark-200 appearance-none cursor-pointer;
+  }
+
+  .range-slider::-webkit-slider-thumb {
+    @apply appearance-none w-6 h-6 rounded-full bg-gradient-button cursor-pointer;
+  }
+
+  .range-slider::-moz-range-thumb {
+    @apply w-6 h-6 rounded-full bg-gradient-button cursor-pointer border-0;
+  }
+}
+
+@layer utilities {
+  /* Float Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Crisp image rendering for logos */
+  .crisp-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+  max-height: 500px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  @apply absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl;
+  @apply opacity-0 invisible transition-all duration-200 z-50;
+}
+
+.group:hover .dropdown-menu {
+  @apply opacity-100 visible;
+}

@@ -1,0 +1,28 @@
+I need you to implement a production-ready website for MATERIX Nano Teknoloji with the following requirements: 
+1. TECH STACK: 
+- Static Site Generator: Eleventy (11ty) 
+- CMS: Netlify CMS (Decap CMS) 
+- Languages: Turkish (TR) and English (EN) 
+- Styling: Tailwind CSS . Use design tokens. Avoid hardcoding of brand colors, styles etc. 
+- Hosting: Netlify (deployment-ready) . 
+2. FEATURES REQUIRED: 
+- Multi-language support (TR/EN) with language switcher 
+- Visual CMS at /admin for content management -
+ SEO optimized with hreflang tags - Mobile responsive design
+- All existing page content preserved from source HTML files 
+3. SOURCE MATERIALS: 
+- I have 11 existing HTML pages with all content in Turkish
+ - Pages: homepage, kurumsal, urunlerimiz, projelerimiz, nanoteknoloji, iletisim, blog, arac-kimyasallari, ev-kimyasallari, tekne-kimyasallari, tekstil-kimyasallari 
+- All files are in /files/ directory - Extract all content from these files and convert to markdown 
+4. DELIVERABLES: - Complete Eleventy project structure 
+- All content extracted and converted to markdown (TR + EN translations) 
+- Netlify CMS configuration with multi-language support 
+- All templates and components built - Ready to deploy to Netlify 
+- GitHub repository initialized and ready to push 
+5. IMPLEMENTATION APPROACH: 
+- Follow the detailed implementation plan in the implementationplan.md
+- Execute each phase sequentially 
+- Test locally before finalizing -
+ Create comprehensive documentation Please implement this step-by-step following the phases outlined below. After each step, update the implementationplan.md. For parked items, update parkeditems.md
+
+Ask for confirmation before moving to the next phase. If design choices or decisions needed, ask me!

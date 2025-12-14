@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATERIX SSR Industrial | Endüstriyel Güneş Enerji Santralleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #10b981 100%); }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); }
+        .btn-primary { background: linear-gradient(135deg, #1e40af, #3b82f6); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(30, 64, 175, 0.4); }
+        .btn-secondary { border: 2px solid #1e40af; color: #1e40af; transition: all 0.3s ease; }
+        .btn-secondary:hover { background: #1e40af; color: white; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="fixed w-full top-0 z-50 glass-effect border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="materix-homepage-mockup.html"><img src="materix-logo.png" alt="MATERIX Logo" class="h-8 md:h-10"></a>
+                    <span class="ml-4 text-sm text-gray-600 hidden md:block">Nanoteknoloji</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="materix-homepage-mockup.html#urunler" class="text-blue-700 font-medium">Ürünler</a>
+                    <a href="materix-homepage-mockup.html#teknoloji" class="text-gray-700 hover:text-blue-700 font-medium">Teknoloji</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-700 font-medium">İletişim</a>
+                </div>
+                <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">Teklif Al</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-gradient-to-b from-purple-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full text-sm font-semibold text-purple-700 mb-4">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+                        Endüstriyel Çözüm
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">MATERIX SSR Industrial</h1>
+                    <p class="text-xl text-gray-600 mb-6">Güneş enerji santralleri ve büyük ölçekli projeler için geliştirilmiş, ultra dayanıklı nano kaplama</p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="font-semibold">%7-8 Verim Artışı</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="font-semibold">7 Yıl Garanti</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="font-semibold">Aşırı Koşullara Dayanıklı</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+                        <div class="mb-4">
+                            <div class="text-4xl font-bold text-purple-700 mb-2">Özel Fiyatlandırma</div>
+                            <div class="text-gray-600">Projenize özel hazırlanan kapsamlı teklif</div>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-4">
+                            * 5 MW+ projeler için hacim indirimleri<br>
+                            * Finansman seçenekleri mevcut
+                        </div>
+                        <button class="w-full btn-primary text-white py-4 rounded-lg font-bold text-lg">Detaylı Teklif İsteyin</button>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl p-6 border-2 border-purple-200">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Kurumsal Destek Paketi</div>
+                                <div class="text-sm text-gray-700">24/7 teknik destek, yıllık periyodik kontrol ve performans raporlaması dahil.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&h=800&fit=crop" alt="Solar Farm" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-6 max-w-xs">
+                        <div class="text-sm font-semibold text-purple-700 mb-1">50 MW Santral İçin</div>
+                        <div class="text-3xl font-bold text-gray-900">₺18M+</div>
+                        <div class="text-sm text-gray-600">10 yıllık ek gelir potansiyeli</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Endüstriyel Projelerde Üstün Performans</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Maksimum ROI</h3>
+                    <p class="text-gray-600">Büyük ölçekli projelerde %7-8 verim artışı, milyon dolarlık ek gelir demektir.</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Aşırı Dayanıklılık</h3>
+                    <p class="text-gray-600">Çöl sıcağından kutup soğuğuna, en zorlu iklim koşullarında 10+ yıl performans.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 hover-lift">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Uzman Ekip</h3>
+                    <p class="text-gray-600">Sertifikalı uygulama ekibi, proje yöneticisi ve 24/7 teknik destek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="text-green-400 font-semibold mb-2">REF PROJE</div>
+                    <h2 class="text-4xl font-bold mb-6">Ankara 25 MW GES</h2>
+                    <p class="text-xl text-gray-300 mb-8">2021'de tamamlanan 25 MW güneş enerji santrali projesinde 36 ay izleme sonuçları</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-green-400 mb-2">+7.4%</div>
+                            <div class="text-gray-300">Ortalama Verim</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">₺4.2M</div>
+                            <div class="text-gray-300">Yıllık Ek Gelir</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-purple-400 mb-2">%85</div>
+                            <div class="text-gray-300">Bakım Azalması</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-4xl font-bold text-orange-400 mb-2">1.8 yıl</div>
+                            <div class="text-gray-300">ROI Süresi</div>
+                        </div>
+                    </div>
+                </div>
+                <div><img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&h=600&fit=crop" alt="Large Solar Farm" class="rounded-2xl shadow-2xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Büyük Ölçekli Projeniz İçin Özel Çözüm</h2>
+            <p class="text-xl text-gray-600 mb-8">Teknik ekibimiz projenizi analiz eder ve size özel teknik çözüm sunar</p>
+            <button class="btn-primary text-white px-12 py-4 rounded-lg font-bold text-lg">Proje Danışmanlığı Talep Et</button>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="materix-logo.png" alt="MATERIX Logo" class="h-8 mb-4 brightness-0 invert">
+                    <p class="text-gray-400">Nanoteknoloji ile güneş enerjisinde geleceği inşa ediyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Ürünler</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="materix-ssr-pro.html" class="hover:text-white">SSR Pro</a></li>
+                        <li><a href="materix-ssr-standard.html" class="hover:text-white">SSR Standard</a></li>
+                        <li><a href="materix-ssr-industrial.html" class="hover:text-white">SSR Industrial</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Şirket</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="materix-homepage-mockup.html" class="hover:text-white">Ana Sayfa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">İletişim</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>DEÜ DEPARK, İzmir</li>
+                        <li>info@materix.tech</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MATERIX Nano Teknoloji San. Tic. A.Ş.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

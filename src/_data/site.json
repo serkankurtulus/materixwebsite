@@ -1,0 +1,68 @@
+{
+  "name": "MATERIX Nano Teknoloji",
+  "shortName": "MATERIX",
+  "url": "https://materix.tech",
+  "defaultLang": "tr",
+  "supportedLangs": ["tr", "en"],
+  "logo": "/assets/images/materix-logo.png",
+  "favicon": "/assets/images/favicon.ico",
+
+  "contact": {
+    "email": "info@materix.tech",
+    "phone": "0850 XXX XX XX",
+    "address": {
+      "tr": "Dokuz Eylül Üniversitesi, Tınaztepe Yerleşkesi, DEPARK Beta Binası, B:29, Buca 35400, İzmir",
+      "en": "Dokuz Eylül University, Tınaztepe Campus, DEPARK Beta Building, B:29, Buca 35400, İzmir, Turkey"
+    },
+    "mapUrl": "https://maps.google.com/?q=DEU+DEPARK+Izmir"
+  },
+
+  "social": {
+    "facebook": "https://facebook.com/materixnano",
+    "linkedin": "https://linkedin.com/company/materix",
+    "twitter": "https://twitter.com/materixnano",
+    "instagram": "https://instagram.com/materixnano",
+    "youtube": "https://youtube.com/@materixnano"
+  },
+
+  "company": {
+    "foundedYear": 2020,
+    "registrationNumber": "",
+    "vatNumber": ""
+  },
+
+  "seo": {
+    "titleSeparator": " | ",
+    "defaultImage": "/assets/images/og-image.jpg",
+    "twitterHandle": "@materixnano"
+  },
+
+  "stats": {
+    "customers": "500+",
+    "applicationArea": "2M+ m²",
+    "satisfaction": "98%"
+  },
+
+  "certifications": [
+    {
+      "name": "KOSGEB",
+      "type": "support",
+      "icon": "trophy"
+    },
+    {
+      "name": "DEÜ DEPARK",
+      "type": "technopark",
+      "icon": "university"
+    },
+    {
+      "name": "ISO 9001",
+      "type": "certification",
+      "icon": "check"
+    },
+    {
+      "name": "TÜBİTAK",
+      "type": "testing",
+      "icon": "lab"
+    }
+  ]
+}
