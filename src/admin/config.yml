@@ -80,12 +80,261 @@ collections:
       - { label: "Content", name: "body", widget: "markdown" }
 
   # ============================================
-  # TURKISH PRODUCTS
+  # TURKISH SSR PRODUCTS (Solar Panel Coatings)
   # ============================================
-  - name: "products_tr"
-    label: "Ürünler (TR)"
-    label_singular: "Ürün (TR)"
+  - name: "ssr_products_tr"
+    label: "SSR Ürünler (TR)"
+    label_singular: "SSR Ürün (TR)"
     folder: "src/content/tr/products"
+    filter: { field: "layout", value: "layouts/product-ssr.njk" }
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/product-ssr.njk" }
+      - { label: "Dil", name: "lang", widget: "hidden", default: "tr" }
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Açıklama (SEO)", name: "description", widget: "text" }
+      - { label: "URL", name: "permalink", widget: "string", hint: "Örnek: /tr/urunlerimiz/ssr-pro/" }
+
+      - label: "Ürün Bilgileri"
+        name: "product"
+        widget: "object"
+        fields:
+          - { label: "Ürün Adı", name: "name", widget: "string" }
+          - { label: "Ürün Kodu", name: "code", widget: "string" }
+          - { label: "Rozet", name: "badge", widget: "string", hint: "Örnek: En Popüler Seçim" }
+          - { label: "Kısa Açıklama", name: "description", widget: "text" }
+          - { label: "Ürün Görseli URL", name: "image", widget: "string" }
+          - { label: "Fiyat", name: "price", widget: "string", hint: "Örnek: ₺ 850 veya Özel Teklif" }
+          - { label: "Fiyat Birimi", name: "priceUnit", widget: "string", required: false, hint: "Örnek: / m²" }
+          - { label: "Fiyat Notu", name: "priceNote", widget: "string", required: false }
+          - { label: "Garanti", name: "warranty", widget: "string" }
+          - { label: "ROI Süresi", name: "roi", widget: "string" }
+          - { label: "ROI Notu", name: "roiNote", widget: "string", required: false }
+
+          - label: "İstatistikler"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Kurulum Sayısı", name: "installations", widget: "string" }
+              - { label: "Puan", name: "rating", widget: "string" }
+
+          - label: "Öne Çıkan Özellikler"
+            name: "highlights"
+            widget: "list"
+            field: { label: "Özellik", name: "highlight", widget: "string" }
+
+          - label: "Ana Faydalar"
+            name: "keyBenefits"
+            widget: "list"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Açıklama", name: "description", widget: "text" }
+              - { label: "Renk", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+              - { label: "İkon (SVG)", name: "icon", widget: "text" }
+
+          - label: "Performans Özellikleri"
+            name: "performanceSpecs"
+            widget: "list"
+            fields:
+              - { label: "Etiket", name: "label", widget: "string" }
+              - { label: "Değer", name: "value", widget: "string" }
+              - { label: "Renk", name: "color", widget: "select", options: ["blue", "green"] }
+
+          - label: "Dayanıklılık Özellikleri"
+            name: "durabilitySpecs"
+            widget: "list"
+            fields:
+              - { label: "Etiket", name: "label", widget: "string" }
+              - { label: "Değer", name: "value", widget: "string" }
+              - { label: "Renk", name: "color", widget: "select", options: ["blue", "green"] }
+
+          - label: "Uygulama Detayları"
+            name: "applicationDetails"
+            widget: "list"
+            fields:
+              - { label: "Değer", name: "value", widget: "string" }
+              - { label: "Etiket", name: "label", widget: "string" }
+              - { label: "Renk", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+
+          - label: "Uygulama Adımları"
+            name: "applicationSteps"
+            widget: "list"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Açıklama", name: "description", widget: "string" }
+              - { label: "Renk", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+
+          - label: "Başarı Hikayesi"
+            name: "caseStudy"
+            widget: "object"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Açıklama", name: "description", widget: "text" }
+              - { label: "Görsel URL", name: "image", widget: "string" }
+              - label: "İstatistikler"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Değer", name: "value", widget: "string" }
+                  - { label: "Etiket", name: "label", widget: "string" }
+                  - { label: "Renk", name: "color", widget: "select", options: ["green", "blue", "purple", "orange"] }
+              - { label: "Alıntı", name: "quote", widget: "text" }
+              - { label: "Yazar", name: "author", widget: "string" }
+
+          - label: "Sıkça Sorulan Sorular"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Soru", name: "question", widget: "string" }
+              - { label: "Cevap", name: "answer", widget: "text" }
+
+          - label: "İlgili Ürünler"
+            name: "relatedProducts"
+            widget: "list"
+            fields:
+              - { label: "Ürün Adı", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Açıklama", name: "description", widget: "string" }
+              - { label: "Fiyat", name: "price", widget: "string" }
+              - { label: "Renk", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+              - { label: "İkon", name: "icon", widget: "string", hint: "Emoji kullanın: ⚡ 🔬 🏭" }
+
+  # ============================================
+  # ENGLISH SSR PRODUCTS (Solar Panel Coatings)
+  # ============================================
+  - name: "ssr_products_en"
+    label: "SSR Products (EN)"
+    label_singular: "SSR Product (EN)"
+    folder: "src/content/en/products"
+    filter: { field: "layout", value: "layouts/product-ssr.njk" }
+    create: true
+    delete: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/product-ssr.njk" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+      - { label: "URL", name: "permalink", widget: "string", hint: "Example: /en/products/ssr-pro/" }
+
+      - label: "Product Information"
+        name: "product"
+        widget: "object"
+        fields:
+          - { label: "Product Name", name: "name", widget: "string" }
+          - { label: "Product Code", name: "code", widget: "string" }
+          - { label: "Badge", name: "badge", widget: "string", hint: "Example: Most Popular Choice" }
+          - { label: "Short Description", name: "description", widget: "text" }
+          - { label: "Product Image URL", name: "image", widget: "string" }
+          - { label: "Price", name: "price", widget: "string", hint: "Example: € 85 or Custom Quote" }
+          - { label: "Price Unit", name: "priceUnit", widget: "string", required: false, hint: "Example: / m²" }
+          - { label: "Price Note", name: "priceNote", widget: "string", required: false }
+          - { label: "Warranty", name: "warranty", widget: "string" }
+          - { label: "ROI Period", name: "roi", widget: "string" }
+          - { label: "ROI Note", name: "roiNote", widget: "string", required: false }
+
+          - label: "Statistics"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Installations", name: "installations", widget: "string" }
+              - { label: "Rating", name: "rating", widget: "string" }
+
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            field: { label: "Highlight", name: "highlight", widget: "string" }
+
+          - label: "Key Benefits"
+            name: "keyBenefits"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Color", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+              - { label: "Icon (SVG)", name: "icon", widget: "text" }
+
+          - label: "Performance Specs"
+            name: "performanceSpecs"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Color", name: "color", widget: "select", options: ["blue", "green"] }
+
+          - label: "Durability Specs"
+            name: "durabilitySpecs"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Color", name: "color", widget: "select", options: ["blue", "green"] }
+
+          - label: "Application Details"
+            name: "applicationDetails"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Color", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+
+          - label: "Application Steps"
+            name: "applicationSteps"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Color", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+
+          - label: "Case Study"
+            name: "caseStudy"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Color", name: "color", widget: "select", options: ["green", "blue", "purple", "orange"] }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+          - label: "Related Products"
+            name: "relatedProducts"
+            widget: "list"
+            fields:
+              - { label: "Product Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Color", name: "color", widget: "select", options: ["blue", "green", "purple", "orange"] }
+              - { label: "Icon", name: "icon", widget: "string", hint: "Use emoji: ⚡ 🔬 🏭" }
+
+  # ============================================
+  # TURKISH CHEMICAL PRODUCTS
+  # ============================================
+  - name: "chemical_products_tr"
+    label: "Kimyasal Ürünler (TR)"
+    label_singular: "Kimyasal Ürün (TR)"
+    folder: "src/content/tr/products"
+    filter: { field: "layout", value: "layouts/product.njk" }
     create: true
     delete: true
     extension: "md"
@@ -97,7 +346,7 @@ collections:
       - { label: "Çeviriler", name: "translations", widget: "hidden", default: "tr" }
       - { label: "Başlık", name: "title", widget: "string" }
       - { label: "Açıklama (SEO)", name: "description", widget: "text" }
-      - { label: "URL", name: "permalink", widget: "string" }
+      - { label: "URL", name: "permalink", widget: "string", hint: "Örnek: /tr/urunlerimiz/ev-kimyasallari/" }
       - label: "Ürün Bilgileri"
         name: "product"
         widget: "object"
@@ -116,12 +365,13 @@ collections:
       - { label: "Detaylı İçerik", name: "body", widget: "markdown" }
 
   # ============================================
-  # ENGLISH PRODUCTS
+  # ENGLISH CHEMICAL PRODUCTS
   # ============================================
-  - name: "products_en"
-    label: "Products (EN)"
-    label_singular: "Product (EN)"
+  - name: "chemical_products_en"
+    label: "Chemical Products (EN)"
+    label_singular: "Chemical Product (EN)"
     folder: "src/content/en/products"
+    filter: { field: "layout", value: "layouts/product.njk" }
     create: true
     delete: true
     extension: "md"
@@ -133,7 +383,7 @@ collections:
       - { label: "Translations", name: "translations", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description (SEO)", name: "description", widget: "text" }
-      - { label: "URL", name: "permalink", widget: "string" }
+      - { label: "URL", name: "permalink", widget: "string", hint: "Example: /en/products/home-chemicals/" }
       - label: "Product Information"
         name: "product"
         widget: "object"
