@@ -5,7 +5,7 @@
   "defaultLang": "tr",
   "supportedLangs": ["tr", "en"],
   "logo": "/assets/images/materix-logo.png",
-  "favicon": "/assets/images/favicon.ico",
+  "favicon": "/assets/images/favicon.svg",
 
   "contact": {
     "email": "info@materix.tech",
@@ -33,7 +33,7 @@
 
   "seo": {
     "titleSeparator": " | ",
-    "defaultImage": "/assets/images/og-image.jpg",
+    "defaultImage": "/assets/images/og-image.svg",
     "twitterHandle": "@materixnano"
   },
 

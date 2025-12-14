@@ -1,87 +1,74 @@
 ---
-layout: layouts/page.njk
+layout: layouts/products.njk
 lang: en
 translations: en
-title: "Our Products"
-description: "Materix nano coating products - Vehicle, home, boat and textile solutions."
+title: "Products"
+description: "Materix nanotechnology products - Solar panel coatings, vehicle, home, textile and marine nano film solutions."
 permalink: /en/products/
 order: 3
 hero:
-  title: "Our Products"
-  description: "Innovative nano coating solutions for every surface"
+  title: "TURNING BIG IDEAS INTO REALITY"
+  description: "Advanced surface protection solutions with nanotechnology"
+intro:
+  title: "Explore Our Products"
+  description: "Materix offers pioneering solutions in nanotechnology, developing innovative products for the needs of different sectors. Our nano film coatings equipped with water-repellent, photocatalytic and protective properties extend the life of surfaces and reduce maintenance costs."
+productsSection:
+  title: "Our Product Portfolio"
+products:
+  - code: "MATERIX SSR"
+    name: "Nano Coating for Solar Panels"
+    description: "Special nano film coating with photocatalytic and anti-reflective properties that increases your solar panels' annual efficiency by 2% to 8%."
+    features:
+      - "☀️ Solar Panel"
+      - "📈 Up to 8% Efficiency"
+      - "♻️ Sustainable"
+    link: "/en/products/ssr-pro/"
+  - code: "MATERIX NFC-11"
+    name: "Rain Repellent for Vehicle Glass"
+    description: "A high-quality water-repellent thin film coating product with its special formula containing nanotechnology. It improves the driving experience in rainy weather and maintains its effect on the glass surface for up to 1 year."
+    features:
+      - "🚗 Vehicle Glass"
+      - "💧 Water Repellent"
+      - "⏱️ 1 Year Protection"
+    link: "/en/products/vehicle-chemicals/"
+  - code: "MATERIX NFC-12"
+    name: "Water Repellent for Boats and Yachts"
+    description: "High-quality water repellent with Marine Clean special formula. Improves visibility on boat and yacht windows, facilitates cleaning of lime and water stains on interior windows."
+    features:
+      - "⛵ Boats & Yachts"
+      - "🌊 Sea Water Resistance"
+      - "⏱️ 1 Year Protection"
+    link: "/en/products/marine-chemicals/"
+  - code: "MATERIX NFC-14"
+    name: "For Home Glass and Ceramic Surfaces"
+    description: "Home Clean prevents water from adhering to surfaces with its high water and oil repellency. It prevents lime formation and minimizes the use of cleaning detergents."
+    features:
+      - "🏠 Home Use"
+      - "🧽 Easy Cleaning"
+      - "✨ Lime Prevention"
+    link: "/en/products/home-chemicals/"
+  - code: "MATERIX NFC-16"
+    name: "Water Repellent for Textile Products"
+    description: "Thanks to hydrophobic nanoparticles, it gives textile and fabric materials liquid-repellent properties. It prevents staining and makes cleaning easier."
+    features:
+      - "👕 Textile"
+      - "🛡️ Stain Prevention"
+      - "👁️ Invisible Layer"
+    link: "/en/products/textile-chemicals/"
+  - code: "MATERIX NFC-15"
+    name: "Water Repellent for Wood Surfaces"
+    description: "With Wood Clean Wood Protective Nano Spray, you can extend the life of your natural wood products and garden furniture by protecting them from water damage."
+    features:
+      - "🪵 Wood Protection"
+      - "☔ Water Damage Prevention"
+      - "🌳 Natural Appearance"
+surfaceCleaner:
+  title: "MATERIX SURFACE CLEANER"
+  subtitle: "Pre-Application Surface Cleaner for Nano Film"
+  description: "A cleaning product that can be used before the water-repellent nano coating process to be applied on vehicle, home and boat windows to make it more effective. It increases the applicability of the nano material spraying process by removing oil and dirt from the surface. It helps you achieve higher quality results for the water-repellent treatment."
+collaboration:
+  title: "COLLABORATION"
+  content:
+    - "Thanks to our workshop, we produce special projects in the field of nanotechnology."
+    - "If you have an idea you want to realize and it's in the field of nanotechnology, great news: It's time to meet Materix!"
 ---
-
-## Nano Coating Solutions
-
-Materix offers a comprehensive range of nano coating products designed to protect, enhance, and extend the life of various surfaces.
-
----
-
-## Product Categories
-
-### Vehicle Chemicals
-**Materix NFC-11** - Rain Repellent Nano Film Coating for Vehicle Glass
-
-Provides clear visibility in rainy conditions without wipers at speeds above 60 km/h. 1 year protection.
-
-[View Details →](/en/vehicle-chemicals/)
-
----
-
-### Home Chemicals
-**Materix NFC-14** - Water Repellent Nano Film Coating for Home Glass and Ceramic Surfaces
-
-Prevents limescale buildup, easy cleaning for bathroom and kitchen surfaces. 80% less detergent usage.
-
-[View Details →](/en/home-chemicals/)
-
----
-
-### Marine Chemicals
-**Materix NFC-12** - Water Repellent Nano Film Coating for Boat and Yacht Glass
-
-Protection against salt water and rain for safer navigation. 1 year protection.
-
-[View Details →](/en/marine-chemicals/)
-
----
-
-### Textile Chemicals
-**Materix NFC-16** - Water Repellent Nano Film for Textile Products
-
-Invisible protection against stains for fabrics, furniture, clothing, and shoes.
-
-[View Details →](/en/textile-chemicals/)
-
----
-
-### Solar Panel Coatings
-**Materix SSR Series** - Self-Cleaning Nano Coatings for Solar Panels
-
-Increase panel efficiency by up to 12%, reduce cleaning frequency, extend panel life.
-
-- **SSR Pro** - Professional installations
-- **SSR Standard** - Residential systems
-- **SSR Industrial** - Large-scale solar farms
-
-[View Details →](/en/nanotechnology/)
-
----
-
-## Why Choose Materix?
-
-### Proven Technology
-Our nano coatings are backed by extensive research and real-world testing.
-
-### Long-Lasting Protection
-Products provide protection from 6 months to 2 years depending on application.
-
-### Easy Application
-User-friendly spray applications that can be done by anyone.
-
-### Eco-Friendly
-Reduce water and detergent usage while extending surface life.
-
----
-
-Contact us for more information about our products and custom solutions for your needs.

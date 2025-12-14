@@ -1,0 +1,77 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    {# Homepage entries with hreflang #}
+    <url>
+        <loc>{{ site.url }}/tr/</loc>
+        <xhtml:link rel="alternate" hreflang="tr" href="{{ site.url }}/tr/" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/tr/" />
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/</loc>
+        <xhtml:link rel="alternate" hreflang="tr" href="{{ site.url }}/tr/" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/tr/" />
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    {# Turkish Pages #}
+    {%- for page in collections.pages_tr %}
+    {%- if page.url != '/tr/' %}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <xhtml:link rel="alternate" hreflang="tr" href="{{ site.url }}{{ page.url }}" />
+        {%- set enUrl = page.url | replace('/tr/', '/en/') | replace('/kurumsal/', '/corporate/') | replace('/urunlerimiz/', '/products/') | replace('/projelerimiz/', '/projects/') | replace('/nanoteknoloji/', '/nanotechnology/') | replace('/iletisim/', '/contact/') | replace('/gizlilik-politikasi/', '/privacy-policy/') | replace('/kullanim-kosullari/', '/terms-of-use/') %}
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ enUrl }}" />
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {%- endif %}
+    {%- endfor %}
+
+    {# English Pages #}
+    {%- for page in collections.pages_en %}
+    {%- if page.url != '/en/' %}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        {%- set trUrl = page.url | replace('/en/', '/tr/') | replace('/corporate/', '/kurumsal/') | replace('/products/', '/urunlerimiz/') | replace('/projects/', '/projelerimiz/') | replace('/nanotechnology/', '/nanoteknoloji/') | replace('/contact/', '/iletisim/') | replace('/privacy-policy/', '/gizlilik-politikasi/') | replace('/terms-of-use/', '/kullanim-kosullari/') %}
+        <xhtml:link rel="alternate" hreflang="tr" href="{{ site.url }}{{ trUrl }}" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}" />
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {%- endif %}
+    {%- endfor %}
+
+    {# Turkish Products #}
+    {%- for product in collections.products_tr %}
+    <url>
+        <loc>{{ site.url }}{{ product.url }}</loc>
+        <xhtml:link rel="alternate" hreflang="tr" href="{{ site.url }}{{ product.url }}" />
+        {%- set enProductUrl = product.url | replace('/tr/urunlerimiz/', '/en/products/') | replace('/arac-kimyasallari/', '/vehicle-chemicals/') | replace('/ev-kimyasallari/', '/home-chemicals/') | replace('/tekne-kimyasallari/', '/marine-chemicals/') | replace('/tekstil-kimyasallari/', '/textile-chemicals/') %}
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ enProductUrl }}" />
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {%- endfor %}
+
+    {# English Products #}
+    {%- for product in collections.products_en %}
+    <url>
+        <loc>{{ site.url }}{{ product.url }}</loc>
+        {%- set trProductUrl = product.url | replace('/en/products/', '/tr/urunlerimiz/') | replace('/vehicle-chemicals/', '/arac-kimyasallari/') | replace('/home-chemicals/', '/ev-kimyasallari/') | replace('/marine-chemicals/', '/tekne-kimyasallari/') | replace('/textile-chemicals/', '/tekstil-kimyasallari/') %}
+        <xhtml:link rel="alternate" hreflang="tr" href="{{ site.url }}{{ trProductUrl }}" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ product.url }}" />
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {%- endfor %}
+</urlset>

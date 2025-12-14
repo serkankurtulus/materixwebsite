@@ -1,95 +1,63 @@
 ---
-layout: layouts/page.njk
+layout: layouts/projects.njk
 lang: en
 translations: en
-title: "Our Projects"
-description: "Materix nano coating projects and success stories. Industrial applications and case studies."
+title: "Projects"
+description: "Materix active projects - Solar panel nano coating, metal surface protection and custom nanotechnology projects."
 permalink: /en/projects/
 order: 4
 hero:
   title: "Our Projects"
-  description: "Success stories and industrial applications"
+  description: "We produce surface technologies alongside water, dirt, oil and micro-organism repellent technologies. We also produce various nanotechnology projects in our workshop."
+intro:
+  title: "Innovation and Sustainability"
+  description: "At Materix, we develop pioneering projects in the field of nanotechnology, offering innovative solutions to industries. Our projects are built on environmentally friendly approaches and resource efficiency focused technologies."
+projectsSection:
+  title: "Active Projects"
+projects:
+  - number: "01"
+    icon: "☀️"
+    title: "Nano Coating for Solar Panels"
+    description: "Your solar panels equipped with Materix solutions now have a much longer lifespan. By reducing the use of cleaning products, it reduces the wear caused by chemicals and extends the service life of your solar panel."
+    features:
+      - "⚡ Energy Efficiency"
+      - "💧 Water Savings"
+      - "🌱 Sustainable"
+      - "🔬 KOSGEB Supported"
+    link: "/en/products/ssr-pro/"
+  - number: "02"
+    icon: "🛡️"
+    title: "Nano Coating for Metal Surfaces"
+    description: "In addition to creating UV resistance on metal surfaces, it keeps surfaces cleaner for longer with its dust/dirt repellent properties. Protective nano film technology developed for industrial applications."
+    features:
+      - "☀️ UV Protection"
+      - "🧹 Dirt Repellent"
+      - "🏭 Industrial"
+      - "⏱️ Long Life"
+technologiesSection:
+  title: "Our Technology Areas"
+technologies:
+  - icon: "🔬"
+    title: "Surface Engineering"
+    description: "It provides environmental protection, mechanical performance and appearance regulation by improving the surface properties of solid objects."
+  - icon: "🎯"
+    title: "Thin Film Technology"
+    description: "Thin films are coating materials under 1 micron created by placing the atoms of the material on a regular substrate."
+  - icon: "✨"
+    title: "Self-Cleaning"
+    description: "In technological applications, self-cleaning independently cleans surfaces such as solar panels through active and passive methods."
+  - icon: "💧"
+    title: "Hydrophobic Coatings"
+    description: "Water-repellent nano films prevent water from adhering to surfaces for easy cleaning and lime prevention."
+  - icon: "🌞"
+    title: "Photocatalytic Technology"
+    description: "Photocatalytic surfaces activated by sunlight break down organic dirt and keep the surface clean."
+  - icon: "🦠"
+    title: "Antibacterial Properties"
+    description: "Our nano coating prevents bacteria from multiplying on the surface and creates hygienic environments."
+cta:
+  title: "Let's Develop Projects Together"
+  content:
+    - "If you have an idea you want to realize and it's in the field of nanotechnology, great news: It's time to meet Materix!"
+    - "Thanks to our workshop, we produce special projects in the field of nanotechnology. Contact us for collaboration!"
 ---
-
-## Featured Projects
-
-Discover how Materix nano coating solutions are making a difference across various industries and applications.
-
----
-
-## Solar Energy Projects
-
-### Solar Farm Efficiency Enhancement
-
-**Location:** Turkey
-**Application:** SSR Pro nano coating on 50MW solar farm
-**Results:**
-- 12% increase in energy production
-- 70% reduction in cleaning frequency
-- Significant maintenance cost savings
-
----
-
-### Residential Solar Panel Protection
-
-**Application:** SSR Standard coating for home solar systems
-**Results:**
-- Extended panel lifespan
-- Consistent energy output in dusty conditions
-- Self-cleaning effect reduces manual maintenance
-
----
-
-## Automotive Applications
-
-### Fleet Vehicle Glass Treatment
-
-**Client:** Transportation company
-**Application:** NFC-11 rain repellent coating
-**Results:**
-- Improved driver visibility in rain
-- Reduced accident risk
-- Lower windshield replacement costs
-
----
-
-## Marine Projects
-
-### Yacht Fleet Protection
-
-**Application:** NFC-12 marine glass coating
-**Results:**
-- Protection against salt water damage
-- Crystal clear visibility in all conditions
-- Reduced cleaning time and costs
-
----
-
-## Industrial Applications
-
-### Glass Facade Protection
-
-**Application:** Commercial building glass treatment
-**Results:**
-- Self-cleaning effect reduces maintenance
-- Improved building appearance
-- Long-term cost savings
-
----
-
-## Project Statistics
-
-| Metric | Value |
-|--------|-------|
-| Projects Completed | 500+ |
-| Solar Panels Coated | 100,000+ |
-| Customer Satisfaction | 98% |
-| Countries Served | 10+ |
-
----
-
-## Partner With Us
-
-Interested in a nano coating solution for your project? Contact us to discuss your requirements and receive a customized proposal.
-
-[Contact Us →](/en/contact/)

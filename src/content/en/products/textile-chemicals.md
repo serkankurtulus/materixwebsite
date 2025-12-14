@@ -1,52 +1,59 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-chemical.njk
 lang: en
 translations: en
-title: "Textile Chemicals"
-description: "Materix NFC-16 - Water Repellent Nano Film for Textile Products. Invisible protection against stains."
+title: "Textile Chemicals - Materix NFC-16"
+description: "Water-repellent nano film coating for textile products. Prevents staining, makes cleaning easier."
 permalink: /en/products/textile-chemicals/
 product:
   name: "Materix NFC-16"
-  code: "NFC-16"
+  subtitle: "Water-Repellent Nano Film Coating for Textile Products"
+  tagline: "Invisible protection, maximum effect!"
   category: "Textile Chemicals"
-  type: "Spray"
-  description: "Water Repellent Nano Film for Textile Products - Protect Your Textiles, Defy Stains and Liquids!"
+  color: "purple"
+  icon: "👕"
+  image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=800&fit=crop"
+  quickInfo:
+    - label: "Usage Area"
+      value: "Textile and Fabric"
+    - label: "Appearance"
+      value: "Invisible Layer"
+  highlight:
+    label: "Stain Protection"
+    value: "95%"
+    sublabel: "Liquid repellency"
+  gradientFrom: "#f3e8ff"
+  gradientTo: "#fce7f3"
 features:
-  - "Gives fabric surfaces liquid repellent properties thanks to the hydrophobic nanoparticles it contains"
-  - "Prevents fabric from staining and makes cleaning easier"
-  - "Creates an invisible protective layer"
-  - "Does not cause any change in the fabric's texture, appearance, or color"
-  - "Provides strong water and oil repellency"
-  - "Provides UV protection effect, preventing fabric from fading"
+  - title: "Liquid Repellent Property"
+    description: "Thanks to hydrophobic nanoparticles, it gives textile and fabric materials liquid-repellent properties."
+    color: "purple"
+  - title: "Stain Prevention"
+    description: "Prevents staining by blocking liquids from penetrating the fabric."
+    color: "purple"
+  - title: "Invisible Layer"
+    description: "Provides protection without changing the natural appearance and texture of the fabric."
+    color: "blue"
+  - title: "Breathability"
+    description: "Maintains the breathability of the fabric, no loss of comfort."
+    color: "green"
+  - title: "Easy Cleaning"
+    description: "Easy to clean even when stained. Reduces the need for detergent."
+    color: "green"
+  - title: "Durable Protection"
+    description: "Maintains its effect even after multiple washes."
+    color: "orange"
+useCases:
+  - icon: "👔"
+    title: "Clothing"
+    description: "Shirts, pants and jackets"
+  - icon: "🛋️"
+    title: "Furniture"
+    description: "Sofa and couch fabrics"
+  - icon: "🎒"
+    title: "Accessories"
+    description: "Bags, shoes and hats"
+useCasesSubtitle: "Protection on all types of textile products"
+ctaTitle: "Protect Your Textiles - Materix NFC-16"
+ctaDescription: "End stains with invisible protection"
 ---
-
-## Feature Details
-
-### Liquid Repellent Property
-Gives fabric surfaces liquid repellent properties thanks to the hydrophobic nanoparticles it contains. This property prevents the fabric from staining and makes cleaning easier.
-
-### Invisible Protection
-After being applied by spraying, it covers the entire surface of the fabric and creates an invisible protective layer. This layer does not cause any change in the fabric's texture, appearance, or color.
-
-### Strong Water and Oil Repellency
-Provides strong water and oil repellency on applied areas, delays the fabric from catching dirt and stains. Also provides UV protection effect, preventing the fabric from fading.
-
-## Application Areas
-
-Ideal for all textile products in your home:
-
-### Furniture
-Sofas, curtains
-
-### Clothing
-Jackets, pants
-
-### Footwear
-Sneakers, boots
-
-### Bags
-Backpacks, suitcases
-
----
-
-Protect your textiles with Materix NFC-16 - Invisible protection against stains, UV resistance, natural look!

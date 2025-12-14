@@ -1,0 +1,124 @@
+---
+layout: layouts/base.njk
+---
+
+{# Projects Page Layout - Matches Original projelerimiz.html Design #}
+
+{# Hero Section - Dark navy with radial gradient #}
+<section class="pt-32 pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);">
+    {# Radial gradient overlay #}
+    <div class="absolute inset-0" style="background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center text-white">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                {{ hero.title }}
+            </h1>
+            {% if hero.description %}
+            <p class="text-xl max-w-4xl mx-auto opacity-90 leading-relaxed">
+                {{ hero.description }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{# Intro Section - Gray background #}
+{% if intro %}
+<section class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{{ intro.title }}</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">{{ intro.description }}</p>
+    </div>
+</section>
+{% endif %}
+
+{# Projects Section - Numbered project cards #}
+{% if projects %}
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-4 relative pb-4">
+            {{ projectsSection.title }}
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-16 mt-16">
+            {% for project in projects %}
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:-translate-y-4 transition-transform duration-300 relative">
+                {# Number Badge #}
+                <div class="absolute top-6 left-6 w-16 h-16 rounded-full flex items-center justify-center z-10 text-3xl font-bold text-white shadow-lg" style="background: linear-gradient(135deg, #00d4ff, #0066ff); box-shadow: 0 5px 15px rgba(0, 100, 255, 0.3);">
+                    {{ project.number }}
+                </div>
+
+                {# Project Image Header #}
+                <div class="h-72 flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="absolute inset-0" style="background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 0%, transparent 60%);"></div>
+                    <span class="text-9xl opacity-30 text-white">{{ project.icon }}</span>
+                </div>
+
+                {# Project Content #}
+                <div class="p-10">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ project.title }}</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">{{ project.description }}</p>
+
+                    {# Feature Badges #}
+                    {% if project.features %}
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        {% for feature in project.features %}
+                        <span class="px-4 py-2 rounded-full text-sm font-medium text-blue-600" style="background: linear-gradient(135deg, #f5f7fa, #c3cfe2);">
+                            {{ feature }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    {# Link Button #}
+                    {% if project.link %}
+                    <a href="{{ project.link }}" class="inline-block px-8 py-3 rounded-full text-white font-semibold hover:scale-105 transition-transform" style="background: linear-gradient(135deg, #00d4ff, #0066ff);">
+                        {% if lang == 'tr' %}Proje Detayları{% else %}Project Details{% endif %} →
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Technologies Section - 6 cards grid #}
+{% if technologies %}
+<section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-4 relative pb-4">
+            {{ technologiesSection.title }}
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+            {% for tech in technologies %}
+            <div class="bg-white p-10 rounded-2xl shadow-lg text-center hover:-translate-y-2 transition-transform duration-300">
+                <div class="text-6xl mb-6">{{ tech.icon }}</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">{{ tech.title }}</h3>
+                <p class="text-gray-600 leading-relaxed">{{ tech.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# CTA Section - Purple gradient #}
+{% if cta %}
+<section class="py-20" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">{{ cta.title }}</h2>
+        {% for paragraph in cta.content %}
+        <p class="text-xl opacity-95 leading-relaxed mb-4">{{ paragraph }}</p>
+        {% endfor %}
+        <a href="{{ translations.urls.contact }}" class="inline-block mt-8 px-12 py-4 bg-white text-purple-600 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+            {% if lang == 'tr' %}İletişime Geçin{% else %}Contact Us{% endif %}
+        </a>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,144 @@
+---
+layout: layouts/base.njk
+---
+
+{# Corporate Page Layout - Matches Original kurumsal.html Design #}
+
+{# Hero Section - Dark navy with wave pattern #}
+<section class="pt-32 pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);">
+    {# Wave pattern overlay #}
+    <div class="absolute inset-0 opacity-30">
+        <svg class="absolute bottom-0 w-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(0,212,255,0.1)"/>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center text-white">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                {{ hero.title }}
+            </h1>
+            {% if hero.description %}
+            <p class="text-xl max-w-3xl mx-auto opacity-90">
+                {{ hero.description }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{# Story Section - Gray background with white card #}
+{% if story %}
+<section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-4 relative pb-4">
+            {{ story.title }}
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></span>
+        </h2>
+
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg mt-10">
+            {% for paragraph in story.content %}
+            <p class="text-lg text-gray-700 leading-relaxed {% if not loop.last %}mb-6{% endif %}">
+                {{ paragraph }}
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Vision & Mission Section - Gradient background with cards #}
+{% if principles %}
+<section class="py-20" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-4 relative pb-4">
+            {{ principles.title }}
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10 mt-12">
+            {% for card in principles.cards %}
+            <div class="bg-white p-10 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-blue-600 mb-5 flex items-center gap-4">
+                    <span class="w-14 h-14 rounded-full flex items-center justify-center text-2xl text-white flex-shrink-0" style="background: linear-gradient(135deg, #00d4ff, #0066ff);">
+                        {{ card.icon }}
+                    </span>
+                    {{ card.title }}
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    {{ card.content }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Timeline Section - Journey/History #}
+{% if timeline %}
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-4 relative pb-4">
+            {{ timeline.title }}
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></span>
+        </h2>
+
+        <div class="max-w-4xl mx-auto mt-12 relative">
+            {# Vertical line #}
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-600 hidden md:block"></div>
+            {# Mobile line #}
+            <div class="absolute left-5 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-600 md:hidden"></div>
+
+            {% for item in timeline.items %}
+            <div class="relative mb-12 {% if loop.index is odd %}md:pr-[calc(50%+40px)] md:text-right{% else %}md:pl-[calc(50%+40px)] md:text-left{% endif %} pl-14 md:pl-0">
+                {# Dot #}
+                <div class="absolute {% if loop.index is odd %}md:left-1/2 md:-translate-x-1/2{% else %}md:left-1/2 md:-translate-x-1/2{% endif %} left-5 -translate-x-1/2 w-5 h-5 bg-blue-600 border-4 border-white rounded-full shadow-lg" style="box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.2);"></div>
+
+                {# Content card #}
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-2xl font-bold text-blue-600 mb-2">{{ item.date }}</div>
+                    <p class="text-gray-600 text-lg">{{ item.event }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Innovation Section - Purple gradient with glass cards #}
+{% if innovation %}
+<section class="py-20" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-white mb-4 relative pb-4">
+            {{ innovation.title }}
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white/50"></span>
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+            {% for card in innovation.cards %}
+            <div class="p-8 rounded-2xl border border-white/20 backdrop-blur-sm hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255, 255, 255, 0.1);">
+                <h3 class="text-xl font-bold text-white mb-4">{{ card.title }}</h3>
+                <p class="text-white/90 leading-relaxed">{{ card.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# CTA Section #}
+<section class="py-16 bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+            {% if lang == 'tr' %}Bizimle Çalışmak İster misiniz?{% else %}Want to Work With Us?{% endif %}
+        </h2>
+        <p class="text-gray-400 mb-8">
+            {% if lang == 'tr' %}Nanoteknoloji çözümlerimiz hakkında bilgi almak için iletişime geçin.{% else %}Contact us to learn more about our nanotechnology solutions.{% endif %}
+        </p>
+        <a href="{{ translations.urls.contact }}" class="inline-block bg-gradient-to-r from-cyan-400 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+            {% if lang == 'tr' %}İletişime Geçin{% else %}Contact Us{% endif %}
+        </a>
+    </div>
+</section>

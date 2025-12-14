@@ -202,6 +202,105 @@ layout: layouts/base.njk
     </div>
 </section>
 
+{# Before/After Comparison Section #}
+<section class="py-20 bg-white" id="karsilastirma">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                {% if lang == 'tr' %}Farkı Görün{% else %}See the Difference{% endif %}
+            </h2>
+            <p class="text-xl text-gray-600">
+                {% if lang == 'tr' %}MATERIX SSR ile kapladığınız güneş panellerinin performans farkı{% else %}Performance difference of solar panels coated with MATERIX SSR{% endif %}
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            {# Before Card #}
+            <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                <div class="aspect-video bg-gray-300 flex items-center justify-center relative">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=450&fit=crop&q=60" alt="{% if lang == 'tr' %}Kaplanmamış Panel{% else %}Uncoated Panel{% endif %}" class="w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-sm">
+                        {% if lang == 'tr' %}ÖNCE{% else %}BEFORE{% endif %}
+                    </div>
+                </div>
+                <div class="p-6 bg-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Kaplamasız Panel{% else %}Uncoated Panel{% endif %}</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}Toz ve kir birikimi{% else %}Dust and dirt accumulation{% endif %}
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}Sık temizlik gerektirir{% else %}Requires frequent cleaning{% endif %}
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}Verim kaybı zamanla artar{% else %}Efficiency loss increases over time{% endif %}
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}UV hasarına açık{% else %}Susceptible to UV damage{% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {# After Card #}
+            <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-green-500">
+                <div class="aspect-video bg-gray-300 flex items-center justify-center relative">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=450&fit=crop&q=100" alt="{% if lang == 'tr' %}Kaplanmış Panel{% else %}Coated Panel{% endif %}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm">
+                        {% if lang == 'tr' %}SONRA{% else %}AFTER{% endif %}
+                    </div>
+                    <div class="absolute top-4 right-4 bg-white text-green-600 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                        +8% {% if lang == 'tr' %}VERİM{% else %}EFFICIENCY{% endif %}
+                    </div>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-blue-50">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}MATERIX SSR Kaplamalı{% else %}MATERIX SSR Coated{% endif %}</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}Kendi kendini temizler{% else %}Self-cleaning surface{% endif %}
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}%70 daha az temizlik{% else %}70% less cleaning needed{% endif %}
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}Sürekli maksimum verim{% else %}Consistent maximum efficiency{% endif %}
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                            {% if lang == 'tr' %}UV ve çevresel koruma{% else %}UV and environmental protection{% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {# Technology Section #}
 <section class="py-20 bg-gray-900 text-white" id="teknoloji">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

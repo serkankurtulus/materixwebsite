@@ -1,0 +1,73 @@
+---
+permalink: /404.html
+eleventyExcludeFromCollections: true
+layout: layouts/base.njk
+title: "Sayfa Bulunamadı - Page Not Found"
+lang: tr
+---
+
+<section class="min-h-[70vh] flex items-center justify-center py-20" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="max-w-2xl mx-auto px-4 text-center text-white">
+        {# Large 404 #}
+        <div class="text-9xl font-bold mb-4 opacity-20">404</div>
+
+        {# Icon #}
+        <div class="text-8xl mb-8">🔍</div>
+
+        {# Turkish Message #}
+        <div class="mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Sayfa Bulunamadı</h1>
+            <p class="text-xl opacity-90 mb-6">Aradığınız sayfa mevcut değil veya taşınmış olabilir.</p>
+            <a href="/tr/" class="inline-block px-8 py-4 bg-white text-purple-600 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                Ana Sayfaya Dön
+            </a>
+        </div>
+
+        {# Divider #}
+        <div class="w-24 h-1 bg-white/30 mx-auto mb-12"></div>
+
+        {# English Message #}
+        <div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Page Not Found</h2>
+            <p class="text-lg opacity-90 mb-6">The page you're looking for doesn't exist or has been moved.</p>
+            <a href="/en/" class="inline-block px-8 py-4 bg-white/20 text-white border-2 border-white rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-all">
+                Go to Homepage
+            </a>
+        </div>
+    </div>
+</section>
+
+{# Quick Links Section #}
+<section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Yararlı Bağlantılar / Useful Links</h3>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            {# Turkish Links #}
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h4 class="font-bold text-gray-900 mb-4 flex items-center">
+                    <span class="mr-2">🇹🇷</span> Türkçe
+                </h4>
+                <ul class="space-y-2">
+                    <li><a href="/tr/" class="text-purple-600 hover:underline">Ana Sayfa</a></li>
+                    <li><a href="/tr/urunlerimiz/" class="text-purple-600 hover:underline">Ürünlerimiz</a></li>
+                    <li><a href="/tr/kurumsal/" class="text-purple-600 hover:underline">Kurumsal</a></li>
+                    <li><a href="/tr/iletisim/" class="text-purple-600 hover:underline">İletişim</a></li>
+                </ul>
+            </div>
+
+            {# English Links #}
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h4 class="font-bold text-gray-900 mb-4 flex items-center">
+                    <span class="mr-2">🇬🇧</span> English
+                </h4>
+                <ul class="space-y-2">
+                    <li><a href="/en/" class="text-purple-600 hover:underline">Homepage</a></li>
+                    <li><a href="/en/products/" class="text-purple-600 hover:underline">Products</a></li>
+                    <li><a href="/en/corporate/" class="text-purple-600 hover:underline">Corporate</a></li>
+                    <li><a href="/en/contact/" class="text-purple-600 hover:underline">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

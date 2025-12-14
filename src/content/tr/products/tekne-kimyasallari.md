@@ -1,59 +1,59 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-chemical.njk
 lang: tr
 translations: tr
-title: "Tekne Kimyasalları"
-description: "Materix NFC-12 - Tekne ve Yat Camları için Su Kaydırıcı Nano Film Kaplama. Deniz koşullarına dayanıklı."
+title: "Tekne Kimyasalları - Materix NFC-12"
+description: "Tekne ve yat camları için su kaydırıcı nano film kaplama. Deniz suyuna dayanıklı formül."
 permalink: /tr/urunlerimiz/tekne-kimyasallari/
 product:
   name: "Materix NFC-12"
-  code: "NFC-12"
+  subtitle: "Tekne ve Yat Camları için Su Kaydırıcı Nano Film Kaplama"
+  tagline: "Denizde kristal netlik!"
   category: "Tekne Kimyasalları"
-  type: "Sprey"
-  description: "Tekne ve Yat Camları için Su Kaydırıcı Nano Film Kaplama - Yatınızın camları için en iyi koruma!"
-  protection_duration: "1 Yıl"
+  color: "cyan"
+  icon: "⛵"
+  image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&h=800&fit=crop"
+  quickInfo:
+    - label: "Kullanım Alanı"
+      value: "Tekne ve Yat Camları"
+    - label: "Koruma Süresi"
+      value: "1 Yıl"
+  highlight:
+    label: "Deniz Suyu Direnci"
+    value: "Yüksek"
+    sublabel: "Tuz koruması"
+  gradientFrom: "#cffafe"
+  gradientTo: "#dbeafe"
 features:
-  - "Yağmurlu koşullarda ve tuzlu suya karşı güvenli seyir sağlar"
-  - "Uygulanan alanlardaki kir ve leke varlığını azaltarak temizliği kolaylaştırır"
-  - "Verimlilik 1 yıla kadar sürer"
-  - "İç mekan camlarında kireç ve su lekelerinin kolay temizlenmesine olanak sağlar"
-  - "Deterjan kullanımını önemli ölçüde azaltır"
+  - title: "Deniz Suyu Direnci"
+    description: "Marine Clean özel formülüyle deniz suyuna karşı yüksek direnç sağlar. Tuz ve mineral birikimini önler."
+    color: "cyan"
+  - title: "Görüş Artırma"
+    description: "Tekne ve yat camlarında görüşü önemli ölçüde arttırır. Dalgalı havalarda bile net görüş."
+    color: "blue"
+  - title: "Kireç ve Su Lekesi Önleme"
+    description: "İç mekan camlarında kireç ve su lekesi temizliğini kolaylaştırır."
+    color: "green"
+  - title: "Uzun Ömürlü Koruma"
+    description: "1 yıla kadar etkisini korur. Zorlu deniz koşullarına dayanıklı."
+    color: "green"
+  - title: "UV Dayanımı"
+    description: "Güneş ışınlarına karşı koruma sağlar, cam yüzeyin uzun ömürlü olmasını destekler."
+    color: "orange"
+  - title: "Kolay Temizlik"
+    description: "Uygulanan yüzeylerin temizliğini kolaylaştırır, bakım süresini azaltır."
+    color: "purple"
+useCases:
+  - icon: "⛵"
+    title: "Tekne Camları"
+    description: "Ön, yan ve arka tekne camları"
+  - icon: "🛥️"
+    title: "Yat Camları"
+    description: "Lüks yat camları ve pencereler"
+  - icon: "🚢"
+    title: "İç Mekan"
+    description: "Kabin camları ve iç mekan yüzeyleri"
+useCasesSubtitle: "Denizde kristal berraklık"
+ctaTitle: "Tekne ve Yatınız İçin Materix NFC-12"
+ctaDescription: "Deniz suyuna dayanıklı, uzun ömürlü koruma"
 ---
-
-## Özellik Detayları
-
-### Su itici özellik
-Yağmurlu koşullarda ve tuzlu suya karşı güvenli sürüş sağlar.
-
-### Kolay temizlik
-Uygulanan alanlardaki kir ve leke varlığını azaltarak temizliği kolaylaştırır ve temizlik malzemesi kullanımını önemli ölçüde azaltır.
-
-### Uzun süreli etki
-Verimlilik 1 yıla kadar sürer, teknenizin camlarında uzun vadeli koruma sağlar.
-
-### Kireç ve su lekeleriyle mücadele
-İç mekan camlarında kireç ve su lekelerinin kolay ve deterjan kullanılmadan temizlenmesine olanak sağlar.
-
-## Güvenli kullanım
-
-Yat ve tekne camlarının dış yüzeylerine güvenle uygulanabilir. Diğer yüzeylerde kullanılmamalıdır. Yanlış uygulama durumunda yüzey kuru bir bezle tamamen silinmelidir.
-
-## Avantajlar
-
-### Görüş Kalitesi
-Tekne camlarında yağmurlu ve dalgalı havalarda görüşü artırır, seyir halindeyken güvenliği artırır.
-
-### Kolay Temizlik
-Tekne ve yatlardaki iç ve dış camlarda kireç ve su lekesi temizliğini kolaylaştırır, deterjan kullanımını azaltır ve temizlik malzemeleriyle zaman kazandırır.
-
-### Uzun Süreli Etki
-Cam yüzey üzerindeki etkisini 1 yıla kadar korur, sürekli yeniden uygulama gereksinimini azaltır.
-
-### Pratik Uygulama
-Basit ve pratik uygulama yönergeleri ile kullanımı kolaydır, Materix Surface Cleaner ile birlikte kullanımı önerilir.
-
----
-
-**1 Yıl** Koruma Süresi | **%80** Daha Az Temizlik | **Kolay** Uygulama
-
-Denizde güvenli seyir için tekne ve yat camlarınızı tuzlu suya, yağmura ve su lekelerine karşı koruyun!
