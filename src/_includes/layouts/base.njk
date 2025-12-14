@@ -43,8 +43,9 @@
     <meta name="twitter:image" content="{{ ogImage or site.url ~ site.seo.defaultImage }}">
 
     {# Favicon #}
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
     <link rel="icon" type="image/x-icon" href="{{ site.favicon or '/assets/images/favicon.ico' }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.svg">
 
     {# Preconnect for performance #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,6 +98,58 @@
 
     {# Additional head content from pages #}
     {% block head %}{% endblock %}
+
+    {# JSON-LD Structured Data #}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "logo": "{{ site.url }}/assets/images/materix-logo.svg",
+        "description": "{{ translations.meta.defaultDescription }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ site.contact.address.street }}",
+            "addressLocality": "{{ site.contact.address.city }}",
+            "addressCountry": "TR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "{{ site.contact.phone }}",
+            "email": "{{ site.contact.email }}",
+            "contactType": "customer service",
+            "availableLanguage": ["Turkish", "English"]
+        },
+        "sameAs": [
+            "{{ site.social.linkedin }}",
+            "{{ site.social.instagram }}"
+        ]
+    }
+    </script>
+    {% if schemaType == 'product' %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "{{ title }}",
+        "description": "{{ description }}",
+        "brand": {
+            "@type": "Brand",
+            "name": "MATERIX"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "{{ site.name }}"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "{% if lang == 'tr' %}TRY{% else %}EUR{% endif %}",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    {% endif %}
 </head>
 <body class="bg-white text-gray-900 antialiased font-sans">
     {# Skip to main content for accessibility #}
@@ -117,10 +170,72 @@
     {# Footer #}
     {% include "components/footer.njk" %}
 
+    {# Netlify Identity Widget - handles login/signup/password reset #}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+
     {# Main JavaScript #}
     <script src="/assets/js/main.js" defer></script>
 
     {# Additional scripts from pages #}
     {% block scripts %}{% endblock %}
+
+    {# Cookie Consent Banner #}
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 transform translate-y-full transition-transform duration-300" style="display: none;">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-300">
+                {% if lang == 'tr' %}
+                    Bu web sitesi deneyiminizi geliştirmek için çerezler kullanmaktadır. Sitemizi kullanarak çerez politikamızı kabul etmiş olursunuz.
+                    <a href="/tr/gizlilik-politikasi/" class="underline text-cyan-400 hover:text-cyan-300">Daha fazla bilgi</a>
+                {% else %}
+                    This website uses cookies to enhance your experience. By using our site, you accept our cookie policy.
+                    <a href="/en/privacy-policy/" class="underline text-cyan-400 hover:text-cyan-300">Learn more</a>
+                {% endif %}
+            </p>
+            <div class="flex gap-3">
+                <button onclick="acceptCookies()" class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold text-sm transition-colors">
+                    {% if lang == 'tr' %}Kabul Et{% else %}Accept{% endif %}
+                </button>
+                <button onclick="declineCookies()" class="px-6 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-semibold text-sm transition-colors">
+                    {% if lang == 'tr' %}Reddet{% else %}Decline{% endif %}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie consent functionality
+        function showCookieConsent() {
+            const banner = document.getElementById('cookie-consent');
+            if (!localStorage.getItem('cookieConsent')) {
+                banner.style.display = 'block';
+                setTimeout(() => banner.classList.remove('translate-y-full'), 100);
+            }
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            hideBanner();
+        }
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            hideBanner();
+        }
+        function hideBanner() {
+            const banner = document.getElementById('cookie-consent');
+            banner.classList.add('translate-y-full');
+            setTimeout(() => banner.style.display = 'none', 300);
+        }
+        document.addEventListener('DOMContentLoaded', showCookieConsent);
+    </script>
 </body>
 </html>
