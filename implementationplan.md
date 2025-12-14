@@ -1345,47 +1345,57 @@ The user needs to:
 
 ### ✅ PHASE 12: Netlify CMS Setup
 
+**Site URLs:**
+- **Live Site (TR):** https://strong-daifuku-b4a8ca.netlify.app/tr/
+- **Live Site (EN):** https://strong-daifuku-b4a8ca.netlify.app/en/
+- **CMS Admin:** https://strong-daifuku-b4a8ca.netlify.app/admin/
+- **Netlify Dashboard:** https://app.netlify.com/sites/strong-daifuku-b4a8ca/
+
 **MANUAL STEP - User Action Required:**
 
-The user needs to:
+### Step 1: Enable Netlify Identity
+1. Go to: https://app.netlify.com/sites/strong-daifuku-b4a8ca/configuration/identity
+2. Click **"Enable Identity"**
 
-1. **Enable Netlify Identity:**
-   - In Netlify Dashboard → Site Settings → Identity
-   - Click "Enable Identity"
-   
-2. **Configure Registration:**
-   - Under Registration → Edit settings
-   - Set to "Invite only"
-   - Save
+### Step 2: Configure Registration
+1. Under **Registration preferences** → Click **Edit settings**
+2. Select **"Invite only"** (recommended for security)
+3. Click **Save**
 
-3. **Enable Git Gateway:**
-   - Identity → Services → Git Gateway
-   - Click "Enable Git Gateway"
+### Step 3: Enable Git Gateway
+1. Scroll to **Services** section
+2. Find **Git Gateway** → Click **"Enable Git Gateway"**
 
-4. **Invite Admin User:**
-   - Identity → "Invite users"
-   - Enter your email address
-   - Send invitation
+### Step 4: Invite Admin User
+1. Go to **Identity** tab: https://app.netlify.com/sites/strong-daifuku-b4a8ca/identity
+2. Click **"Invite users"**
+3. Enter your email address
+4. Click **"Send"**
 
-5. **Accept Invitation:**
-   - Check your email
-   - Click invitation link
-   - Set password
+### Step 5: Accept Invitation
+1. Check your email inbox
+2. Click the invitation link from Netlify
+3. Set your password
 
-6. **Access CMS:**
-   - Go to: `https://your-site.netlify.app/admin`
-   - Log in with your credentials
-   
-7. **Test CMS:**
-   - Try editing a page
-   - Click "Save"
-   - Verify changes appear on live site
+### Step 6: Login to CMS
+1. Go to: **https://strong-daifuku-b4a8ca.netlify.app/admin/**
+2. Click **"Login with Netlify Identity"**
+3. Enter your email and password
+4. You're now in the CMS!
+
+### Step 7: Test CMS Functionality
+1. In CMS, navigate to **Sayfalar (TR)** or **Pages (EN)**
+2. Click on a page to edit
+3. Make a small change
+4. Click **"Publish"** (or Save)
+5. Wait 1-2 minutes for auto-deploy
+6. Verify changes appear on live site
 
 **Verification:**
 - [ ] Identity enabled
 - [ ] Git Gateway active
 - [ ] Admin user invited and accepted
-- [ ] CMS login works
+- [ ] CMS login works at /admin/
 - [ ] Can edit and save content
 - [ ] Changes deploy automatically
 
