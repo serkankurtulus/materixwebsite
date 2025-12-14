@@ -1,0 +1,358 @@
+---
+layout: layouts/base.njk
+---
+
+{# SSR Product Detail Layout - Matches Original Design #}
+
+{# Hero Section - Light gradient with price card #}
+<section class="pt-32 pb-16 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                {# Popular Badge #}
+                {% if product.badge %}
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full text-sm font-semibold text-green-700 mb-4">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ product.badge }}
+                </div>
+                {% endif %}
+
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                    {{ product.name or title }}
+                </h1>
+                <p class="text-xl text-gray-600 mb-6">
+                    {{ product.description or description }}
+                </p>
+
+                {# Feature Highlights with Checkmarks #}
+                {% if product.highlights %}
+                <div class="flex flex-wrap gap-4 mb-8">
+                    {% for highlight in product.highlights %}
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-semibold">{{ highlight }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {# Price Card #}
+                {% if product.price %}
+                <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+                    <div class="flex items-baseline gap-2 mb-4">
+                        <span class="text-4xl font-bold text-blue-700">{{ product.price }}</span>
+                        {% if product.priceUnit %}
+                        <span class="text-gray-600">{{ product.priceUnit }}</span>
+                        {% endif %}
+                    </div>
+                    {% if product.priceNote %}
+                    <div class="text-sm text-gray-600 mb-4">
+                        {{ product.priceNote }}
+                    </div>
+                    {% endif %}
+                    <div class="flex gap-3">
+                        <a href="/{{ lang }}/iletisim/" class="flex-1 btn-primary text-white py-4 rounded-lg font-bold text-lg text-center">
+                            {% if lang == 'tr' %}Hemen Sipariş Ver{% else %}Order Now{% endif %}
+                        </a>
+                        <a href="/{{ lang }}/iletisim/" class="btn-secondary bg-white px-6 py-4 rounded-lg font-bold">
+                            {{ translations.common.getQuote }}
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+
+                {# Stats Row #}
+                {% if product.stats %}
+                <div class="flex items-center gap-6 text-sm text-gray-600">
+                    {% if product.stats.installations %}
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>{{ product.stats.installations }} {% if lang == 'tr' %}Kurulum{% else %}Installations{% endif %}</span>
+                    </div>
+                    {% endif %}
+                    {% if product.stats.rating %}
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <span>{{ product.stats.rating }} {% if lang == 'tr' %}Müşteri Puanı{% else %}Customer Rating{% endif %}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+
+            {# Product Image with ROI Card #}
+            <div class="relative">
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                    {% if product.image %}
+                    <img src="{{ product.image }}"
+                         alt="{{ product.name or title }}"
+                         class="w-full h-full object-cover">
+                    {% else %}
+                    <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                        <span class="text-8xl">🔬</span>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if product.roi %}
+                <div class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-6 max-w-xs">
+                    <div class="text-sm font-semibold text-blue-700 mb-1">{% if lang == 'tr' %}Ortalama ROI{% else %}Average ROI{% endif %}</div>
+                    <div class="text-3xl font-bold text-gray-900">{{ product.roi }}</div>
+                    {% if product.roiNote %}
+                    <div class="text-sm text-gray-600">{{ product.roiNote }}</div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{# Key Benefits Section - 3 Gradient Cards #}
+{% if product.keyBenefits %}
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Neden {{ product.name }}?{% else %}Why {{ product.name }}?{% endif %}</h2>
+            <p class="text-xl text-gray-600">{% if lang == 'tr' %}Profesyonel projelerde tercih edilen üstün özellikler{% else %}Superior features preferred in professional projects{% endif %}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            {% for benefit in product.keyBenefits %}
+            <div class="bg-gradient-to-br from-{{ benefit.color }}-50 to-white rounded-2xl p-8 hover-lift">
+                <div class="w-14 h-14 bg-{{ benefit.color }}-100 rounded-xl flex items-center justify-center mb-4">
+                    {% if benefit.icon %}
+                    {{ benefit.icon | safe }}
+                    {% else %}
+                    <svg class="w-8 h-8 text-{{ benefit.color }}-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    {% endif %}
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{{ benefit.title }}</h3>
+                <p class="text-gray-600">{{ benefit.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Technical Specifications Section #}
+{% if product.performanceSpecs or product.durabilitySpecs %}
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Teknik Özellikler{% else %}Technical Specifications{% endif %}</h2>
+            <p class="text-xl text-gray-600">{% if lang == 'tr' %}Profesyonel performans için geliştirilmiş nano teknoloji{% else %}Nano technology developed for professional performance{% endif %}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            {# Performance Specs Card #}
+            {% if product.performanceSpecs %}
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">{% if lang == 'tr' %}Performans Özellikleri{% else %}Performance Characteristics{% endif %}</h3>
+                <div class="space-y-4">
+                    {% for spec in product.performanceSpecs %}
+                    <div class="flex justify-between items-center pb-4 border-b border-gray-100 {% if loop.last %}border-b-0 pb-0{% endif %}">
+                        <span class="text-gray-700 font-medium">{{ spec.label }}</span>
+                        <span class="text-{{ spec.color or 'blue' }}-700 font-bold">{{ spec.value }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {# Durability Specs Card #}
+            {% if product.durabilitySpecs %}
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">{% if lang == 'tr' %}Dayanıklılık{% else %}Durability{% endif %}</h3>
+                <div class="space-y-4">
+                    {% for spec in product.durabilitySpecs %}
+                    <div class="flex justify-between items-center pb-4 border-b border-gray-100 {% if loop.last %}border-b-0 pb-0{% endif %}">
+                        <span class="text-gray-700 font-medium">{{ spec.label }}</span>
+                        <span class="text-{{ spec.color or 'green' }}-600 font-bold">{{ spec.value }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        {# Application Details Grid #}
+        {% if product.applicationDetails %}
+        <div class="mt-8 bg-white rounded-2xl p-8 shadow-lg">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">{% if lang == 'tr' %}Uygulama Detayları{% else %}Application Details{% endif %}</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                {% for detail in product.applicationDetails %}
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-{{ detail.color or 'blue' }}-600 mb-2">{{ detail.value }}</div>
+                    <div class="text-sm text-gray-600">{{ detail.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{# Application Process Section - Numbered Circles #}
+{% if product.applicationSteps %}
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Uygulama Süreci{% else %}Application Process{% endif %}</h2>
+            <p class="text-xl text-gray-600">{% if lang == 'tr' %}Profesyonel ekibimiz tarafından {{ product.applicationSteps | length }} aşamalı uygulama{% else %}{{ product.applicationSteps | length }}-phase application by our professional team{% endif %}</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            {% for step in product.applicationSteps %}
+            <div class="text-center">
+                <div class="w-20 h-20 bg-{{ step.color or 'blue' }}-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-3xl font-bold text-{{ step.color or 'blue' }}-700">{{ loop.index }}</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{{ step.title }}</h3>
+                <p class="text-gray-600 text-sm">{{ step.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        {# Professional Application CTA Banner #}
+        <div class="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Profesyonel Uygulama Dahil{% else %}Professional Application Included{% endif %}</h3>
+            <p class="text-gray-700 mb-6">
+                {% if lang == 'tr' %}Tüm {{ product.name }} siparişleri, sertifikalı uygulama ekibimiz tarafından yerinde yapılır. Ek uygulama ücreti yoktur.{% else %}All {{ product.name }} orders are applied on-site by our certified application team. No additional application fee.{% endif %}
+            </p>
+            <a href="/{{ lang }}/iletisim/" class="btn-primary inline-block text-white px-8 py-4 rounded-lg font-bold text-lg">
+                {% if lang == 'tr' %}Ücretsiz Keşif Randevusu Al{% else %}Book Free Site Survey{% endif %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Case Study Section - Dark Background #}
+{% if product.caseStudy %}
+<section class="py-16 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="text-green-400 font-semibold mb-2">{% if lang == 'tr' %}BAŞARI HİKAYESİ{% else %}SUCCESS STORY{% endif %}</div>
+                <h2 class="text-4xl font-bold mb-6">{{ product.caseStudy.title }}</h2>
+                <p class="text-xl text-gray-300 mb-8">{{ product.caseStudy.description }}</p>
+
+                {# Stats Grid #}
+                {% if product.caseStudy.stats %}
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    {% for stat in product.caseStudy.stats %}
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                        <div class="text-4xl font-bold text-{{ stat.color or 'green' }}-400 mb-2">{{ stat.value }}</div>
+                        <div class="text-gray-300">{{ stat.label }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {# Quote #}
+                {% if product.caseStudy.quote %}
+                <blockquote class="border-l-4 border-green-400 pl-6 italic text-gray-300 mb-4">
+                    "{{ product.caseStudy.quote }}"
+                </blockquote>
+                <div class="text-gray-400">— {{ product.caseStudy.author }}</div>
+                {% endif %}
+            </div>
+
+            <div>
+                {% if product.caseStudy.image %}
+                <img src="{{ product.caseStudy.image }}"
+                     alt="{{ product.caseStudy.title }}"
+                     class="rounded-2xl shadow-2xl">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# FAQ Section - Collapsible Accordions #}
+{% if product.faqs %}
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Sıkça Sorulan Sorular{% else %}Frequently Asked Questions{% endif %}</h2>
+        </div>
+
+        <div class="space-y-4">
+            {% for faq in product.faqs %}
+            <details class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors group">
+                <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center">
+                    {{ faq.question }}
+                    <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </summary>
+                <p class="mt-4 text-gray-700">{{ faq.answer }}</p>
+            </details>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Related Products Section #}
+{% if product.relatedProducts %}
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{% if lang == 'tr' %}Diğer Ürünlerimiz{% else %}Our Other Products{% endif %}</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            {% for related in product.relatedProducts %}
+            <a href="{{ related.url }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift block">
+                <div class="h-48 bg-gradient-to-br from-{{ related.color or 'blue' }}-500 to-{{ related.color or 'blue' }}-700 flex items-center justify-center">
+                    <div class="text-white text-6xl">{{ related.icon or '🔬' }}</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ related.name }}</h3>
+                    <p class="text-gray-600 mb-4">{{ related.description }}</p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-2xl font-bold text-blue-700">{{ related.price }}</div>
+                        <span class="text-blue-700 font-semibold">{% if lang == 'tr' %}Detayları Gör{% else %}View Details{% endif %} →</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# Final CTA Section - Full Gradient #}
+<section class="py-16 gradient-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <h2 class="text-4xl font-bold mb-6">
+            {% if lang == 'tr' %}{{ product.name }} ile Verimliliği Artırın{% else %}Increase Efficiency with {{ product.name }}{% endif %}
+        </h2>
+        <p class="text-xl mb-8 text-blue-100">
+            {% if lang == 'tr' %}Profesyonel uygulama ve {{ product.warranty or '5 yıl' }} garanti ile güneş panelinizin performansını maksimize edin.{% else %}Maximize your solar panel performance with professional application and {{ product.warranty or '5 years' }} warranty.{% endif %}
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/{{ lang }}/iletisim/" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105">
+                {% if lang == 'tr' %}Hemen Sipariş Ver{% else %}Order Now{% endif %}
+            </a>
+            <a href="/{{ lang }}/iletisim/" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-700 transition-all">
+                {% if lang == 'tr' %}Ücretsiz Teklif Al{% else %}Get Free Quote{% endif %}
+            </a>
+        </div>
+    </div>
+</section>

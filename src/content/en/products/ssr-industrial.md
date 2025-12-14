@@ -1,158 +1,140 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-ssr.njk
 lang: en
-translations: en
 title: "MATERIX SSR Industrial"
 description: "Nano coating for industrial solar power plants. 8-12% efficiency increase, 7-year warranty, special formulation."
 permalink: /en/products/ssr-industrial/
 product:
   name: "MATERIX SSR Industrial"
   code: "SSR-IND"
-  category: "Solar Panel Coatings"
-  type: "Industrial Nano Coating"
+  badge: "Industrial Power"
   description: "Maximum performance and durability for large-scale solar power plants"
-  protection_duration: "7 Year Warranty"
-  warranty: "7 Years"
-  price: "€120 / m²"
   image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=800&fit=crop"
-features:
-  - "8-12% efficiency increase for maximum energy production"
-  - "7-year warranty - the industry's longest warranty"
-  - "Industrial formulation resistant to extreme weather conditions"
-  - "Up to 80% reduction in cleaning costs"
-  - "Professional application by expert team"
-  - "500+ MW installed capacity"
-  - "4.95/5 customer rating"
-benefits:
-  - title: "Maximum Performance"
-    description: "Maximize your ROI with 8-12% efficiency increase. Formulation optimized for large power plants."
-  - title: "Industrial Durability"
-    description: "Industry's longest protection with 7-year warranty. Superior resistance to extreme temperature, humidity and UV."
-  - title: "Low Operating Cost"
-    description: "Up to 80% reduction in cleaning and maintenance costs. Less downtime, more production."
-  - title: "Dedicated Support"
-    description: "Dedicated account manager and 24/7 technical support. Periodic performance reports."
+  price: "Custom Quote"
+  priceUnit: ""
+  priceNote: "* Project-based pricing. Minimum 500 m²"
+  warranty: "7 Years"
+  roi: "1.8 Years"
+  roiNote: "15-year lifespan"
+  stats:
+    installations: "500+ MW"
+    rating: "4.95/5"
+  highlights:
+    - "8-12% Efficiency Increase"
+    - "7 Year Warranty"
+    - "Robotic Application"
+  keyBenefits:
+    - title: "Maximum Performance"
+      description: "Maximize your ROI with 8-12% efficiency increase. Formulation optimized for large power plants."
+      color: "blue"
+      icon: '<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+    - title: "Industrial Durability"
+      description: "Industry's longest protection with 7-year warranty. Superior resistance to extreme temperature, humidity and UV."
+      color: "green"
+      icon: '<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>'
+    - title: "Dedicated Support"
+      description: "Dedicated account manager and 24/7 technical support. Periodic performance reports."
+      color: "purple"
+      icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>'
+  performanceSpecs:
+    - label: "Efficiency Increase"
+      value: "8-12%"
+      color: "blue"
+    - label: "Dirt Repellency"
+      value: "99.9%"
+      color: "green"
+    - label: "Water Contact Angle"
+      value: "120°-125°"
+      color: "blue"
+    - label: "UV Transmittance"
+      value: "99%+"
+      color: "green"
+    - label: "Light Transmission"
+      value: "99.5%"
+      color: "blue"
+  durabilitySpecs:
+    - label: "Warranty Period"
+      value: "7 Years"
+      color: "blue"
+    - label: "Estimated Lifespan"
+      value: "12-15 Years"
+      color: "green"
+    - label: "Temperature Resistance"
+      value: "-50°C / +90°C"
+      color: "blue"
+    - label: "UV Resistance"
+      value: "Excellent+"
+      color: "green"
+    - label: "Chemical Resistance"
+      value: "pH 1-13"
+      color: "blue"
+  applicationDetails:
+    - value: "500 m²"
+      label: "Minimum Area"
+      color: "blue"
+    - value: "48-72h"
+      label: "Curing Time"
+      color: "green"
+    - value: "0.6-0.8 L"
+      label: "Consumption / 100m²"
+      color: "purple"
+    - value: "1 Day"
+      label: "Application / 2000m²"
+      color: "orange"
+  applicationSteps:
+    - title: "Site Analysis"
+      description: "Detailed site inspection and performance measurement"
+      color: "blue"
+    - title: "Professional Cleaning"
+      description: "Deep cleaning with industrial cleaning equipment"
+      color: "green"
+    - title: "Robotic Application"
+      description: "MATERIX SSR Industrial applied with robotic systems"
+      color: "purple"
+    - title: "Quality Control"
+      description: "ISO standard quality control and certification"
+      color: "orange"
+  caseStudy:
+    title: "Konya Solar Plant: 50 MW"
+    description: "36-month monitoring data from the 50 MW solar power plant commissioned in 2021 after MATERIX SSR Industrial application."
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=1000&fit=crop"
+    stats:
+      - value: "+9.2%"
+        label: "Average Efficiency Increase"
+        color: "green"
+      - value: "€450K"
+        label: "Annual Additional Revenue"
+        color: "blue"
+      - value: "78%"
+        label: "Cleaning Cost Reduction"
+        color: "purple"
+      - value: "1.8 years"
+        label: "Payback Period"
+        color: "orange"
+    quote: "The MATERIX application at our 50 MW plant delivered results beyond our expectations. We recovered our investment in 2 years."
+    author: "Hakan Yilmaz, Plant Director"
+  faqs:
+    - question: "What is the minimum project size?"
+      answer: "Minimum project size for SSR Industrial is 500 m² (approximately 100 kWp). For smaller projects, we recommend SSR Pro."
+    - question: "How long does application take?"
+      answer: "We have an average application capacity of 2000 m²/day. A 1 MW plant takes approximately 3-4 days."
+    - question: "What are the warranty terms?"
+      answer: "We guarantee the specified performance values for 7 years. Free renewal is provided in case of performance degradation."
+    - question: "Are there financing options?"
+      answer: "Yes, we offer installment payment and leasing options for large projects. Contact us for details."
+    - question: "Can it be applied to existing plants?"
+      answer: "Yes, it can be applied to all commercial solar panels. Panel age or brand doesn't matter."
+  relatedProducts:
+    - name: "MATERIX SSR Pro"
+      url: "/en/products/ssr-pro/"
+      description: "Premium solution for professional installations"
+      price: "€ 85 / m²"
+      color: "blue"
+      icon: "🔬"
+    - name: "MATERIX SSR Standard"
+      url: "/en/products/ssr-standard/"
+      description: "For residential and small businesses"
+      price: "€ 55 / m²"
+      color: "green"
+      icon: "⚡"
 ---
-
-## Technical Specifications
-
-### Performance Characteristics
-
-| Feature | Value |
-|---------|-------|
-| Efficiency Increase | 8-12% |
-| Dirt Repellency | 99.9% |
-| Water Contact Angle | 120°-125° |
-| UV Transmittance | 99%+ |
-| Light Transmission | 99.5% |
-
-### Durability
-
-| Feature | Value |
-|---------|-------|
-| Warranty Period | 7 Years |
-| Estimated Lifespan | 12-15 Years |
-| Temperature Resistance | -50°C / +90°C |
-| UV Resistance | Excellent+ |
-| Chemical Resistance | pH 1-13 |
-
-### Application Details
-
-- **Minimum Area:** 500 m²
-- **Curing Time:** 48-72 hours
-- **Consumption:** 0.6-0.8 L / 100m²
-- **Application Time:** 1 day / 2000m²
-
----
-
-## Application Process
-
-5-phase application by our expert industrial team:
-
-### 1. Site Analysis
-Detailed site inspection and performance measurement.
-
-### 2. Professional Cleaning
-Deep cleaning with industrial cleaning equipment.
-
-### 3. Surface Preparation
-Special primer and activator application.
-
-### 4. Nano Coating
-MATERIX SSR Industrial applied with robotic systems.
-
-### 5. Quality Control & Certification
-ISO standard quality control and international certification.
-
----
-
-## Industrial References
-
-### Konya Solar Plant - 50 MW
-**36-Month Monitoring Data**
-
-| Metric | Result |
-|--------|--------|
-| Average Efficiency Increase | +9.2% |
-| Annual Additional Revenue | €450K |
-| Cleaning Cost Reduction | 78% |
-| Payback Period | 1.8 years |
-
-### Ankara Solar Plant - 25 MW
-**24-Month Monitoring Data**
-
-| Metric | Result |
-|--------|--------|
-| Average Efficiency Increase | +8.7% |
-| Annual Additional Revenue | €210K |
-| Cleaning Cost Reduction | 82% |
-| Payback Period | 2.0 years |
-
----
-
-## Why SSR Industrial?
-
-### Optimized for Large Plants
-
-- **500+ MW** installed capacity experience
-- **50+ MW** single project capacity
-- **24/7** technical support
-- **Dedicated** account manager
-
-### Financial Advantages
-
-- **8-12%** efficiency increase
-- **80%** cleaning savings
-- **<2 years** payback period
-- **ROI guarantee**
-
----
-
-## Product Comparison
-
-| Feature | Standard | Pro | Industrial |
-|---------|----------|-----|------------|
-| Efficiency Increase | 4-6% | 6-8% | 8-12% |
-| Warranty | 3 Years | 5 Years | 7 Years |
-| Min. Area | 10 m² | 50 m² | 500 m² |
-| Temperature | -30/+80°C | -40/+85°C | -50/+90°C |
-| Price | €55/m² | €85/m² | €120/m² |
-
----
-
-## Frequently Asked Questions
-
-### What is the minimum project size?
-Minimum project size for SSR Industrial is 500 m² (approximately 100 kWp). For smaller projects, we recommend SSR Pro.
-
-### How long does application take?
-We have an average application capacity of 2000 m²/day. A 1 MW plant takes approximately 3-4 days.
-
-### What are the warranty terms?
-We guarantee the specified performance values for 7 years. Free renewal is provided in case of performance degradation.
-
-### Are there financing options?
-Yes, we offer installment payment and leasing options for large projects. Contact us for details.
-
-### Can it be applied to existing panels?
-Yes, it can be applied to all commercial solar panels. Panel age or brand doesn't matter.

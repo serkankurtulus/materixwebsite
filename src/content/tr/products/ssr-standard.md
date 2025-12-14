@@ -1,117 +1,140 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-ssr.njk
 lang: tr
-translations: tr
 title: "MATERIX SSR Standard"
 description: "Ev tipi güneş panelleri için nano kaplama. %4-6 verim artışı, 3 yıl garanti, kolay uygulama."
 permalink: /tr/urunlerimiz/ssr-standard/
 product:
   name: "MATERIX SSR Standard"
   code: "SSR-STD"
-  category: "Güneş Paneli Kaplamaları"
-  type: "Standart Nano Kaplama"
+  badge: "Ekonomik Seçim"
   description: "Ev ve küçük ölçekli sistemler için ideal, uygun maliyetli nano kaplama çözümü"
-  protection_duration: "3 Yıl Garanti"
-  warranty: "3 Yıl"
-  price: "₺550 / m²"
   image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=800&fit=crop"
-features:
-  - "%4-6 verim artışı ile enerji üretiminizi optimize edin"
-  - "3 yıl garanti ile güvenli yatırım"
-  - "Kendi kendini temizleme özelliği"
-  - "Temizlik maliyetlerinde %60'a varan azalma"
-  - "Hızlı ve kolay uygulama"
-  - "1.5K+ başarılı kurulum"
-  - "4.7/5 müşteri puanı"
-benefits:
-  - title: "Verimli Üretim"
-    description: "%4-6 verim artışı ile yıllık üretiminizi artırın. Panelleriniz daha uzun süre temiz kalır."
-  - title: "Uygun Maliyet"
-    description: "Ev kullanıcıları için optimize edilmiş fiyatlandırma. Yüksek kalite, makul bütçe."
-  - title: "Kolay Bakım"
-    description: "Kendi kendini temizleme özelliği sayesinde minimum bakım gerektirir."
-  - title: "Hızlı Uygulama"
-    description: "Küçük sistemler için aynı gün uygulama tamamlanır."
+  price: "₺ 550"
+  priceUnit: "/ m²"
+  priceNote: "* Minimum 10 m² uygulama için geçerlidir"
+  warranty: "3 Yıl"
+  roi: "2.8 Yıl"
+  roiNote: "7 yıl kullanım süresi"
+  stats:
+    installations: "1.5K+"
+    rating: "4.7/5"
+  highlights:
+    - "%4-6 Verim Artışı"
+    - "3 Yıl Garanti"
+    - "DIY Uygulanabilir"
+  keyBenefits:
+    - title: "Verimli Üretim"
+      description: "%4-6 verim artışı ile yıllık üretiminizi artırın. Panelleriniz daha uzun süre temiz kalır."
+      color: "green"
+      icon: '<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+    - title: "Uygun Maliyet"
+      description: "Ev kullanıcıları için optimize edilmiş fiyatlandırma. Yüksek kalite, makul bütçe."
+      color: "blue"
+      icon: '<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+    - title: "Kolay Uygulama"
+      description: "DIY uygulamaya uygun formülasyon. Detaylı kılavuz ile kendiniz uygulayabilirsiniz."
+      color: "purple"
+      icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+  performanceSpecs:
+    - label: "Verim Artışı"
+      value: "%4-6"
+      color: "blue"
+    - label: "Kir İtme Özelliği"
+      value: "%98"
+      color: "green"
+    - label: "Su İtme Açısı"
+      value: "110°-115°"
+      color: "blue"
+    - label: "UV Geçirgenlik"
+      value: "%97+"
+      color: "green"
+    - label: "Işık Transmisyonu"
+      value: "%98.8"
+      color: "blue"
+  durabilitySpecs:
+    - label: "Garanti Süresi"
+      value: "3 Yıl"
+      color: "blue"
+    - label: "Tahmini Ömür"
+      value: "5-7 Yıl"
+      color: "green"
+    - label: "Sıcaklık Dayanımı"
+      value: "-30°C / +80°C"
+      color: "blue"
+    - label: "UV Dayanımı"
+      value: "Çok İyi"
+      color: "green"
+    - label: "Kimyasal Dayanım"
+      value: "pH 3-11"
+      color: "blue"
+  applicationDetails:
+    - value: "10 m²"
+      label: "Minimum Alan"
+      color: "blue"
+    - value: "12-24h"
+      label: "Kuruma Süresi"
+      color: "green"
+    - value: "1.0-1.5 L"
+      label: "Tüketim / 100m²"
+      color: "purple"
+    - value: "2-4 saat"
+      label: "Uygulama / 50m²"
+      color: "orange"
+  applicationSteps:
+    - title: "Yüzey Temizliği"
+      description: "Panel yüzeyleri temizlenir ve kurumaya bırakılır"
+      color: "blue"
+    - title: "Kaplama Hazırlığı"
+      description: "Ürün iyice çalkalanır ve uygulama bezine alınır"
+      color: "green"
+    - title: "Uygulama"
+      description: "Dairesel hareketlerle eşit şekilde uygulanır"
+      color: "purple"
+    - title: "Kuruma"
+      description: "24 saat kuruma süresi beklenir"
+      color: "orange"
+  caseStudy:
+    title: "Ankara Konut: 10 kWp Çatı Sistemi"
+    description: "2023 yılında kurulan ev tipi güneş paneli sisteminde MATERIX SSR Standard uygulaması sonrası 12 aylık izleme verileri."
+    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=1000&fit=crop"
+    stats:
+      - value: "+5.2%"
+        label: "Ortalama Verim Artışı"
+        color: "green"
+      - value: "₺8.5K"
+        label: "Yıllık Ek Gelir"
+        color: "blue"
+      - value: "%65"
+        label: "Temizlik Maliyet Azalması"
+        color: "purple"
+      - value: "2.5 yıl"
+        label: "Geri Ödeme Süresi"
+        color: "orange"
+    quote: "Kendi evimde kolayca uyguladım. Temizlik derdi bitti, elektrik faturamda ciddi düşüş gördüm."
+    author: "Ali Demir, Ev Sahibi"
+  faqs:
+    - question: "SSR Standard'ı kendim uygulayabilir miyim?"
+      answer: "Evet! SSR Standard, DIY uygulamaya uygun formülasyona sahiptir. Detaylı uygulama kılavuzu ile birlikte teslim edilir."
+    - question: "Garanti kapsamı nedir?"
+      answer: "3 yıl süresince ürün performansını garantiliyoruz. Normal kullanım koşullarında kaplama etkinliğini kaybederse, ücretsiz yeniden uygulama yapılır."
+    - question: "Ne kadar sürede kendini amorti eder?"
+      answer: "Ortalama 2-3 yıl içinde yatırımınızı geri kazanırsınız."
+    - question: "Tüm panel tiplerine uygulanabilir mi?"
+      answer: "Evet, tüm silikon tabanlı güneş panellerine uygulanabilir."
+    - question: "Profesyonel uygulama isteyebilir miyim?"
+      answer: "Evet! Ek ücret karşılığında profesyonel uygulama hizmeti de sunuyoruz."
+  relatedProducts:
+    - name: "MATERIX SSR Pro"
+      url: "/tr/urunlerimiz/ssr-pro/"
+      description: "Profesyonel kurulumlar için premium çözüm"
+      price: "₺ 850 / m²"
+      color: "blue"
+      icon: "🔬"
+    - name: "MATERIX SSR Industrial"
+      url: "/tr/urunlerimiz/ssr-industrial/"
+      description: "Büyük ölçekli GES projeleri için"
+      price: "Özel Teklif"
+      color: "purple"
+      icon: "🏭"
 ---
-
-## Teknik Özellikler
-
-### Performans Özellikleri
-
-| Özellik | Değer |
-|---------|-------|
-| Verim Artışı | %4-6 |
-| Kir İtme Özelliği | %98 |
-| Su İtme Açısı | 110°-115° |
-| UV Geçirgenlik | %97+ |
-| Işık Transmisyonu | %98.8 |
-
-### Dayanıklılık
-
-| Özellik | Değer |
-|---------|-------|
-| Garanti Süresi | 3 Yıl |
-| Tahmini Ömür | 5-7 Yıl |
-| Sıcaklık Dayanımı | -30°C / +80°C |
-| UV Dayanımı | Çok İyi |
-| Kimyasal Dayanım | pH 3-11 |
-
-### Uygulama Detayları
-
-- **Minimum Alan:** 10 m²
-- **Kuruma Süresi:** 12-24 saat
-- **Tüketim:** 1.0-1.5 L / 100m²
-- **Uygulama Süresi:** 2-4 saat / 50m²
-
----
-
-## Uygulama Süreci
-
-### 1. Yüzey Temizliği
-Panel yüzeyleri temizlenir ve kurumaya bırakılır.
-
-### 2. Kaplama Uygulaması
-MATERIX SSR Standard eşit şekilde uygulanır.
-
-### 3. Kuruma
-24 saat kuruma süresi beklenir.
-
-### 4. Kontrol
-Uygulama kalitesi kontrol edilir.
-
----
-
-## Kimler İçin Uygun?
-
-- **Ev kullanıcıları** - Çatı tipi güneş paneli sahipleri
-- **Küçük işletmeler** - 50 kW'a kadar sistemler
-- **Tarımsal tesisler** - Sera ve çiftlik uygulamaları
-- **Bütçe odaklı projeler** - Maliyet-etkin çözüm arayanlar
-
----
-
-## SSR Pro ile Karşılaştırma
-
-| Özellik | SSR Standard | SSR Pro |
-|---------|--------------|---------|
-| Verim Artışı | %4-6 | %6-8 |
-| Garanti | 3 Yıl | 5 Yıl |
-| Min. Alan | 10 m² | 50 m² |
-| Uygulama | DIY / Profesyonel | Profesyonel |
-| Fiyat | ₺550/m² | ₺850/m² |
-
----
-
-## Sıkça Sorulan Sorular
-
-### SSR Standard'ı kendim uygulayabilir miyim?
-Evet! SSR Standard, DIY uygulamaya uygun formülasyona sahiptir. Detaylı uygulama kılavuzu ile birlikte teslim edilir.
-
-### Garanti kapsamı nedir?
-3 yıl süresince ürün performansını garantiliyoruz. Normal kullanım koşullarında kaplama etkinliğini kaybederse, ücretsiz yeniden uygulama yapılır.
-
-### Ne kadar sürede kendini amorti eder?
-Ortalama 2-3 yıl içinde yatırımınızı geri kazanırsınız.
-
-### Tüm panel tiplerine uygulanabilir mi?
-Evet, tüm silikon tabanlı güneş panellerine uygulanabilir.

@@ -1,158 +1,140 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-ssr.njk
 lang: tr
-translations: tr
 title: "MATERIX SSR Industrial"
 description: "Endüstriyel güneş santralleri için nano kaplama. %8-12 verim artışı, 7 yıl garanti, özel formülasyon."
 permalink: /tr/urunlerimiz/ssr-industrial/
 product:
   name: "MATERIX SSR Industrial"
   code: "SSR-IND"
-  category: "Güneş Paneli Kaplamaları"
-  type: "Endüstriyel Nano Kaplama"
+  badge: "Endüstriyel Güç"
   description: "Büyük ölçekli güneş santralleri için maksimum performans ve dayanıklılık"
-  protection_duration: "7 Yıl Garanti"
-  warranty: "7 Yıl"
-  price: "₺1.200 / m²"
   image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=800&fit=crop"
-features:
-  - "%8-12 verim artışı ile maksimum enerji üretimi"
-  - "7 yıl garanti - sektörün en uzun garantisi"
-  - "Aşırı hava koşullarına dayanıklı endüstriyel formülasyon"
-  - "Temizlik maliyetlerinde %80'e varan azalma"
-  - "Uzman ekip tarafından profesyonel uygulama"
-  - "500+ MW kurulu güç"
-  - "4.95/5 müşteri puanı"
-benefits:
-  - title: "Maksimum Performans"
-    description: "%8-12 verim artışı ile yatırım getirinizi maksimize edin. Büyük santraller için optimize edilmiş formülasyon."
-  - title: "Endüstriyel Dayanıklılık"
-    description: "7 yıl garanti ile sektörün en uzun koruma süresi. Aşırı sıcaklık, nem ve UV'ye karşı üstün direnç."
-  - title: "Düşük İşletme Maliyeti"
-    description: "Temizlik ve bakım maliyetlerinde %80'e varan azalma. Daha az duruş süresi, daha fazla üretim."
-  - title: "Özel Destek"
-    description: "Dedicated hesap yöneticisi ve 7/24 teknik destek. Periyodik performans raporları."
+  price: "Özel Teklif"
+  priceUnit: ""
+  priceNote: "* Proje bazlı fiyatlandırma. Minimum 500 m²"
+  warranty: "7 Yıl"
+  roi: "1.8 Yıl"
+  roiNote: "15 yıl kullanım süresi"
+  stats:
+    installations: "500+ MW"
+    rating: "4.95/5"
+  highlights:
+    - "%8-12 Verim Artışı"
+    - "7 Yıl Garanti"
+    - "Robotik Uygulama"
+  keyBenefits:
+    - title: "Maksimum Performans"
+      description: "%8-12 verim artışı ile yatırım getirinizi maksimize edin. Büyük santraller için optimize edilmiş formülasyon."
+      color: "blue"
+      icon: '<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+    - title: "Endüstriyel Dayanıklılık"
+      description: "7 yıl garanti ile sektörün en uzun koruma süresi. Aşırı sıcaklık, nem ve UV'ye karşı üstün direnç."
+      color: "green"
+      icon: '<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>'
+    - title: "Özel Destek"
+      description: "Dedicated hesap yöneticisi ve 7/24 teknik destek. Periyodik performans raporları."
+      color: "purple"
+      icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>'
+  performanceSpecs:
+    - label: "Verim Artışı"
+      value: "%8-12"
+      color: "blue"
+    - label: "Kir İtme Özelliği"
+      value: "%99.9"
+      color: "green"
+    - label: "Su İtme Açısı"
+      value: "120°-125°"
+      color: "blue"
+    - label: "UV Geçirgenlik"
+      value: "%99+"
+      color: "green"
+    - label: "Işık Transmisyonu"
+      value: "%99.5"
+      color: "blue"
+  durabilitySpecs:
+    - label: "Garanti Süresi"
+      value: "7 Yıl"
+      color: "blue"
+    - label: "Tahmini Ömür"
+      value: "12-15 Yıl"
+      color: "green"
+    - label: "Sıcaklık Dayanımı"
+      value: "-50°C / +90°C"
+      color: "blue"
+    - label: "UV Dayanımı"
+      value: "Mükemmel+"
+      color: "green"
+    - label: "Kimyasal Dayanım"
+      value: "pH 1-13"
+      color: "blue"
+  applicationDetails:
+    - value: "500 m²"
+      label: "Minimum Alan"
+      color: "blue"
+    - value: "48-72h"
+      label: "Kuruma Süresi"
+      color: "green"
+    - value: "0.6-0.8 L"
+      label: "Tüketim / 100m²"
+      color: "purple"
+    - value: "1 Gün"
+      label: "Uygulama / 2000m²"
+      color: "orange"
+  applicationSteps:
+    - title: "Saha Analizi"
+      description: "Detaylı saha incelemesi ve performans ölçümü yapılır"
+      color: "blue"
+    - title: "Profesyonel Temizlik"
+      description: "Endüstriyel temizlik ekipmanları ile derinlemesine temizlik"
+      color: "green"
+    - title: "Robotik Uygulama"
+      description: "MATERIX SSR Industrial robotik sistemlerle uygulanır"
+      color: "purple"
+    - title: "Kalite Kontrol"
+      description: "ISO standartlarında kalite kontrol ve sertifikasyon"
+      color: "orange"
+  caseStudy:
+    title: "Konya GES: 50 MW Santral"
+    description: "2021 yılında devreye alınan 50 MW güneş enerji santralinde MATERIX SSR Industrial uygulaması sonrası 36 aylık izleme verileri."
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=1000&fit=crop"
+    stats:
+      - value: "+9.2%"
+        label: "Ortalama Verim Artışı"
+        color: "green"
+      - value: "₺4.5M"
+        label: "Yıllık Ek Gelir"
+        color: "blue"
+      - value: "%78"
+        label: "Temizlik Maliyet Azalması"
+        color: "purple"
+      - value: "1.8 yıl"
+        label: "Geri Ödeme Süresi"
+        color: "orange"
+    quote: "50 MW'lık santralimizdeki MATERIX uygulaması, beklentilerimizin üzerinde sonuçlar verdi. Yatırımı 2 yılda geri kazandık."
+    author: "Hakan Yılmaz, Santral Direktörü"
+  faqs:
+    - question: "Minimum proje büyüklüğü nedir?"
+      answer: "SSR Industrial için minimum proje büyüklüğü 500 m² (yaklaşık 100 kWp) dir. Daha küçük projeler için SSR Pro öneriyoruz."
+    - question: "Uygulama süresi ne kadar?"
+      answer: "Ortalama 2000 m²/gün uygulama kapasitemiz bulunmaktadır. 1 MW'lık bir santral için yaklaşık 3-4 gün sürer."
+    - question: "Garanti şartları nelerdir?"
+      answer: "7 yıl boyunca belirtilen performans değerlerini garantiliyoruz. Performans düşüşü durumunda ücretsiz yenileme yapılır."
+    - question: "Finans seçenekleri var mı?"
+      answer: "Evet, büyük projeler için taksitli ödeme ve leasing seçenekleri sunuyoruz. Detaylar için bizimle iletişime geçin."
+    - question: "Mevcut santrallere uygulanabilir mi?"
+      answer: "Evet, tüm ticari güneş panellerine uygulanabilir. Panel yaşı veya markası fark etmez."
+  relatedProducts:
+    - name: "MATERIX SSR Pro"
+      url: "/tr/urunlerimiz/ssr-pro/"
+      description: "Profesyonel kurulumlar için premium çözüm"
+      price: "₺ 850 / m²"
+      color: "blue"
+      icon: "🔬"
+    - name: "MATERIX SSR Standard"
+      url: "/tr/urunlerimiz/ssr-standard/"
+      description: "Konut ve küçük işletmeler için"
+      price: "₺ 550 / m²"
+      color: "green"
+      icon: "⚡"
 ---
-
-## Teknik Özellikler
-
-### Performans Özellikleri
-
-| Özellik | Değer |
-|---------|-------|
-| Verim Artışı | %8-12 |
-| Kir İtme Özelliği | %99.9 |
-| Su İtme Açısı | 120°-125° |
-| UV Geçirgenlik | %99+ |
-| Işık Transmisyonu | %99.5 |
-
-### Dayanıklılık
-
-| Özellik | Değer |
-|---------|-------|
-| Garanti Süresi | 7 Yıl |
-| Tahmini Ömür | 12-15 Yıl |
-| Sıcaklık Dayanımı | -50°C / +90°C |
-| UV Dayanımı | Mükemmel+ |
-| Kimyasal Dayanım | pH 1-13 |
-
-### Uygulama Detayları
-
-- **Minimum Alan:** 500 m²
-- **Kuruma Süresi:** 48-72 saat
-- **Tüketim:** 0.6-0.8 L / 100m²
-- **Uygulama Süresi:** 1 gün / 2000m²
-
----
-
-## Uygulama Süreci
-
-Uzman endüstriyel ekibimiz tarafından 5 aşamalı uygulama:
-
-### 1. Saha Analizi
-Detaylı saha incelemesi ve performans ölçümü yapılır.
-
-### 2. Profesyonel Temizlik
-Endüstriyel temizlik ekipmanları ile derinlemesine temizlik.
-
-### 3. Yüzey Hazırlığı
-Özel primer ve aktivatör uygulaması.
-
-### 4. Nano Kaplama
-MATERIX SSR Industrial robotik sistemlerle uygulanır.
-
-### 5. Kalite Kontrol & Sertifikasyon
-ISO standartlarında kalite kontrol ve uluslararası sertifikasyon.
-
----
-
-## Endüstriyel Referanslar
-
-### Konya GES - 50 MW
-**36 Aylık İzleme Verileri**
-
-| Metrik | Sonuç |
-|--------|-------|
-| Ortalama Verim Artışı | +9.2% |
-| Yıllık Ek Gelir | ₺4.5M |
-| Temizlik Maliyet Azalması | %78 |
-| Geri Ödeme Süresi | 1.8 yıl |
-
-### Ankara GES - 25 MW
-**24 Aylık İzleme Verileri**
-
-| Metrik | Sonuç |
-|--------|-------|
-| Ortalama Verim Artışı | +8.7% |
-| Yıllık Ek Gelir | ₺2.1M |
-| Temizlik Maliyet Azalması | %82 |
-| Geri Ödeme Süresi | 2.0 yıl |
-
----
-
-## Neden SSR Industrial?
-
-### Büyük Santraller İçin Optimize
-
-- **500+ MW** kurulu güç deneyimi
-- **50+ MW** tek proje kapasitesi
-- **7/24** teknik destek
-- **Dedicated** hesap yöneticisi
-
-### Finansal Avantajlar
-
-- **%8-12** verim artışı
-- **%80** temizlik tasarrufu
-- **<2 yıl** geri ödeme süresi
-- **ROI garantisi**
-
----
-
-## Ürün Karşılaştırması
-
-| Özellik | Standard | Pro | Industrial |
-|---------|----------|-----|------------|
-| Verim Artışı | %4-6 | %6-8 | %8-12 |
-| Garanti | 3 Yıl | 5 Yıl | 7 Yıl |
-| Min. Alan | 10 m² | 50 m² | 500 m² |
-| Sıcaklık | -30/+80°C | -40/+85°C | -50/+90°C |
-| Fiyat | ₺550/m² | ₺850/m² | ₺1.200/m² |
-
----
-
-## Sıkça Sorulan Sorular
-
-### Minimum proje büyüklüğü nedir?
-SSR Industrial için minimum proje büyüklüğü 500 m² (yaklaşık 100 kWp) dir. Daha küçük projeler için SSR Pro öneriyoruz.
-
-### Uygulama süresi ne kadar?
-Ortalama 2000 m²/gün uygulama kapasitemiz bulunmaktadır. 1 MW'lık bir santral için yaklaşık 3-4 gün sürer.
-
-### Garanti şartları nelerdir?
-7 yıl boyunca belirtilen performans değerlerini garantiliyoruz. Performans düşüşü durumunda ücretsiz yenileme yapılır.
-
-### Finans seçenekleri var mı?
-Evet, büyük projeler için taksitli ödeme ve leasing seçenekleri sunuyoruz. Detaylar için bizimle iletişime geçin.
-
-### Mevcut panellere uygulanabilir mi?
-Evet, tüm ticari güneş panellerine uygulanabilir. Panel yaşı veya markası fark etmez.

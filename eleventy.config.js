@@ -1,5 +1,18 @@
 module.exports = function(eleventyConfig) {
 
+  // Add computed data for translations
+  // This makes 'translations' available as the actual translation object based on 'lang'
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    translations: (data) => {
+      const lang = data.lang || 'tr';
+      // Return the translation data based on language
+      if (lang === 'en') {
+        return data.en;
+      }
+      return data.tr;
+    }
+  });
+
   // Copy static assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");

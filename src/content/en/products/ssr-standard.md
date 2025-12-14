@@ -1,117 +1,140 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-ssr.njk
 lang: en
-translations: en
 title: "MATERIX SSR Standard"
 description: "Nano coating for residential solar panels. 4-6% efficiency increase, 3-year warranty, easy application."
 permalink: /en/products/ssr-standard/
 product:
   name: "MATERIX SSR Standard"
   code: "SSR-STD"
-  category: "Solar Panel Coatings"
-  type: "Standard Nano Coating"
+  badge: "Budget Friendly"
   description: "Cost-effective nano coating solution ideal for residential and small-scale systems"
-  protection_duration: "3 Year Warranty"
-  warranty: "3 Years"
-  price: "€55 / m²"
   image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=800&fit=crop"
-features:
-  - "4-6% efficiency increase to optimize your energy production"
-  - "3-year warranty for secure investment"
-  - "Self-cleaning feature"
-  - "Up to 60% reduction in cleaning costs"
-  - "Quick and easy application"
-  - "1.5K+ successful installations"
-  - "4.7/5 customer rating"
-benefits:
-  - title: "Efficient Production"
-    description: "Increase your annual production with 4-6% efficiency gain. Your panels stay clean longer."
-  - title: "Affordable Cost"
-    description: "Pricing optimized for home users. High quality, reasonable budget."
-  - title: "Easy Maintenance"
-    description: "Requires minimum maintenance thanks to self-cleaning feature."
-  - title: "Quick Application"
-    description: "Application completed same day for small systems."
+  price: "€ 55"
+  priceUnit: "/ m²"
+  priceNote: "* Valid for minimum 10 m² application"
+  warranty: "3 Years"
+  roi: "2.8 Years"
+  roiNote: "7-year lifespan"
+  stats:
+    installations: "1.5K+"
+    rating: "4.7/5"
+  highlights:
+    - "4-6% Efficiency Increase"
+    - "3 Year Warranty"
+    - "DIY Applicable"
+  keyBenefits:
+    - title: "Efficient Production"
+      description: "Increase your annual production with 4-6% efficiency gain. Your panels stay clean longer."
+      color: "green"
+      icon: '<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+    - title: "Affordable Cost"
+      description: "Pricing optimized for home users. High quality, reasonable budget."
+      color: "blue"
+      icon: '<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+    - title: "Easy Application"
+      description: "DIY-friendly formulation. You can apply it yourself with the detailed guide."
+      color: "purple"
+      icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+  performanceSpecs:
+    - label: "Efficiency Increase"
+      value: "4-6%"
+      color: "blue"
+    - label: "Dirt Repellency"
+      value: "98%"
+      color: "green"
+    - label: "Water Contact Angle"
+      value: "110°-115°"
+      color: "blue"
+    - label: "UV Transmittance"
+      value: "97%+"
+      color: "green"
+    - label: "Light Transmission"
+      value: "98.8%"
+      color: "blue"
+  durabilitySpecs:
+    - label: "Warranty Period"
+      value: "3 Years"
+      color: "blue"
+    - label: "Estimated Lifespan"
+      value: "5-7 Years"
+      color: "green"
+    - label: "Temperature Resistance"
+      value: "-30°C / +80°C"
+      color: "blue"
+    - label: "UV Resistance"
+      value: "Very Good"
+      color: "green"
+    - label: "Chemical Resistance"
+      value: "pH 3-11"
+      color: "blue"
+  applicationDetails:
+    - value: "10 m²"
+      label: "Minimum Area"
+      color: "blue"
+    - value: "12-24h"
+      label: "Curing Time"
+      color: "green"
+    - value: "1.0-1.5 L"
+      label: "Consumption / 100m²"
+      color: "purple"
+    - value: "2-4 hours"
+      label: "Application / 50m²"
+      color: "orange"
+  applicationSteps:
+    - title: "Surface Cleaning"
+      description: "Panel surfaces are cleaned and left to dry"
+      color: "blue"
+    - title: "Coating Preparation"
+      description: "Product is shaken well and applied to cloth"
+      color: "green"
+    - title: "Application"
+      description: "Applied evenly with circular motions"
+      color: "purple"
+    - title: "Curing"
+      description: "24-hour curing time is observed"
+      color: "orange"
+  caseStudy:
+    title: "Ankara Residence: 10 kWp Rooftop System"
+    description: "12-month monitoring data from the residential solar panel system installed in 2023 after MATERIX SSR Standard application."
+    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=1000&fit=crop"
+    stats:
+      - value: "+5.2%"
+        label: "Average Efficiency Increase"
+        color: "green"
+      - value: "€850"
+        label: "Annual Additional Savings"
+        color: "blue"
+      - value: "65%"
+        label: "Cleaning Cost Reduction"
+        color: "purple"
+      - value: "2.5 years"
+        label: "Payback Period"
+        color: "orange"
+    quote: "I easily applied it at my own home. No more cleaning hassle, and I saw a significant drop in my electricity bill."
+    author: "Ali Demir, Homeowner"
+  faqs:
+    - question: "Can I apply SSR Standard myself?"
+      answer: "Yes! SSR Standard has a DIY-friendly formulation. It comes with a detailed application guide."
+    - question: "What does the warranty cover?"
+      answer: "We guarantee product performance for 3 years. If the coating loses its effectiveness under normal usage conditions, free reapplication is provided."
+    - question: "How long until it pays for itself?"
+      answer: "On average, you'll recover your investment within 2-3 years."
+    - question: "Can it be applied to all panel types?"
+      answer: "Yes, it can be applied to all silicon-based solar panels."
+    - question: "Can I request professional application?"
+      answer: "Yes! We also offer professional application service for an additional fee."
+  relatedProducts:
+    - name: "MATERIX SSR Pro"
+      url: "/en/products/ssr-pro/"
+      description: "Premium solution for professional installations"
+      price: "€ 85 / m²"
+      color: "blue"
+      icon: "🔬"
+    - name: "MATERIX SSR Industrial"
+      url: "/en/products/ssr-industrial/"
+      description: "For large-scale solar projects"
+      price: "Custom Quote"
+      color: "purple"
+      icon: "🏭"
 ---
-
-## Technical Specifications
-
-### Performance Characteristics
-
-| Feature | Value |
-|---------|-------|
-| Efficiency Increase | 4-6% |
-| Dirt Repellency | 98% |
-| Water Contact Angle | 110°-115° |
-| UV Transmittance | 97%+ |
-| Light Transmission | 98.8% |
-
-### Durability
-
-| Feature | Value |
-|---------|-------|
-| Warranty Period | 3 Years |
-| Estimated Lifespan | 5-7 Years |
-| Temperature Resistance | -30°C / +80°C |
-| UV Resistance | Very Good |
-| Chemical Resistance | pH 3-11 |
-
-### Application Details
-
-- **Minimum Area:** 10 m²
-- **Curing Time:** 12-24 hours
-- **Consumption:** 1.0-1.5 L / 100m²
-- **Application Time:** 2-4 hours / 50m²
-
----
-
-## Application Process
-
-### 1. Surface Cleaning
-Panel surfaces are cleaned and left to dry.
-
-### 2. Coating Application
-MATERIX SSR Standard is applied evenly.
-
-### 3. Curing
-24-hour curing time is observed.
-
-### 4. Inspection
-Application quality is checked.
-
----
-
-## Who Is It For?
-
-- **Home users** - Rooftop solar panel owners
-- **Small businesses** - Systems up to 50 kW
-- **Agricultural facilities** - Greenhouse and farm applications
-- **Budget-focused projects** - Those seeking cost-effective solutions
-
----
-
-## Comparison with SSR Pro
-
-| Feature | SSR Standard | SSR Pro |
-|---------|--------------|---------|
-| Efficiency Increase | 4-6% | 6-8% |
-| Warranty | 3 Years | 5 Years |
-| Min. Area | 10 m² | 50 m² |
-| Application | DIY / Professional | Professional |
-| Price | €55/m² | €85/m² |
-
----
-
-## Frequently Asked Questions
-
-### Can I apply SSR Standard myself?
-Yes! SSR Standard has a DIY-friendly formulation. It comes with a detailed application guide.
-
-### What does the warranty cover?
-We guarantee product performance for 3 years. If the coating loses its effectiveness under normal usage conditions, free reapplication is provided.
-
-### How long until it pays for itself?
-On average, you'll recover your investment within 2-3 years.
-
-### Can it be applied to all panel types?
-Yes, it can be applied to all silicon-based solar panels.

@@ -1,117 +1,140 @@
 ---
-layout: layouts/product.njk
+layout: layouts/product-ssr.njk
 lang: en
-translations: en
 title: "MATERIX SSR Pro"
 description: "Professional solar panel nano coating. 6-8% efficiency increase, 5-year warranty, professional application included."
 permalink: /en/products/ssr-pro/
 product:
   name: "MATERIX SSR Pro"
   code: "SSR-PRO"
-  category: "Solar Panel Coatings"
-  type: "Professional Nano Coating"
+  badge: "Most Popular Choice"
   description: "Industry-leading nano coating technology developed for professional installations"
-  protection_duration: "5 Year Warranty"
-  warranty: "5 Years"
-  price: "€85 / m²"
   image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=800&fit=crop"
-features:
-  - "6-8% efficiency increase to significantly boost your annual production"
-  - "5-year warranty for peace of mind"
-  - "UV-resistant formulation maintains effectiveness even in extreme weather"
-  - "Up to 70% reduction in cleaning costs"
-  - "Professional application included - no extra charge"
-  - "2.5K+ successful installations"
-  - "4.9/5 customer rating"
-benefits:
-  - title: "Maximum Efficiency"
-    description: "Significantly increase your annual production with 6-8% efficiency gain. Your solar panels always stay clean and optimized."
-  - title: "Long-lasting Protection"
-    description: "Peace of mind with 5-year warranty. UV-resistant formulation maintains effectiveness even in extreme weather conditions."
-  - title: "Cost Savings"
-    description: "Up to 70% reduction in cleaning costs. Less maintenance, more production, higher profitability."
-  - title: "Professional Application"
-    description: "Applied on-site by our certified application team. No additional application fee."
+  price: "€ 85"
+  priceUnit: "/ m²"
+  priceNote: "* Valid for minimum 50 m² application"
+  warranty: "5 Years"
+  roi: "2.3 Years"
+  roiNote: "10-year lifespan"
+  stats:
+    installations: "2.5K+"
+    rating: "4.9/5"
+  highlights:
+    - "6-8% Efficiency Increase"
+    - "5 Year Warranty"
+    - "Professional Application"
+  keyBenefits:
+    - title: "Maximum Efficiency"
+      description: "Significantly increase your annual production with 6-8% efficiency gain. Your solar panels always stay clean and optimized."
+      color: "blue"
+      icon: '<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+    - title: "Long-lasting Protection"
+      description: "Peace of mind with 5-year warranty. UV-resistant formulation maintains effectiveness even in extreme weather conditions."
+      color: "green"
+      icon: '<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+    - title: "Cost Savings"
+      description: "Up to 70% reduction in cleaning costs. Less maintenance, more production, higher profitability."
+      color: "purple"
+      icon: '<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+  performanceSpecs:
+    - label: "Efficiency Increase"
+      value: "6-8%"
+      color: "blue"
+    - label: "Dirt Repellency"
+      value: "99.5%"
+      color: "green"
+    - label: "Water Contact Angle"
+      value: "115°-120°"
+      color: "blue"
+    - label: "UV Transmittance"
+      value: "98%+"
+      color: "green"
+    - label: "Light Transmission"
+      value: "99.2%"
+      color: "blue"
+  durabilitySpecs:
+    - label: "Warranty Period"
+      value: "5 Years"
+      color: "blue"
+    - label: "Estimated Lifespan"
+      value: "8-10 Years"
+      color: "green"
+    - label: "Temperature Resistance"
+      value: "-40°C / +85°C"
+      color: "blue"
+    - label: "UV Resistance"
+      value: "Excellent"
+      color: "green"
+    - label: "Chemical Resistance"
+      value: "pH 2-12"
+      color: "blue"
+  applicationDetails:
+    - value: "50 m²"
+      label: "Minimum Area"
+      color: "blue"
+    - value: "24-48h"
+      label: "Curing Time"
+      color: "green"
+    - value: "0.8-1.2 L"
+      label: "Consumption / 100m²"
+      color: "purple"
+    - value: "1 Day"
+      label: "Application / 1000m²"
+      color: "orange"
+  applicationSteps:
+    - title: "Surface Cleaning"
+      description: "Panel surfaces are thoroughly cleaned with special cleaning solutions"
+      color: "blue"
+    - title: "Surface Preparation"
+      description: "Surface is optimized for nano coating with primer application"
+      color: "green"
+    - title: "Nano Coating"
+      description: "MATERIX SSR Pro is applied evenly with professional equipment"
+      color: "purple"
+    - title: "Inspection & Testing"
+      description: "Application quality is tested and warranty certificate is issued"
+      color: "orange"
+  caseStudy:
+    title: "Izmir Solar Plant: 500 kWp"
+    description: "24-month monitoring data from the solar power plant commissioned in 2022 after MATERIX SSR Pro application."
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=1000&fit=crop"
+    stats:
+      - value: "+6.8%"
+        label: "Average Efficiency Increase"
+        color: "green"
+      - value: "€18.5K"
+        label: "Annual Additional Revenue"
+        color: "blue"
+      - value: "72%"
+        label: "Cleaning Cost Reduction"
+        color: "purple"
+      - value: "2.1 years"
+        label: "Payback Period"
+        color: "orange"
+    quote: "After the MATERIX SSR Pro application, both our production increased and our maintenance costs significantly decreased. We saw the difference even in the first 6 months."
+    author: "Mehmet Kaya, Plant Manager"
+  faqs:
+    - question: "Can I apply MATERIX SSR Pro myself?"
+      answer: "No, MATERIX SSR Pro requires professional application. Special equipment and technical knowledge are required for maximum effectiveness. All orders are applied by our certified team."
+    - question: "What does the warranty cover?"
+      answer: "We guarantee product performance for 5 years. If the coating loses its effectiveness under normal usage conditions during this period, free reapplication is provided."
+    - question: "How often do I need to clean?"
+      answer: "After MATERIX SSR Pro application, your panels are self-cleaning. We only recommend rinsing with light water 1-2 times a year. No chemical cleaners needed."
+    - question: "Can it be applied to existing panels?"
+      answer: "Yes! MATERIX SSR Pro can be applied to all silicon-based solar panels. The age or brand of your panels doesn't matter."
+    - question: "What is the delivery time?"
+      answer: "A site survey appointment is scheduled within 5-7 business days after order. Application is usually carried out 2 weeks after the survey."
+  relatedProducts:
+    - name: "MATERIX SSR Standard"
+      url: "/en/products/ssr-standard/"
+      description: "Economic solution for residential and small businesses"
+      price: "€ 55 / m²"
+      color: "green"
+      icon: "⚡"
+    - name: "MATERIX SSR Industrial"
+      url: "/en/products/ssr-industrial/"
+      description: "Special formulation for large-scale solar projects"
+      price: "Custom Quote"
+      color: "purple"
+      icon: "🏭"
 ---
-
-## Technical Specifications
-
-### Performance Characteristics
-
-| Feature | Value |
-|---------|-------|
-| Efficiency Increase | 6-8% |
-| Dirt Repellency | 99.5% |
-| Water Contact Angle | 115°-120° |
-| UV Transmittance | 98%+ |
-| Light Transmission | 99.2% |
-
-### Durability
-
-| Feature | Value |
-|---------|-------|
-| Warranty Period | 5 Years |
-| Estimated Lifespan | 8-10 Years |
-| Temperature Resistance | -40°C / +85°C |
-| UV Resistance | Excellent |
-| Chemical Resistance | pH 2-12 |
-
-### Application Details
-
-- **Minimum Area:** 50 m²
-- **Curing Time:** 24-48 hours
-- **Consumption:** 0.8-1.2 L / 100m²
-- **Application Time:** 1 day / 1000m²
-
----
-
-## Application Process
-
-4-phase application by our professional team:
-
-### 1. Surface Cleaning
-Panel surfaces are thoroughly cleaned with special cleaning solutions.
-
-### 2. Surface Preparation
-Surface is optimized for nano coating with primer application.
-
-### 3. Nano Coating
-MATERIX SSR Pro is applied evenly with professional equipment.
-
-### 4. Inspection & Testing
-Application quality is tested and warranty certificate is issued.
-
----
-
-## Success Story: Izmir Solar Plant
-
-**500 kWp Plant - 24-Month Monitoring Data**
-
-| Metric | Result |
-|--------|--------|
-| Average Efficiency Increase | +6.8% |
-| Annual Additional Revenue | €18,500 |
-| Cleaning Cost Reduction | 72% |
-| Payback Period | 2.1 years |
-
-> "After the MATERIX SSR Pro application, both our production increased and our maintenance costs significantly decreased. We saw the difference even in the first 6 months."
-> — Mehmet Kaya, Plant Manager
-
----
-
-## Frequently Asked Questions
-
-### Can I apply MATERIX SSR Pro myself?
-No, MATERIX SSR Pro is a product that requires professional application. Special equipment and technical knowledge are required for maximum effectiveness.
-
-### What does the warranty cover?
-We guarantee product performance for 5 years. If the coating loses its effectiveness under normal usage conditions during this period, free reapplication is provided.
-
-### How often do I need to clean?
-After MATERIX SSR Pro application, your panels are self-cleaning. We only recommend rinsing with light water 1-2 times a year.
-
-### Can it be applied to existing panels?
-Yes! MATERIX SSR Pro can be applied to all silicon-based solar panels. The age or brand of your panels doesn't matter.
-
-### What is the delivery time?
-A site survey appointment is scheduled within 5-7 business days after order. Application is usually carried out 2 weeks after the survey.
