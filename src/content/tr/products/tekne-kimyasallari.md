@@ -35,6 +35,12 @@ productList:
       - "Tuz koruması"
       - "1 yıl koruma"
       - "Kolay temizlik"
+    usage:
+      - "Yüzeyi temizleyip kurutun"
+      - "Tek seferde 0.5 m²'den fazla çalışmayın"
+      - "1 m² için 5-10ml püskürtün"
+      - "Mikrofiber bezle hemen silin"
+      - "Uygulama sıcaklığı: 5-30°C"
   - name: "Detay Temizleyici"
     subtitle: "Marine Çok Amaçlı Temizlik"
     description: "Tekne ve yat iç mekan yüzeyleri için. Mobilya yüzeylerinde (ahşap, metal, plastik), kabin yüzeyleri ve tüm detaylar için etkili temizlik."

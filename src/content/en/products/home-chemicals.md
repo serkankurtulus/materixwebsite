@@ -15,7 +15,7 @@ product:
   image: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=800&h=800&fit=crop"
   quickInfo:
     - label: "Product Count"
-      value: "3 Products"
+      value: "4 Products"
     - label: "Sales Point"
       value: "Koçtaş"
   highlight:
@@ -55,6 +55,21 @@ productList:
       - "Anti-static"
       - "Pleasant scent"
       - "No residue"
+  - name: "PURIRA"
+    subtitle: "Concentrated Plant-Based General Surface Cleaner"
+    description: "Thanks to its plant-based content, it is friendly to both nature and you. With its pH neutral formula, it does not irritate your skin. From kitchen to bathroom, from tables and counters to door handles, you can safely use it on any surface."
+    icon: "🌿"
+    color: "emerald"
+    features:
+      - "Plant-based content"
+      - "pH neutral formula"
+      - "Effective on all surfaces"
+      - "Fresh lemon scent"
+    usage:
+      - "Daily Cleaning: Add 1 tea glass to 5L water"
+      - "Glass & Mirror: Add 1 teaspoon to ½L water"
+      - "Kitchen Grease/Oven/Stove: Spray directly, wait 1 min"
+      - "Bathroom & Sink: Spray directly, wait 1 min"
 features:
   - title: "Water and Oil Repellency"
     description: "Thanks to its high water and oil repellency, it prevents water and oil from adhering to the surface, thus reducing the need for cleaning."

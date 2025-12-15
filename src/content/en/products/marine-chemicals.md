@@ -35,6 +35,12 @@ productList:
       - "Salt protection"
       - "1 year protection"
       - "Easy cleaning"
+    usage:
+      - "Clean and dry the surface"
+      - "Work on max 0.5 m² at a time"
+      - "Spray 5-10ml per m²"
+      - "Wipe immediately with microfiber cloth"
+      - "Application temperature: 5-30°C"
   - name: "Detail Cleaner"
     subtitle: "Marine Multi-Purpose Cleaning"
     description: "For boat and yacht interior surfaces. Effective cleaning for furniture surfaces (wood, metal, plastic), cabin surfaces and all details."

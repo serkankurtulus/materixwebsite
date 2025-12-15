@@ -15,7 +15,7 @@ product:
   image: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=800&h=800&fit=crop"
   quickInfo:
     - label: "Ürün Sayısı"
-      value: "3 Ürün"
+      value: "4 Ürün"
     - label: "Satış Noktası"
       value: "Koçtaş"
   highlight:
@@ -55,6 +55,21 @@ productList:
       - "Antistatik"
       - "Hoş kokulu"
       - "Kalıntı bırakmaz"
+  - name: "PURIRA"
+    subtitle: "Konsantre Bitkisel Genel Yüzey Temizleyici"
+    description: "Bitkisel içeriği sayesinde hem doğaya hem size dosttur. pH nötr formülü ile cildinizi tahriş etmez. Mutfaktan banyoya, masa ve tezgahlardan kapı kollarına kadar her yüzeyde güvenle kullanabilirsiniz."
+    icon: "🌿"
+    color: "emerald"
+    features:
+      - "Bitkisel içerik"
+      - "pH nötr formül"
+      - "Her yüzeyde etkili"
+      - "Ferah limon kokusu"
+    usage:
+      - "Günlük Temizlik: 5 lt suya 1 çay bardağı ekleyin"
+      - "Cam & Ayna: ½ L suya 1 çay kaşığı ekleyin"
+      - "Mutfak Yağı/Fırın/Ocak: Direkt sıkın, 1 dk bekleyin"
+      - "Banyo & Lavabo: Direkt püskürtün, 1 dk bekleyin"
 features:
   - title: "Su ve Yağ İticilik"
     description: "Yüksek su ve yağ iticilik özelliği sayesinde suyun ve yağın yüzeye tutunmasını engeller, böylece temizlik gereksinimini azaltır."
