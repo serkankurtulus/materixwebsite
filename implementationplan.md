@@ -2172,6 +2172,31 @@ Solution: Check permalink URLs in frontmatter match expected structure
 Solution: Verify image paths are correct and assets folder is being copied
 ```
 
+**Issue 5: Blog/article content not styling correctly (no headings, lists, etc.)**
+```bash
+Root Cause: Site uses Tailwind CDN which includes "preflight" CSS reset that
+strips all default browser styling from h1-h4, p, ul, ol, blockquote, etc.
+
+Solution: Add !important to all .blog-content typography styles in
+src/assets/css/styles.css to override Tailwind's preflight reset.
+
+Fixed in commit: e57b0e9
+```
+
+**Issue 6: Navigation dropdown "Güneş Paneli Ürünleri" pointing to wrong page**
+```bash
+Root Cause: Header was using translations.urls.products (general products page)
+instead of a specific solar products URL.
+
+Solution:
+1. Add solarProducts URL to tr.json and en.json:
+   - TR: "/tr/urunlerimiz/ssr-pro/"
+   - EN: "/en/products/ssr-pro/"
+2. Update header.njk to use translations.urls.solarProducts
+
+Fixed in commit: 5ca22e7
+```
+
 ---
 
 ## 🎓 Learning Resources
