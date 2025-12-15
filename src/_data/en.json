@@ -8,6 +8,7 @@
   "urls": {
     "home": "/en/",
     "products": "/en/products/",
+    "solarProducts": "/en/products/ssr-pro/",
     "ssrPro": "/en/products/ssr-pro/",
     "ssrStandard": "/en/products/ssr-standard/",
     "ssrIndustrial": "/en/products/ssr-industrial/",

@@ -8,6 +8,7 @@
   "urls": {
     "home": "/tr/",
     "products": "/tr/urunlerimiz/",
+    "solarProducts": "/tr/urunlerimiz/ssr-pro/",
     "ssrPro": "/tr/urunlerimiz/ssr-pro/",
     "ssrStandard": "/tr/urunlerimiz/ssr-standard/",
     "ssrIndustrial": "/tr/urunlerimiz/ssr-industrial/",
