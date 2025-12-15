@@ -1787,12 +1787,82 @@ Added to `src/_data/site.json`:
 
 | Item | Status | Notes |
 |------|--------|-------|
-| Purira product | ❓ Awaiting clarification | Not found in catalog - what is this product? |
 | ROI Calculator equation | ❓ Awaiting review | User to verify calculation formula |
 | 500+ customers stats | ❓ Awaiting update | User to provide accurate numbers |
 | SSR Industrial price | ❓ Awaiting info | Price per m² needed |
 
 **🔹 PHASE 13 COMPLETE - Content updates applied**
+
+---
+
+### ✅ PHASE 14: Blog Styling, Purira Product & Catalog Updates - **COMPLETED 2024-12-15**
+
+**Issues Addressed:**
+
+#### 1. Blog Page Styling Fix
+
+**Problem:** Blog pages at `/tr/blog/gunes-panellerinde-nano-kaplama/` were not rendering with proper typography styling. The `prose` classes from Tailwind Typography plugin were missing since `@tailwindcss/typography` was not installed.
+
+**Solution:** Added custom `.blog-content` CSS class to `src/assets/css/styles.css` with comprehensive typography styles:
+- Headings (h1-h4) with proper sizing, weight, and spacing
+- Paragraphs with gray color and line-height
+- Links with purple color and underline
+- Lists (ul, ol) with proper bullet/number styling
+- Blockquotes with left border and background
+- Code blocks with syntax highlighting styling
+- Tables with borders and header styling
+- Images with rounded corners and shadow
+
+**Files Modified:**
+- `src/assets/css/styles.css` - Added 150+ lines of `.blog-content` styles
+- `src/_includes/layouts/blog-post.njk` - Changed `prose` to `blog-content` class
+- `src/_includes/layouts/page.njk` - Changed `prose` to `blog-content` class
+- `src/_includes/layouts/product.njk` - Changed `prose` to `blog-content` class
+
+#### 2. PURIRA Product Added
+
+**Product Details (from PDF flyer):**
+- **Name:** PURIRA - Konsantre Bitkisel Genel Yüzey Temizleyici
+- **English:** Concentrated Plant-Based General Surface Cleaner
+- **Category:** Home Chemicals (Ev Kimyasalları)
+
+**Features:**
+- Bitkisel içerik (Plant-based content)
+- pH nötr formül (pH neutral formula)
+- Her yüzeyde etkili (Effective on all surfaces)
+- Ferah limon kokusu (Fresh lemon scent)
+
+**Usage Instructions:**
+- Günlük Temizlik: 5 lt suya 1 çay bardağı ekleyin
+- Cam & Ayna: ½ L suya 1 çay kaşığı ekleyin
+- Mutfak Yağı/Fırın/Ocak: Direkt sıkın, 1 dk bekleyin
+- Banyo & Lavabo: Direkt püskürtün, 1 dk bekleyin
+
+**Files Modified:**
+- `src/content/tr/products/ev-kimyasallari.md` - Added PURIRA to productList, updated product count to 4
+- `src/content/en/products/home-chemicals.md` - Added PURIRA to productList, updated product count to 4
+
+#### 3. Product Specs Updated from Catalog PDF
+
+Updated NFC-12 Marine product with detailed usage instructions from catalog:
+- Clean and dry the surface
+- Work on max 0.5 m² at a time
+- Spray 5-10ml per m²
+- Wipe immediately with microfiber cloth
+- Application temperature: 5-30°C
+
+**Files Modified:**
+- `src/content/tr/products/tekne-kimyasallari.md` - Added usage instructions
+- `src/content/en/products/marine-chemicals.md` - Added usage instructions
+
+#### 4. Color Palette Documentation
+
+Created comprehensive color palette documentation with visual previews:
+- `color-palette.html` - HTML file with inline CSS color swatches
+
+**Git Commit:** `2f4a031` - "Add blog styling, Purira product, and product spec updates"
+
+**🔹 PHASE 14 COMPLETE - Blog styling fixed, Purira added, specs updated**
 
 ---
 
